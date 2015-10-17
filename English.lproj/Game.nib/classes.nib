@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {CLASS = FLCardView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FLFlashView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FLGame; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {buttonHitClicked = id; }; 
+            CLASS = FLGameController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cardView = FLCardView; 
+                game = FLGame; 
+                playerView = NSView; 
+                reasonHit = NSTextField; 
+                viewWithPlayers = NSView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            CLASS = FLPlayerView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                buttonState = NSButton; 
+                flashView = FLFlashView; 
+                textFieldNbrCard = NSTextField; 
+                textFieldPlayerName = NSTextField; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

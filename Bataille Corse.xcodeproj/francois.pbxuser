@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {671, 209}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 181}";
+			sepNavVisRect = "{{0, 0}, {685, 209}}";
+		};
+	};
+	0F0543E50792EAFA009F5182 /* NotificationsNames.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {748, 670}}";
+			sepNavSelRange = "{274, 15}";
+			sepNavVisRect = "{{0, 0}, {748, 670}}";
+		};
+	};
+	0F0D437F079FF6A000368A61 /* FLNSMutableArray.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{374, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F0D4380079FF6A000368A61 /* FLNSMutableArray.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{306, 2}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F1619420789AE5C000A2F03 /* FLCustomWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{94, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F1619430789AE5C000A2F03 /* FLCustomWindow.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 707}}";
+			sepNavSelRange = "{1090, 5}";
+			sepNavVisRect = "{{0, 0}, {936, 707}}";
+		};
+	};
+	0F2171A2078B083C00C6387E /* AppController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 587}}";
+			sepNavSelRange = "{310, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 361}}";
+		};
+	};
+	0F2171A3078B083C00C6387E /* AppController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1009, 2086}}";
+			sepNavSelRange = "{3937, 0}";
+			sepNavVisRange = "{3476, 766}";
+			sepNavVisRect = "{{0, 1108}, {708, 488}}";
+		};
+	};
+	0F24C0020D68A01F0021276E /* FLGameController.m:68 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 0FA167510796E99900A931F9 /* FLGameController.m */;
+		functionName = "-initWithPacket:andPlayers:";
+		hitCount = 3;
+		ignoreCount = 0;
+		lineNumber = 68;
+		location = "Bataille Corse";
+		modificationTime = 224961793.470624;
+		state = 1;
+	};
+	0F316BB507A183F500939E82 /* FLComputerPlayer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 639}}";
+			sepNavSelRange = "{958, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+			sepNavWindowFrame = "{{38, 107}, {949, 1045}}";
+		};
+	};
+	0F316BB607A183F500939E82 /* FLComputerPlayer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {741, 3568}}";
+			sepNavSelRange = "{4968, 0}";
+			sepNavVisRect = "{{0, 2038}, {724, 705}}";
+		};
+	};
+	0F34198B07A6AED500B78052 /* FLTextView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{281, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F34198C07A6AED500B78052 /* FLTextView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 975}}";
+			sepNavSelRange = "{1124, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F3419B807A6B16900B78052 /* FLTextViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{444, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F3419B907A6B16900B78052 /* FLTextViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 863}}";
+			sepNavSelRange = "{630, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F34210B079AC97200E38185 /* FLGame.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{275, 33}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F34210C079AC97200E38185 /* FLGame.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {734, 1999}}";
+			sepNavSelRange = "{3080, 0}";
+			sepNavVisRect = "{{0, 1511}, {708, 488}}";
+		};
+	};
+	0F4558B007B1152F002727CB /* FLPlayerView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 899}}";
+			sepNavSelRange = "{806, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 899}}";
+		};
+	};
+	0F4558B107B1152F002727CB /* FLPlayerView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 2095}}";
+			sepNavSelRange = "{1155, 0}";
+			sepNavVisRect = "{{0, 127}, {755, 629}}";
+		};
+	};
+	0F5375F107C60DEC00879E62 /* FLCycleArray.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {883, 679}}";
+			sepNavSelRange = "{555, 0}";
+			sepNavVisRange = "{0, 644}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+			sepNavWindowFrame = "{{15, 382}, {942, 791}}";
+		};
+	};
+	0F5375F207C60DEC00879E62 /* FLCycleArray.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1073, 1652}}";
+			sepNavSelRange = "{1486, 0}";
+			sepNavVisRange = "{1621, 285}";
+			sepNavVisRect = "{{0, 1612}, {936, 707}}";
+		};
+	};
+	0F552A6B07882DCB002E73B1 /* FLCardValue.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 687}}";
+			sepNavSelRange = "{428, 32}";
+			sepNavVisRect = "{{0, 58}, {755, 629}}";
+		};
+	};
+	0F552A6C07882DCB002E73B1 /* FLCardValue.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 1023}}";
+			sepNavSelRange = "{1078, 0}";
+			sepNavVisRect = "{{0, 394}, {755, 629}}";
+		};
+	};
+	0F594ECD0801A06E00C57AA0 /* NSString+Keys.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{169, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F594ECE0801A06E00C57AA0 /* NSString+Keys.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {881, 1551}}";
+			sepNavSelRange = "{3870, 0}";
+			sepNavVisRect = "{{0, 864}, {755, 629}}";
+		};
+	};
+	0F698B6907881B720037374C /* FLCardView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{353, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0F698B6A07881B720037374C /* FLCardView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 1167}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 268}, {755, 899}}";
+		};
+	};
+	0F698B89078821590037374C /* FLCard.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {695, 527}}";
+			sepNavSelRange = "{708, 0}";
+			sepNavVisRect = "{{0, 236}, {695, 280}}";
+		};
+	};
+	0F698B8A078821590037374C /* FLCard.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {762, 2079}}";
+			sepNavSelRange = "{1209, 0}";
+			sepNavVisRect = "{{0, 563}, {695, 280}}";
+		};
+	};
+	0F6F85C0079554DE00AC967C /* FLPlayer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {708, 1391}}";
+			sepNavSelRange = "{2619, 0}";
+			sepNavVisRect = "{{0, 903}, {708, 488}}";
+		};
+	};
+	0F6F85C1079554DE00AC967C /* FLPlayer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 7583}}";
+			sepNavSelRange = "{11193, 5}";
+			sepNavVisRect = "{{0, 6683}, {708, 488}}";
+		};
+	};
+	0F950D030856099100458D5F /* FLFlashView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {708, 488}}";
+			sepNavSelRange = "{250, 0}";
+			sepNavVisRect = "{{0, 0}, {708, 488}}";
+		};
+	};
+	0F950D040856099100458D5F /* FLFlashView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {748, 2111}}";
+			sepNavSelRange = "{1673, 0}";
+			sepNavVisRect = "{{0, 0}, {748, 670}}";
+		};
+	};
+	0FA167500796E99900A931F9 /* FLGameController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 1471}}";
+			sepNavSelRange = "{1342, 0}";
+			sepNavVisRect = "{{0, 336}, {755, 629}}";
+			sepNavWindowFrame = "{{15, 128}, {949, 1045}}";
+		};
+	};
+	0FA167510796E99900A931F9 /* FLGameController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {671, 8960}}";
+			sepNavSelRange = "{6540, 0}";
+			sepNavVisRange = "{6377, 413}";
+			sepNavVisRect = "{{0, 4020}, {708, 488}}";
+		};
+	};
+	0FA7210907EF482D00D09301 /* FLCalibrateTimeController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {708, 1183}}";
+			sepNavSelRange = "{278, 0}";
+			sepNavVisRect = "{{0, 0}, {708, 488}}";
+		};
+	};
+	0FA7210A07EF482D00D09301 /* FLCalibrateTimeController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {741, 5839}}";
+			sepNavSelRange = "{5163, 0}";
+			sepNavVisRect = "{{0, 2960}, {708, 488}}";
+		};
+	};
+	0FA76CBD0789B5A000BC5655 /* AppInit.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{58, 0}";
+			sepNavVisRect = "{{0, 0}, {755, 629}}";
+		};
+	};
+	0FA76CBE0789B5A000BC5655 /* AppInit.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {936, 735}}";
+			sepNavSelRange = "{580, 5}";
+			sepNavVisRect = "{{0, 0}, {936, 707}}";
+		};
+	};
+	0FCD1B21078FE5C20096D90C /* NamesPrefs.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {748, 670}}";
+			sepNavSelRange = "{327, 13}";
+			sepNavVisRect = "{{0, 0}, {748, 670}}";
+		};
+	};
+	0FD155290776D97800ED8F4D /* Bataille Corse */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				displayName = "Executable Runner";
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Bataille Corse";
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	0FD1552B0776D97C00ED8F4D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	0FD1552C0776D97C00ED8F4D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	0FDC7F1A078F0F0F00BEC676 /* FLPreferencesController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 629}}";
+			sepNavSelRange = "{168, 0}";
+			sepNavVisRect = "{{0, 340}, {755, 289}}";
+		};
+	};
+	0FDC7F1B078F0F0F00BEC676 /* FLPreferencesController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 1871}}";
+			sepNavSelRange = "{165, 0}";
+			sepNavVisRect = "{{0, 43}, {755, 629}}";
+		};
+	};
+	0FDC7F49078F123A00BEC676 /* FLNewGameController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {724, 928}}";
+			sepNavSelRange = "{1651, 0}";
+			sepNavVisRect = "{{0, 648}, {724, 280}}";
+		};
+	};
+	0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1009, 3612}}";
+			sepNavSelRange = "{2664, 0}";
+			sepNavVisRange = "{2297, 960}";
+			sepNavVisRect = "{{0, 3083}, {453, 186}}";
+		};
+	};
+	0FE160B3079051EB009F1372 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {748, 927}}";
+			sepNavSelRange = "{1984, 0}";
+			sepNavVisRect = "{{0, 526}, {708, 386}}";
+			sepNavWindowFrame = "{{15, 377}, {484, 796}}";
+		};
+	};
+	0FE3266907ECA67D0012B670 /* French */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {671, 209}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 181}";
+			sepNavVisRect = "{{0, 0}, {685, 209}}";
+		};
+	};
+	0FE3266A07ECA67D0012B670 /* French */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {993, 927}}";
+			sepNavSelRange = "{1128, 0}";
+			sepNavVisRect = "{{0, 527}, {708, 386}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Deployment;
+		activeExecutable = 0FD155290776D97800ED8F4D /* Bataille Corse */;
+		activeTarget = 8D1107260486CEB800E47090 /* Bataille Corse */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* Bataille Corse */,
+		);
+		breakpoints = (
+			0F24C0020D68A01F0021276E /* FLGameController.m:68 */,
+		);
+		codeSenseManager = 0FD1552C0776D97C00ED8F4D /* Code sense */;
+		executables = (
+			0FD155290776D97800ED8F4D /* Bataille Corse */,
+		);
+		expressions = (
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					259.2085,
+					243.5991,
+					270.5835,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					455,
+					267.2085,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					461.7974,
+					242.5835,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					456,
+					20,
+					85,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					363.2974,
+					366.2085,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					236.8008,
+					266.0356,
+					243.2085,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					507,
+					20,
+					80,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					414,
+					60,
+					20,
+					87,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 225452989;
+			PBXPrepackagedSmartGroups_v2 = (
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					activationKey = OldTargetSmartGroup;
+					clz = PBXTargetSmartGroup;
+					description = "Displays all targets of the project.";
+					globalID = 1C37FABC04509CD000000102;
+					name = Targets;
+					preferences = {
+						image = Targets;
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = PBXTargetSmartGroup2;
+					description = "Displays all targets of the project as well as nested build phases.";
+					globalID = 1C37FBAC04509CD000000102;
+					name = Targets;
+					preferences = {
+						image = Targets;
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = PBXExecutablesSmartGroup;
+					description = "Displays all executables of the project.";
+					globalID = 1C37FAAC04509CD000000102;
+					name = Executables;
+					preferences = {
+						image = Executable;
+					};
+				},
+				{
+					" PBXTransientLocationAtTop " = bottom;
+					absolutePathToBundle = "";
+					clz = PBXErrorsWarningsSmartGroup;
+					description = "Displays files with errors or warnings.";
+					globalID = 1C08E77C0454961000C914BD;
+					name = "Errors and Warnings";
+					preferences = {
+						fnmatch = "";
+						image = WarningsErrors;
+						recursive = 1;
+						regex = "";
+						root = "<PROJECT>";
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = PBXFilenameSmartGroup;
+					description = "Filters items in a given group (potentially recursively) based on matching the name with the regular expression of the filter.";
+					globalID = 1CC0EA4004350EF90044410B;
+					name = "Implementation Files";
+					preferences = {
+						canSave = 1;
+						fnmatch = "";
+						image = SmartFolder;
+						isLeaf = 0;
+						recursive = 1;
+						regex = "?*\\.[mcMC]";
+						root = "<PROJECT>";
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = PBXFilenameSmartGroup;
+					description = "This group displays Interface Builder NIB Files.";
+					globalID = 1CC0EA4004350EF90041110B;
+					name = "NIB Files";
+					preferences = {
+						canSave = 1;
+						fnmatch = "*.nib";
+						image = SmartFolder;
+						isLeaf = 0;
+						recursive = 1;
+						regex = "";
+						root = "<PROJECT>";
+					};
+				},
+				{
+					PBXTransientLocationAtTop = no;
+					absolutePathToBundle = "";
+					clz = PBXFindSmartGroup;
+					description = "Displays Find Results.";
+					globalID = 1C37FABC05509CD000000102;
+					name = "Find Results";
+					preferences = {
+						image = spyglass;
+					};
+				},
+				{
+					PBXTransientLocationAtTop = no;
+					absolutePathToBundle = "";
+					clz = PBXBookmarksSmartGroup;
+					description = "Displays Project Bookmarks.";
+					globalID = 1C37FABC05539CD112110102;
+					name = Bookmarks;
+					preferences = {
+						image = Bookmarks;
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = XCSCMSmartGroup;
+					description = "Displays files with interesting SCM status.";
+					globalID = E2644B35053B69B200211256;
+					name = SCM;
+					preferences = {
+						image = PBXRepository;
+						isLeaf = 0;
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = PBXSymbolsSmartGroup;
+					description = "Displays all symbols for the project.";
+					globalID = 1C37FABC04509CD000100104;
+					name = "Project Symbols";
+					preferences = {
+						image = ProjectSymbols;
+						isLeaf = 1;
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = PBXFilenameSmartGroup;
+					description = "Filters items in a given group (potentially recursively) based on matching the name with the regular expression of the filter.";
+					globalID = PBXTemplateMarker;
+					name = "Simple Filter SmartGroup";
+					preferences = {
+						canSave = 1;
+						fnmatch = "*.nib";
+						image = SmartFolder;
+						isLeaf = 0;
+						recursive = 1;
+						regex = "";
+						root = "<PROJECT>";
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					absolutePathToBundle = "";
+					clz = PBXFilenameSmartGroup;
+					description = "Filters items in a given group (potentially recursively) based on matching the name with the regular expression of the filter.";
+					globalID = PBXTemplateMarker;
+					name = "Simple Regular Expression SmartGroup";
+					preferences = {
+						canSave = 1;
+						fnmatch = "";
+						image = SmartFolder;
+						isLeaf = 0;
+						recursive = 1;
+						regex = "?*\\.[mcMC]";
+						root = "<PROJECT>";
+					};
+				},
+				{
+					PBXTransientLocationAtTop = bottom;
+					clz = XDDesignSmartGroup;
+					description = "Displays Xdesign models";
+					globalID = 2E4A936305E6979E00701470;
+					name = Design;
+					preferences = {
+						image = Design;
+						isLeaf = 0;
+					};
+				},
+			);
+			PBXWorkspaceStateSaveDate = 225452989;
+		};
+		sourceControlManager = 0FD1552B0776D97C00ED8F4D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {695, 280}}";
+			sepNavSelRange = "{191, 0}";
+			sepNavVisRect = "{{0, 0}, {695, 280}}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* Bataille Corse_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {748, 670}}";
+			sepNavSelRange = "{153, 0}";
+			sepNavVisRect = "{{0, 0}, {748, 670}}";
+		};
+	};
+	8D1107260486CEB800E47090 /* Bataille Corse */ = {
+		activeExec = 0;
+		executables = (
+			0FD155290776D97800ED8F4D /* Bataille Corse */,
+		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {674, 406}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 518}";
+			sepNavVisRect = "{{0, 48}, {685, 209}}";
+			sepNavWindowFrame = "{{15, 128}, {949, 1045}}";
+		};
+	};
+}
