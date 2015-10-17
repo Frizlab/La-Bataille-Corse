@@ -276,17 +276,17 @@
 	if (! winner)
 		return NO;
 	if ([winner class] == [FLPlayer class]) {
-		NSRunAlertPanel(NSLocalizedString(@"bravo"   , nil),
-							 NSLocalizedString(@"endMatch", nil),
-							 NSLocalizedString(@"ok"      , nil),
-							 nil,
-							 nil, [winner playerName]);
+		NSAlert *alert = [NSAlert new];
+		alert.messageText = NSLocalizedString(@"bravo", nil);
+		alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"endMatch", nil), winner.playerName];
+		[alert addButtonWithTitle:NSLocalizedString(@"ok", nil)];
+		[alert runModal];
 	} else {
-		NSRunAlertPanel(NSLocalizedString(@"dommage", nil),
-							 NSLocalizedString(@"improve", nil),
-							 NSLocalizedString(@"ok"     , nil),
-							 nil,
-							 nil, [winner playerName]);
+		NSAlert *alert = [NSAlert new];
+		alert.messageText = NSLocalizedString(@"dommage", nil);
+		alert.informativeText = [NSString stringWithFormat:NSLocalizedString(@"improve", nil), winner.playerName];
+		[alert addButtonWithTitle:NSLocalizedString(@"ok", nil)];
+		[alert runModal];
 	}
 	[self invalidateTimersOfPlayers];
 	gameIsFinish = YES;
@@ -307,14 +307,14 @@
 	if (NUMBER_OF_CARDS > [packet count]) {
 		NSLog(@"*** In distributeCards of FLGameController, NUMBER_OF_CARDS > [packet count]");
 		NSLog(@"so, I must stop the game ***");
-		NSRunAlertPanel(NSLocalizedString(@"error"                 , nil),
-							 NSLocalizedString(@"errWhenDistributeCards", nil),
-							 NSLocalizedString(@"ok"                    , nil),
-							 nil,
-							 nil);
+		NSAlert *alert = [NSAlert new];
+		alert.messageText = NSLocalizedString(@"error", nil);
+		alert.informativeText = NSLocalizedString(@"errWhenDistributeCards", nil);
+		[alert addButtonWithTitle:NSLocalizedString(@"ok", nil)];
+		[alert runModal];
 		[NSException raise:@"Can't distribute cards"
-						format:@"NUMBER_OF_CARDS > [packet count] (%d > %d)",
-																 NUMBER_OF_CARDS, [packet count]];
+						format:@"NUMBER_OF_CARDS > [packet count] (%d > %lu)",
+																 NUMBER_OF_CARDS, (unsigned long)[packet count]];
 	}
 	
 	for (i = 0 ; i<NUMBER_OF_CARDS ; i++)
@@ -563,13 +563,13 @@
 	if (gameIsFinish)
 		return YES;
 	
-	int choice;
-	choice = NSRunAlertPanel(NSLocalizedString(@"sureQuit", nil),
-									 NSLocalizedString(@"ifYouQuit", nil),
-									 NSLocalizedString(@"yes", nil),
-									 NSLocalizedString(@"no", nil),
-									 nil);
-	if (choice == NSAlertDefaultReturn) {
+	NSAlert *alert = [NSAlert new];
+	alert.messageText = NSLocalizedString(@"sureQuit", nil);
+	alert.informativeText = NSLocalizedString(@"ifYouQuit", nil);
+	[alert addButtonWithTitle:NSLocalizedString(@"yes", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"no", nil)];
+	NSModalResponse choice = [alert runModal];
+	if (-ABS(choice) /* WHY? runModal returns 1000 when ok, NSModalResponseStop = -1000 */ == NSModalResponseStop) {
 		gameIsFinish = YES;
 		return YES;
 	}

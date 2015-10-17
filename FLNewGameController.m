@@ -23,8 +23,8 @@
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
 	[tableViewListOfPlayersView reloadData];
-	[tableViewListOfPlayersView selectRow:[defaults integerForKey:FLCurrentPlayer]
-						  byExtendingSelection:NO];
+	[tableViewListOfPlayersView selectRowIndexes:[NSIndexSet indexSetWithIndex:[defaults integerForKey:FLCurrentPlayer]]
+									byExtendingSelection:NO];
 	
 	[nbrComputerPlayers setIntValue:[defaults integerForKey:FLNumberOfComputerPlayers]];
 	[self refreshButtonOk:nil];
@@ -147,7 +147,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 {
 	NSString *identifier = [aTableColumn identifier];
 	FLPlayer *player = [players objectAtIndex:rowIndex];
-	[player takeValue:anObject forKey:identifier];
+	[player setValue:anObject forKey:identifier];
 	
 	[self saveArray];
 }
@@ -213,7 +213,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 - (void)editKeyOfRow:(unsigned int)row
 {
 	[textViewController setCurrentRowIdentifier:@"hitKey"];
-	[tableViewListOfPlayersView selectRow:row byExtendingSelection:NO];
+	[tableViewListOfPlayersView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
 	[tableViewListOfPlayersView editColumn:[tableViewListOfPlayersView columnWithIdentifier:@"hitKey"]
 												  row:row
 										  withEvent:nil

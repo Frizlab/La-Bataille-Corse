@@ -13,7 +13,7 @@
 - (BOOL)resignFirstResponder
 {
 	// The [super resignFirstResponder] must be here
-	if ([[self superview] textShouldEndEditing:self])
+	if ([(id)[self superview] textShouldEndEditing:self])
 		return [super resignFirstResponder];
 	else
 		return NO;
@@ -48,7 +48,7 @@
 		NSBeep();
 		return;
 	}
-	if ([letter isEqualToString:@"\t"] || ! [[self superview] textShouldEndEditing:self]) {
+	if ([letter isEqualToString:@"\t"] || ! [(id)[self superview] textShouldEndEditing:self]) {
 		NSBeep();
 		[super setString:[letter nameForKey]];
 		[super selectAll:nil];

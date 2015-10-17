@@ -128,11 +128,11 @@
 	if (NUMBER_OF_CARDS > [packet count]) {
 		NSLog(@"*** In distributeCards of FLGameController, NUMBER_OF_CARDS > [packet count]");
 		NSLog(@"so, I must quit ***");
-		NSRunAlertPanel(NSLocalizedString(@"error"                 , nil),
-							 NSLocalizedString(@"errWhenDistributeCards", nil),
-							 NSLocalizedString(@"ok"                    , nil),
-							 nil,
-							 nil);
+		NSAlert *alert = [NSAlert new];
+		alert.messageText = NSLocalizedString(@"error", nil);
+		alert.informativeText = NSLocalizedString(@"errWhenDistributeCards", nil);
+		[alert addButtonWithTitle:NSLocalizedString(@"ok", nil)];
+		[alert runModal];
 		[NSApp terminate:nil];
 	}
 	
@@ -332,13 +332,13 @@
 	if (isCalibrateFinish)
 		return YES;
 	
-	int choice;
-	choice = NSRunAlertPanel(NSLocalizedString(@"sureStopCalibrate", nil),
-									 NSLocalizedString(@"ifYouStop"        , nil),
-									 NSLocalizedString(@"yes"              , nil),
-									 NSLocalizedString(@"no"               , nil),
-									 nil);
-	if (choice == NSAlertDefaultReturn) {
+	NSAlert *alert = [NSAlert new];
+	alert.messageText = NSLocalizedString(@"sureStopCalibrate", nil);
+	alert.informativeText = NSLocalizedString(@"ifYouStop", nil);
+	[alert addButtonWithTitle:NSLocalizedString(@"yes", nil)];
+	[alert addButtonWithTitle:NSLocalizedString(@"no", nil)];
+	NSModalResponse choice = [alert runModal];
+	if (-ABS(choice) /* WHY? runModal returns 1000 when ok, NSModalResponseStop = -1000 */ == NSModalResponseStop) {
 		isCalibrateFinish = YES;
 		return YES;
 	}
