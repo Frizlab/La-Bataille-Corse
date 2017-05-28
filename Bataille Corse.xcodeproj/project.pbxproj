@@ -162,7 +162,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F0543E50792EAFA009F5182 /* NotificationsNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsNames.h; sourceTree = "<group>"; };
 		0F0D437F079FF6A000368A61 /* FLNSMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNSMutableArray.h; sourceTree = "<group>"; };
 		0F0D4380079FF6A000368A61 /* FLNSMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNSMutableArray.m; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 		0F34210C079AC97200E38185 /* FLGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGame.m; sourceTree = "<group>"; };
 		0F4558B007B1152F002727CB /* FLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = FLPlayerView.h; sourceTree = "<group>"; };
 		0F4558B107B1152F002727CB /* FLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = FLPlayerView.m; sourceTree = "<group>"; };
-		0F46739407F476E20024A165 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = English.lproj/help; sourceTree = "<group>"; };
+		0F46739407F476E20024A165 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = en.lproj/help; sourceTree = "<group>"; };
 		0F5375F107C60DEC00879E62 /* FLCycleArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCycleArray.h; sourceTree = "<group>"; };
 		0F5375F207C60DEC00879E62 /* FLCycleArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCycleArray.m; sourceTree = "<group>"; };
 		0F552A6B07882DCB002E73B1 /* FLCardValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCardValue.h; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		0F698B8A078821590037374C /* FLCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCard.m; sourceTree = "<group>"; };
 		0F6F85C0079554DE00AC967C /* FLPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLPlayer.h; sourceTree = "<group>"; };
 		0F6F85C1079554DE00AC967C /* FLPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLPlayer.m; sourceTree = "<group>"; };
-		0F77B08707FD24E9009EF9FB /* French */ = {isa = PBXFileReference; lastKnownFileType = folder; name = French; path = French.lproj/help; sourceTree = "<group>"; };
+		0F77B08707FD24E9009EF9FB /* French */ = {isa = PBXFileReference; lastKnownFileType = folder; name = French; path = fr.lproj/help; sourceTree = "<group>"; };
 		0F950D030856099100458D5F /* FLFlashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFlashView.h; sourceTree = "<group>"; };
 		0F950D040856099100458D5F /* FLFlashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFlashView.m; sourceTree = "<group>"; };
 		0FA167500796E99900A931F9 /* FLGameController.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = FLGameController.h; sourceTree = "<group>"; };
@@ -264,22 +264,22 @@
 		0FDC7F1B078F0F0F00BEC676 /* FLPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = FLPreferencesController.m; sourceTree = "<group>"; };
 		0FDC7F49078F123A00BEC676 /* FLNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = FLNewGameController.h; sourceTree = "<group>"; };
 		0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = FLNewGameController.m; sourceTree = "<group>"; };
-		0FE160B3079051EB009F1372 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0FE3266907ECA67D0012B670 /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0FE3266A07ECA67D0012B670 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0FE160B3079051EB009F1372 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0FE3266907ECA67D0012B670 /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0FE3266A07ECA67D0012B670 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Bataille Corse_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bataille Corse_Prefix.pch"; sourceTree = "<group>"; };
-		7B4814E31EDB6C9E00C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		7B4814E51EDB6CBE00C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		7B4814E71EDB6D6700C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/NewGame.xib; sourceTree = "<group>"; };
-		7B4814E91EDB6D7900C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/NewGame.xib; sourceTree = "<group>"; };
-		7BFA1E231EDB706D0081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
-		7BFA1E251EDB70960081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/Preferences.xib; sourceTree = "<group>"; };
-		7BFA1E271EDB70C90081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Game.xib; sourceTree = "<group>"; };
-		7BFA1E291EDB70E10081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/Game.xib; sourceTree = "<group>"; };
+		7B4814E31EDB6C9E00C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7B4814E51EDB6CBE00C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7B4814E71EDB6D6700C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/NewGame.xib; sourceTree = "<group>"; };
+		7B4814E91EDB6D7900C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/NewGame.xib; sourceTree = "<group>"; };
+		7BFA1E231EDB706D0081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/Preferences.xib; sourceTree = "<group>"; };
+		7BFA1E251EDB70960081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/Preferences.xib; sourceTree = "<group>"; };
+		7BFA1E271EDB70C90081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/Game.xib; sourceTree = "<group>"; };
+		7BFA1E291EDB70E10081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/Game.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Bataille Corse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bataille Corse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -548,8 +548,7 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
-				English,
-				French,
+				fr,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Bataille corse */;
 			projectDirPath = "";
