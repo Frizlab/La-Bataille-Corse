@@ -32,7 +32,7 @@
 #endif
 	
 	unsigned int code = [e modifierFlags];
-	if ((code & NSAlphaShiftKeyMask) || (code == 256 /* CapsLock release */ )) {
+	if ((code & NSEventModifierFlagCapsLock) || (code == 256 /* CapsLock release */ )) {
 		NSBeep();
 		return;
 	}

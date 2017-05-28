@@ -27,16 +27,16 @@
 	if ([self isEqualToString:@"\x7f"])
 		return NSLocalizedString(@"backSpace", nil);
 	
-	if ([self intValue] & NSShiftKeyMask)
+	if ([self intValue] & NSEventModifierFlagShift)
 		return NSLocalizedString(@"shift", nil);
 	
-	if ([self intValue] & NSControlKeyMask)
+	if ([self intValue] & NSEventModifierFlagControl)
 		return NSLocalizedString(@"control", nil);
 	
-	if ([self intValue] & NSAlternateKeyMask)
+	if ([self intValue] & NSEventModifierFlagOption)
 		return NSLocalizedString(@"alt", nil);
 	
-	if ([self intValue] & NSCommandKeyMask)
+	if ([self intValue] & NSEventModifierFlagCommand)
 		return NSLocalizedString(@"cmd", nil);
 	
 	switch ([self characterAtIndex:0]) {

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F0D4382079FF6A000368A61 /* FLNSMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0D4380079FF6A000368A61 /* FLNSMutableArray.m */; };
-		0F1619200789AC97000A2F03 /* NewGame.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0F16191E0789AC97000A2F03 /* NewGame.nib */; };
-		0F1619230789ACAD000A2F03 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1619210789ACAD000A2F03 /* Preferences.nib */; };
 		0F1619450789AE5C000A2F03 /* FLCustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1619430789AE5C000A2F03 /* FLCustomWindow.m */; };
 		0F2171A5078B083C00C6387E /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2171A3078B083C00C6387E /* AppController.m */; };
 		0F2DF85B078F176A00B828FF /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0F2DF85A078F176A00B828FF /* app.icns */; };
@@ -82,14 +80,16 @@
 		0F6F85C3079554DE00AC967C /* FLPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F85C1079554DE00AC967C /* FLPlayer.m */; };
 		0F77B03607FD24E4009EF9FB /* help in Resources */ = {isa = PBXBuildFile; fileRef = 0F77B03507FD24E4009EF9FB /* help */; };
 		0F950D060856099100458D5F /* FLFlashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F950D040856099100458D5F /* FLFlashView.m */; };
-		0FA167470796E72A00A931F9 /* Game.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA167450796E72A00A931F9 /* Game.nib */; };
 		0FA167530796E99900A931F9 /* FLGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA167510796E99900A931F9 /* FLGameController.m */; };
 		0FA7210C07EF482D00D09301 /* FLCalibrateTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7210A07EF482D00D09301 /* FLCalibrateTimeController.m */; };
 		0FA76CC00789B5A000BC5655 /* AppInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA76CBE0789B5A000BC5655 /* AppInit.m */; };
 		0FDC7F1D078F0F0F00BEC676 /* FLPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC7F1B078F0F0F00BEC676 /* FLPreferencesController.m */; };
 		0FDC7F4C078F123A00BEC676 /* FLNewGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */; };
 		0FE160B607905210009F1372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FE160B507905210009F1372 /* Localizable.strings */; };
-		0FFD7AB40788393700928225 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD7AB20788393700928225 /* MainMenu.nib */; };
+		7B4814E41EDB6C9E00C82F8C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */; };
+		7B4814E81EDB6D6700C82F8C /* NewGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4814E61EDB6D6700C82F8C /* NewGame.xib */; };
+		7BFA1E241EDB706D0081AFC7 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA1E221EDB706D0081AFC7 /* Preferences.xib */; };
+		7BFA1E281EDB70C90081AFC7 /* Game.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA1E261EDB70C90081AFC7 /* Game.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -166,8 +166,6 @@
 		0F0543E50792EAFA009F5182 /* NotificationsNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsNames.h; sourceTree = "<group>"; };
 		0F0D437F079FF6A000368A61 /* FLNSMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNSMutableArray.h; sourceTree = "<group>"; };
 		0F0D4380079FF6A000368A61 /* FLNSMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNSMutableArray.m; sourceTree = "<group>"; };
-		0F16191F0789AC97000A2F03 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/NewGame.nib; sourceTree = "<group>"; };
-		0F1619220789ACAD000A2F03 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
 		0F1619420789AE5C000A2F03 /* FLCustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = FLCustomWindow.h; sourceTree = "<group>"; };
 		0F1619430789AE5C000A2F03 /* FLCustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = FLCustomWindow.m; sourceTree = "<group>"; };
 		0F2171A2078B083C00C6387E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 		0F77B08707FD24E9009EF9FB /* French */ = {isa = PBXFileReference; lastKnownFileType = folder; name = French; path = French.lproj/help; sourceTree = "<group>"; };
 		0F950D030856099100458D5F /* FLFlashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFlashView.h; sourceTree = "<group>"; };
 		0F950D040856099100458D5F /* FLFlashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFlashView.m; sourceTree = "<group>"; };
-		0FA167460796E72A00A931F9 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Game.nib; sourceTree = "<group>"; };
 		0FA167500796E99900A931F9 /* FLGameController.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = FLGameController.h; sourceTree = "<group>"; };
 		0FA167510796E99900A931F9 /* FLGameController.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = FLGameController.m; sourceTree = "<group>"; };
 		0FA7210907EF482D00D09301 /* FLCalibrateTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCalibrateTimeController.h; sourceTree = "<group>"; };
@@ -268,18 +265,21 @@
 		0FDC7F49078F123A00BEC676 /* FLNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = FLNewGameController.h; sourceTree = "<group>"; };
 		0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = FLNewGameController.m; sourceTree = "<group>"; };
 		0FE160B3079051EB009F1372 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0FE3265D07ECA6670012B670 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/Game.nib; sourceTree = "<group>"; };
-		0FE3266507ECA66F0012B670 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		0FE3266607ECA66F0012B670 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/NewGame.nib; sourceTree = "<group>"; };
-		0FE3266707ECA66F0012B670 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/Preferences.nib; sourceTree = "<group>"; };
 		0FE3266907ECA67D0012B670 /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0FE3266A07ECA67D0012B670 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0FFD7AB30788393700928225 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Bataille Corse_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bataille Corse_Prefix.pch"; sourceTree = "<group>"; };
+		7B4814E31EDB6C9E00C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7B4814E51EDB6CBE00C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7B4814E71EDB6D6700C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/NewGame.xib; sourceTree = "<group>"; };
+		7B4814E91EDB6D7900C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/NewGame.xib; sourceTree = "<group>"; };
+		7BFA1E231EDB706D0081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Preferences.xib; sourceTree = "<group>"; };
+		7BFA1E251EDB70960081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/Preferences.xib; sourceTree = "<group>"; };
+		7BFA1E271EDB70C90081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Game.xib; sourceTree = "<group>"; };
+		7BFA1E291EDB70E10081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/Game.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Bataille Corse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bataille Corse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -495,10 +495,10 @@
 				0F698B7607881E760037374C /* cartes */,
 				0FE160B507905210009F1372 /* Localizable.strings */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				0FFD7AB20788393700928225 /* MainMenu.nib */,
-				0F16191E0789AC97000A2F03 /* NewGame.nib */,
-				0F1619210789ACAD000A2F03 /* Preferences.nib */,
-				0FA167450796E72A00A931F9 /* Game.nib */,
+				7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */,
+				7B4814E61EDB6D6700C82F8C /* NewGame.xib */,
+				7BFA1E221EDB706D0081AFC7 /* Preferences.xib */,
+				7BFA1E261EDB70C90081AFC7 /* Game.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -548,6 +548,8 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				English,
+				French,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Bataille corse */;
 			projectDirPath = "";
@@ -566,10 +568,10 @@
 				0F31CAB6092F43EA00D395EE /* dos_des_cartes.tiff in Resources */,
 				0F2DF85B078F176A00B828FF /* app.icns in Resources */,
 				0F667EA5086F220F005DFA9A /* my_logo.pdf in Resources */,
-				0FFD7AB40788393700928225 /* MainMenu.nib in Resources */,
-				0F1619200789AC97000A2F03 /* NewGame.nib in Resources */,
-				0F1619230789ACAD000A2F03 /* Preferences.nib in Resources */,
-				0FA167470796E72A00A931F9 /* Game.nib in Resources */,
+				7B4814E41EDB6C9E00C82F8C /* MainMenu.xib in Resources */,
+				7BFA1E241EDB706D0081AFC7 /* Preferences.xib in Resources */,
+				7BFA1E281EDB70C90081AFC7 /* Game.xib in Resources */,
+				7B4814E81EDB6D6700C82F8C /* NewGame.xib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				0FE160B607905210009F1372 /* Localizable.strings in Resources */,
 				0F77B03607FD24E4009EF9FB /* help in Resources */,
@@ -619,24 +621,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		0F16191E0789AC97000A2F03 /* NewGame.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F16191F0789AC97000A2F03 /* English */,
-				0FE3266607ECA66F0012B670 /* French */,
-			);
-			name = NewGame.nib;
-			sourceTree = "<group>";
-		};
-		0F1619210789ACAD000A2F03 /* Preferences.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F1619220789ACAD000A2F03 /* English */,
-				0FE3266707ECA66F0012B670 /* French */,
-			);
-			name = Preferences.nib;
-			sourceTree = "<group>";
-		};
 		0F77B03507FD24E4009EF9FB /* help */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -644,15 +628,6 @@
 				0F77B08707FD24E9009EF9FB /* French */,
 			);
 			name = help;
-			sourceTree = "<group>";
-		};
-		0FA167450796E72A00A931F9 /* Game.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FA167460796E72A00A931F9 /* English */,
-				0FE3265D07ECA6670012B670 /* French */,
-			);
-			name = Game.nib;
 			sourceTree = "<group>";
 		};
 		0FE160B507905210009F1372 /* Localizable.strings */ = {
@@ -664,13 +639,40 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		0FFD7AB20788393700928225 /* MainMenu.nib */ = {
+		7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0FFD7AB30788393700928225 /* English */,
-				0FE3266507ECA66F0012B670 /* French */,
+				7B4814E31EDB6C9E00C82F8C /* English */,
+				7B4814E51EDB6CBE00C82F8C /* French */,
 			);
-			name = MainMenu.nib;
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		7B4814E61EDB6D6700C82F8C /* NewGame.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B4814E71EDB6D6700C82F8C /* English */,
+				7B4814E91EDB6D7900C82F8C /* French */,
+			);
+			name = NewGame.xib;
+			sourceTree = "<group>";
+		};
+		7BFA1E221EDB706D0081AFC7 /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BFA1E231EDB706D0081AFC7 /* English */,
+				7BFA1E251EDB70960081AFC7 /* French */,
+			);
+			name = Preferences.xib;
+			sourceTree = "<group>";
+		};
+		7BFA1E261EDB70C90081AFC7 /* Game.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BFA1E271EDB70C90081AFC7 /* English */,
+				7BFA1E291EDB70E10081AFC7 /* French */,
+			);
+			name = Game.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -710,6 +712,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.neuf.frostland.Bataille-Corse";
 				PRODUCT_NAME = "Bataille Corse";
 				REZ_PREPROCESSOR_DEFINITIONS = "";
@@ -743,6 +746,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.neuf.frostland.Bataille-Corse";
 				PRODUCT_NAME = "Bataille Corse";
 				REZ_PREPROCESSOR_DEFINITIONS = "";
@@ -761,6 +765,7 @@
 				GCC_PREFIX_HEADER = "Bataille Corse_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.neuf.frostland.Bataille-Corse";
 				PRODUCT_NAME = "Bataille Corse";
 				VERSIONING_SYSTEM = "";

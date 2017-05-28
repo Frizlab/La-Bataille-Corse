@@ -3,13 +3,13 @@
 @implementation FLCustomWindow
 
 - (id)initWithContentRect:(NSRect)contentRect
-					 styleMask:(NSUInteger)aStyle
+					 styleMask:(NSWindowStyleMask)aStyle
 						backing:(NSBackingStoreType)bufferingType
 						  defer:(BOOL)flag
 {
 	// Change the style mask to NSBorderlessWindowMask. So, the window will not have title-bar.
 	FLCustomWindow* result = [super initWithContentRect:contentRect
-															styleMask:NSBorderlessWindowMask
+															styleMask:NSWindowStyleMaskBorderless
 															  backing:bufferingType
 																 defer:NO];
 	// Efface le fond par défaut d'une fenêtre

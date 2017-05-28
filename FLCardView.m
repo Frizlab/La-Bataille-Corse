@@ -56,7 +56,7 @@
 	for (i = 0 ; i<[cards count] ; i++) {
 		currentImage = [[cards objectAtIndex:i] image];
 //		currentSize = [currentImage size];
-		[currentImage drawAtPoint:origin fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.];
+		[currentImage drawAtPoint:origin fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.];
 //		[NSBezierPath strokeLineFromPoint:origin
 //										  toPoint:NSMakePoint(origin.x, (origin.y + currentSize.height))];
 		origin.x += 25;
