@@ -1,4 +1,5 @@
 # Finder and Xcode ignored files
+Icon?
 .DS_Store
 xcuserdata/
 
