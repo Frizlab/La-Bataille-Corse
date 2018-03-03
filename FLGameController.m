@@ -60,7 +60,7 @@
 {
 	NSNotificationCenter *nc;
 	if ((self = [super initWithWindowNibName:@"Game"]) != nil) {
-		srandom(time(NULL));
+		srandom((unsigned int)time(NULL));
 		
 		[self setWindowFrameAutosaveName:@"FLGameWindow"];
 		[self setPacket:newPacket];
@@ -182,7 +182,7 @@
 - (void)computerPlayersHit
 {
 	FLPlayer *currentPlayer;
-	unsigned int n, nPlayers = [players count], i;
+	NSUInteger n, nPlayers = [players count], i;
 	
 	[self invalidateHitTimerOfComputersPlayer];
 	i = random() % nPlayers;
@@ -264,7 +264,7 @@
 
 - (void)flashPlayer:(FLPlayer *)aPlayer
 {
-	unsigned int idx = [players indexOfObject:aPlayer];
+	NSUInteger idx = [players indexOfObject:aPlayer];
 	assert(idx != NSNotFound);
 	[[[viewWithPlayers subviews] objectAtIndex:idx] flash];
 }
@@ -302,7 +302,7 @@
 - (void)distributeCards
 {
 	cardValue sawValues[NUMBER_OF_CARDS], randomNumber;
-	unsigned int cardPut = 0, nPlayers = [players count], i;
+	NSUInteger cardPut = 0, nPlayers = [players count], i;
 	
 	if (NUMBER_OF_CARDS > [packet count]) {
 		NSLog(@"*** In distributeCards of FLGameController, NUMBER_OF_CARDS > [packet count]");

@@ -37,7 +37,7 @@
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
-	int version;
+	NSInteger version;
 	if ((self = [self init]) != nil) {
 		version = [decoder versionForClassName:@"FLPlayer"];
 		[self setPlayerName:[decoder decodeObject]];
@@ -233,11 +233,11 @@
 }
 
 // Anagrammes //
-- (signed int)passage:(unsigned int)length withLevels:(NSMutableArray *)levels
+- (NSInteger)passage:(NSUInteger)length withLevels:(NSMutableArray *)levels
 {
-	unsigned int i;
+	NSUInteger i;
 	for (i = 0 ; i<length-1 ; i++) {
-		if ((unsigned)[[levels objectAtIndex:i] intValue] != i+1) {
+		if ((NSUInteger)[[levels objectAtIndex:i] intValue] != i+1) {
 			return i;
 		}
 	}
@@ -254,7 +254,7 @@
 // pour que l'attente ne soit pas trop longue
 - (NSArray *)cardsForCitation:(signed int)nbrCardsAmende
 {
-	unsigned int length = [packet count], i, lastIndexBasesLevel;
+	NSUInteger length = [packet count], i, lastIndexBasesLevel;
 	signed int nbrCardsToPut = MIN(nbrCardsAmende, (signed)[packet count]);
 	NSArray *putCards = [self putCardsOnGame];
 	NSMutableArray *bases, *level, *returnArray;
@@ -286,8 +286,8 @@
 	
 	i = 0;
 	while (i<length) {
-		signed int augment;
-		unsigned int j, currentLevel = [[level objectAtIndex:i] intValue];
+		NSInteger augment;
+		NSUInteger j, currentLevel = [[level objectAtIndex:i] intValue];
 		[[bases objectAtIndex:i] exchangeObjectAtIndex:lastIndexBasesLevel-currentLevel-1
 											  withObjectAtIndex:lastIndexBasesLevel-i];
 		
@@ -303,7 +303,7 @@
 			[packet removeObjectsInRange:rangeNbrCards];
 			return returnArray;
 		}
-		[level replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:++currentLevel]];
+		[level replaceObjectAtIndex:i withObject:[NSNumber numberWithInteger:++currentLevel]];
 		for (j = i-1 ; (signed)j>=0 ; j--)
 			[bases replaceObjectAtIndex:j withObject:[bases objectAtIndex:i]];
 		

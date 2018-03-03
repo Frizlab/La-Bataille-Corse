@@ -29,7 +29,7 @@
 - (IBAction)refreshButtonOk:(id)sender;
 
 /// dataSource du tableau ///
-- (int)numberOfRowsInTableView:(NSTableView *)aTableView;
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView;
 - (id)tableView:(NSTableView *)aTableView
 objectValueForTableColumn:(NSTableColumn *)aTableColumn
 				row:(int)rowIndex;
@@ -50,7 +50,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 - (BOOL)isCorrectNumberOfPlayersSelectedForPlay;
 - (BOOL)isHitKeyColumnEdited;
 - (BOOL)isValidKey:(NSString *)key forPlayer:(FLPlayer *)p;
-- (void)editKeyOfRow:(unsigned int)row;
+- (void)editKeyOfRow:(NSUInteger)row;
 - (void)refreshButtonSupp;
 - (void)saveArray;
 

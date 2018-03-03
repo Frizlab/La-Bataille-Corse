@@ -54,7 +54,7 @@
 /// Utils ///
 - (NSArray *)putCardsOnGame;
 // Anagrammes //
-- (signed int)passage:(unsigned int)length withLevels:(NSMutableArray *)levels;
+- (NSInteger)passage:(NSUInteger)length withLevels:(NSMutableArray *)levels;
 // Il est possible que le temps pour trouver un anagramme correct
 // soit excessivement long avec cette methode
 // Il faudrait la changer pour que l'echange se fasse entre la première

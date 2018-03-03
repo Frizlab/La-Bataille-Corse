@@ -53,12 +53,12 @@
 		currentIndex = 0;
 }
 
-- (unsigned int)currentIndex
+- (NSUInteger)currentIndex
 {
 	return currentIndex;
 }
 
-- (void)setCurrentIndex:(unsigned int)anIndex
+- (void)setCurrentIndex:(NSUInteger)anIndex
 {
 	currentIndex = [self validIndexFromIndex:anIndex];
 }
@@ -70,7 +70,7 @@
 
 - (BOOL)setCurrentObject:(id)anObject
 {
-	unsigned int testIndex = [self indexOfObject:anObject];
+	NSUInteger testIndex = [self indexOfObject:anObject];
 	if (testIndex != NSNotFound) {
 		currentIndex = testIndex;
 		return YES;
@@ -78,23 +78,23 @@
 	return NO;
 }
 
-- (unsigned int)validIndexFromIndex:(unsigned int)anIndex
+- (NSUInteger)validIndexFromIndex:(NSUInteger)anIndex
 {
 	return (anIndex % [backingStore count]);
 }
 
 /* Method "copy" */
-- (unsigned int)indexOfObject:(id)anObject
+- (NSUInteger)indexOfObject:(id)anObject
 {
 	return [backingStore indexOfObject:anObject];
 }
 
-- (unsigned)count
+- (NSUInteger)count
 {
 	return [backingStore count];
 }
 
-- (id)objectAtIndex:(unsigned)anIndex
+- (id)objectAtIndex:(NSUInteger)anIndex
 {
 	return [backingStore objectAtIndex:anIndex];
 }

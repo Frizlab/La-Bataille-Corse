@@ -26,7 +26,7 @@
 	[tableViewListOfPlayersView selectRowIndexes:[NSIndexSet indexSetWithIndex:[defaults integerForKey:FLCurrentPlayer]]
 									byExtendingSelection:NO];
 	
-	[nbrComputerPlayers setIntValue:[defaults integerForKey:FLNumberOfComputerPlayers]];
+	[nbrComputerPlayers setIntegerValue:[defaults integerForKey:FLNumberOfComputerPlayers]];
 	[self refreshButtonOk:nil];
 	[self refreshButtonSupp];
 }
@@ -73,7 +73,7 @@
 		NSBeep();
 		return;
 	}
-	int row = [tableViewListOfPlayersView selectedRow];
+	NSInteger row = [tableViewListOfPlayersView selectedRow];
 	[players removeObjectAtIndex:row];
 	
 	[tableViewListOfPlayersView reloadData];
@@ -120,7 +120,7 @@
 }
 
 //////////////////////// dataSource du tableau ////////////////////////
-- (int)numberOfRowsInTableView:(NSTableView *)aTableView
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
 	return [players count];
 }
@@ -210,7 +210,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 	return YES;
 }
 
-- (void)editKeyOfRow:(unsigned int)row
+- (void)editKeyOfRow:(NSUInteger)row
 {
 	[textViewController setCurrentRowIdentifier:@"hitKey"];
 	[tableViewListOfPlayersView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];

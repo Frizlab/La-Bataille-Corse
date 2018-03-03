@@ -57,7 +57,7 @@
 {
 	NSNotificationCenter *nc;
 	if ((self = [super initWithWindowNibName:@"Game"]) != nil) {
-		srandom(time(NULL));
+		srandom((unsigned)time(NULL));
 		
 		[self setWindowFrameAutosaveName:@"FLCalibrateTimeWindow"];
 		[self setShouldCascadeWindows:NO];

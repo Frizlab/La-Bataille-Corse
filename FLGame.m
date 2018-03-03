@@ -41,7 +41,7 @@
 	if (! [cards count])
 		return NO;
 	
-	unsigned int i, lastIndex = [cards count] - 1;
+	NSUInteger i, lastIndex = [cards count] - 1;
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	cardValue valeurFirstCard = [[cards objectAtIndex:0] cardValue];
 	cardValue valeurLastCard  = [[cards lastObject]		cardValue];
@@ -74,10 +74,10 @@
 			cardValue valeurCurrentStudyCard = [[cards objectAtIndex:lastIndex-i] cardValue];
 			if (valeurCurrentStudyCard == valeurLastCard) {
 				// Ici, on sait qu'il faut taper et on détermine le message qui dit pourquoi il le faut
-				[self setLastReasonForHit:[NSString stringWithFormat:@"%@ %@ %d %@",
+				[self setLastReasonForHit:[NSString stringWithFormat:@"%@ %@ %lu %@",
 					NSLocalizedString(@"doubles", nil),
 					NSLocalizedString(@"with", nil),
-					i-1,
+					(unsigned long)i-1,
 					NSLocalizedString(@"cards between", nil)]];
 				
 				return YES;
@@ -90,10 +90,10 @@
 			cardValue valeurCurrentStudyCard = [[cards objectAtIndex:lastIndex-i] cardValue];
 			if (valeurCurrentStudyCard + valeurLastCard == 10) {
 				// Ici, on sait qu'il faut taper et on détermine le message qui dit pourquoi il le faut
-				[self setLastReasonForHit:[NSString stringWithFormat:@"%@ %@ %d %@",
+				[self setLastReasonForHit:[NSString stringWithFormat:@"%@ %@ %lu %@",
 					NSLocalizedString(@"ten", nil),
 					NSLocalizedString(@"with", nil),
-					i-1,
+					(unsigned long)i-1,
 					NSLocalizedString(@"cards between", nil)]];
 				
 				return YES;

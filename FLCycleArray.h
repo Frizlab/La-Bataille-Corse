@@ -9,24 +9,24 @@
 #import <Cocoa/Cocoa.h>
 
 @interface FLCycleArray : NSObject {
-	unsigned int currentIndex;
+	NSUInteger currentIndex;
 	NSArray *backingStore;
 }
 - (id)nextObject;
 - (void)selectNextIndex;
 
-- (unsigned int)currentIndex;
-- (void)setCurrentIndex:(unsigned int)index;
+- (NSUInteger)currentIndex;
+- (void)setCurrentIndex:(NSUInteger)index;
 
 - (id)currentObject;
 - (BOOL)setCurrentObject:(id)anObject;
 
-- (unsigned int)validIndexFromIndex:(unsigned int)index;
+- (NSUInteger)validIndexFromIndex:(NSUInteger)index;
 
-- (unsigned)count;
-- (id)objectAtIndex:(unsigned)index;
+- (NSUInteger)count;
+- (id)objectAtIndex:(NSUInteger)index;
 
 - (id)initWithArray:(NSArray *)array;
-- (unsigned int)indexOfObject:(id)anObject;
+- (NSUInteger)indexOfObject:(id)anObject;
 
 @end

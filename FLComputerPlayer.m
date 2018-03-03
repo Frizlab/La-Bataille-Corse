@@ -14,7 +14,7 @@
 - (id)init
 {
 	if ((self = [super init]) != nil) {
-		srandom(time(NULL));
+		srandom((unsigned int)time(NULL));
 		
 		[self setPlayerName:NSLocalizedString(@"computer", nil)];
 		[self setHitKey:nil];
@@ -34,7 +34,7 @@
 				 andMinMax:(minMax *)minMaxVar
   ofOtherReactionTimes:(FLCycleArray *)players
 {
-	unsigned int oldIndex = [players currentIndex], nbrPlayersSeen = 0;
+	NSUInteger oldIndex = [players currentIndex], nbrPlayersSeen = 0;
 	float somme = 0., sommeCarre = 0., currentTime;
 	FLPlayer *currentPlayer;
 	
@@ -120,7 +120,7 @@
 
 - (float)tempsReaction
 {
-	int levelDifficulty;
+	NSInteger levelDifficulty;
 	minMax useMinMax, factorMinMax, percentMinMax;
 	float diffMaxMin, diffPercent, variance;
 	float randomNumber;
@@ -157,11 +157,11 @@
 		
 		default :
 			NSLog(@"*** An error has occured in tempsReaction of FLComputerPlayer :");
-			NSLog(@"\tlevelDifficulty is %d and no correspond to a know level difficulty ***",
-										 levelDifficulty);
+			NSLog(@"\tlevelDifficulty is %lu and no correspond to a know level difficulty ***",
+										 (unsigned long)levelDifficulty);
 			[NSException raise:@"Level difficulty unknown"
-							format:@"The level difficulty %d is unknown (in FLComputerPlayer)",
-															levelDifficulty];
+							format:@"The level difficulty %lu is unknown (in FLComputerPlayer)",
+															(unsigned long)levelDifficulty];
 	}
 	factor = SSRandomFloatBetween(factorMinMax.min, factorMinMax.max);
 	// Multiplie le nombre crŽŽ au hasard par un facteur choisi au hasard

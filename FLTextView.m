@@ -29,7 +29,8 @@
 #ifdef NSPECIALKEY
 	[super flagsChanged:e];
 	return;
-#endif
+	
+# else
 	
 	unsigned int code = [e modifierFlags];
 	if ((code & NSEventModifierFlagCapsLock) || (code == 256 /* CapsLock release */ )) {
@@ -38,6 +39,7 @@
 	}
 	[super setString:[NSString stringWithFormat:@"%02d", code]];
 	[self leaveEiting];
+#endif
 }
 
 - (void)keyDown:(NSEvent *)e

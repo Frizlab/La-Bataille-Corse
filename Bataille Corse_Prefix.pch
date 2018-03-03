@@ -13,7 +13,7 @@
 #define NUMBER_OF_CARDS 54
 
 #ifdef __OBJC__
-	#import <Cocoa/Cocoa.h>
-	#import "NamesPrefs.h"
-	#import "NotificationsNames.h"
+# import <Cocoa/Cocoa.h>
+# import "NamesPrefs.h"
+# import "NotificationsNames.h"
 #endif
