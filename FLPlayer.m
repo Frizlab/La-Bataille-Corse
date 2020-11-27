@@ -461,12 +461,12 @@
 
 
 // Pour le tableau de FLNewGameController (overwrite de la méthode de NSObject)
-- (void)unableToSetNilForKey:(NSString *)key
+- (void)setNilValueForKey:(NSString *)key
 {
 	if ([key isEqual:@"tempsReaction"]) {
 		[self setTempsReaction:0.0];
 	} else {
-		[super unableToSetNilForKey:key];
+		[super setNilValueForKey:key];
 	}
 }
 
