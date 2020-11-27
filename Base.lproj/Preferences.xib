@@ -29,17 +29,17 @@
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="FLPrefsWindow" animationBehavior="default" id="385" userLabel="Panel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="304" y="417" width="552" height="382"/>
+            <rect key="contentRect" x="304" y="417" width="552" height="316"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
             <view key="contentView" autoresizesSubviews="NO" id="386">
-                <rect key="frame" x="0.0" y="0.0" width="552" height="313"/>
+                <rect key="frame" x="0.0" y="0.0" width="552" height="316"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="388">
-                        <rect key="frame" x="0.0" y="266" width="552" height="5"/>
+                        <rect key="frame" x="0.0" y="269" width="552" height="5"/>
                     </box>
                     <button autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="389">
-                        <rect key="frame" x="171" y="276" width="118" height="18"/>
+                        <rect key="frame" x="171" y="279" width="118" height="18"/>
                         <buttonCell key="cell" type="check" title="Beginner mode" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="481">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -134,7 +134,7 @@
                         </connections>
                     </textField>
                     <button autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="419">
-                        <rect key="frame" x="18" y="276" width="147" height="18"/>
+                        <rect key="frame" x="18" y="279" width="147" height="18"/>
                         <buttonCell key="cell" type="check" title="Show splash screen" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="486">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -150,7 +150,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="396">
-                                    <rect key="frame" x="206" y="73" width="49" height="16"/>
+                                    <rect key="frame" x="198" y="73" width="49" height="16"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="level(s)" id="492">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -178,7 +178,7 @@
                                     </connections>
                                 </button>
                                 <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="391">
-                                    <rect key="frame" x="200" y="44" width="25" height="21"/>
+                                    <rect key="frame" x="192" y="44" width="25" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="Smc-Lr-ZJW"/>
                                     </constraints>
@@ -213,7 +213,7 @@
                                     </connections>
                                 </button>
                                 <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="412">
-                                    <rect key="frame" x="231" y="47" width="49" height="16"/>
+                                    <rect key="frame" x="223" y="47" width="49" height="16"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="level(s)" id="497">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -221,7 +221,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="404">
-                                    <rect key="frame" x="175" y="70" width="25" height="21"/>
+                                    <rect key="frame" x="167" y="70" width="25" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="PGG-Fd-B5x"/>
                                     </constraints>
@@ -257,7 +257,7 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="404" firstAttribute="leading" secondItem="398" secondAttribute="trailing" constant="8" symbolic="YES" id="0Go-fb-jfe"/>
+                                <constraint firstItem="404" firstAttribute="leading" secondItem="398" secondAttribute="trailing" id="0Go-fb-jfe"/>
                                 <constraint firstItem="402" firstAttribute="firstBaseline" secondItem="393" secondAttribute="firstBaseline" id="3TE-2U-MfJ"/>
                                 <constraint firstItem="412" firstAttribute="firstBaseline" secondItem="391" secondAttribute="firstBaseline" id="AxX-2C-wmD"/>
                                 <constraint firstAttribute="bottom" secondItem="402" secondAttribute="bottom" constant="20" symbolic="YES" id="CEJ-if-gUn"/>
@@ -268,7 +268,7 @@
                                 <constraint firstItem="396" firstAttribute="leading" secondItem="404" secondAttribute="trailing" constant="8" symbolic="YES" id="Jqa-cB-l8V"/>
                                 <constraint firstItem="396" firstAttribute="firstBaseline" secondItem="404" secondAttribute="firstBaseline" id="NnZ-wM-3Zh"/>
                                 <constraint firstItem="415" firstAttribute="leading" secondItem="aNW-eh-Y8d" secondAttribute="leading" constant="20" symbolic="YES" id="P6c-6P-9PN"/>
-                                <constraint firstItem="391" firstAttribute="leading" secondItem="415" secondAttribute="trailing" constant="8" symbolic="YES" id="Qt9-LP-1Kw"/>
+                                <constraint firstItem="391" firstAttribute="leading" secondItem="415" secondAttribute="trailing" id="Qt9-LP-1Kw"/>
                                 <constraint firstItem="402" firstAttribute="leading" secondItem="393" secondAttribute="trailing" constant="8" symbolic="YES" id="Smn-IR-4e0"/>
                                 <constraint firstItem="412" firstAttribute="leading" secondItem="391" secondAttribute="trailing" constant="8" symbolic="YES" id="VKw-gU-69E"/>
                                 <constraint firstItem="391" firstAttribute="firstBaseline" secondItem="415" secondAttribute="firstBaseline" id="bQc-hl-NKS"/>
@@ -283,15 +283,15 @@
                         </constraints>
                     </box>
                     <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="469">
-                        <rect key="frame" x="18" y="242" width="412" height="16"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Minimum  reaction time of computers players = your reaction time -" id="488">
+                        <rect key="frame" x="18" y="245" width="408" height="16"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Minimum reaction time of computers players = your reaction time -" id="488">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="470">
-                        <rect key="frame" x="18" y="217" width="413" height="16"/>
+                        <rect key="frame" x="18" y="220" width="413" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Maximum reaction time of computers players = your reaction time +" id="489">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -299,7 +299,7 @@
                         </textFieldCell>
                     </textField>
                     <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="471">
-                        <rect key="frame" x="437" y="214" width="95" height="21"/>
+                        <rect key="frame" x="437" y="217" width="95" height="21"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="100 %" drawsBackground="YES" id="490">
                             <numberFormatter key="formatter" formatterBehavior="10_0" positiveFormat="0 %" negativeFormat="-0 %" hasThousandSeparators="NO" thousandSeparator=" " id="473">
                                 <attributedString key="attributedStringForNil"/>
@@ -321,7 +321,7 @@
                         </connections>
                     </textField>
                     <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="474">
-                        <rect key="frame" x="436" y="239" width="96" height="21"/>
+                        <rect key="frame" x="432" y="242" width="100" height="21"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="100 %" drawsBackground="YES" id="491">
                             <numberFormatter key="formatter" formatterBehavior="10_0" positiveFormat="0 %" negativeFormat="-0 %" hasThousandSeparators="NO" thousandSeparator=" " id="472">
                                 <attributedString key="attributedStringForNil"/>
@@ -367,7 +367,7 @@
                     <constraint firstItem="387" firstAttribute="top" secondItem="394" secondAttribute="bottom" constant="8" symbolic="YES" id="E8z-JQ-rdL"/>
                     <constraint firstAttribute="trailing" secondItem="420" secondAttribute="trailing" constant="20" symbolic="YES" id="HOc-P6-reX"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="411" secondAttribute="trailing" constant="20" symbolic="YES" id="Hfg-9d-MRG"/>
-                    <constraint firstItem="394" firstAttribute="top" secondItem="471" secondAttribute="bottom" constant="5" id="JBL-zc-Yr8"/>
+                    <constraint firstItem="394" firstAttribute="top" secondItem="471" secondAttribute="bottom" constant="8" id="JBL-zc-Yr8"/>
                     <constraint firstItem="403" firstAttribute="leading" secondItem="386" secondAttribute="leading" constant="20" symbolic="YES" id="L26-CG-bvb"/>
                     <constraint firstItem="471" firstAttribute="leading" secondItem="470" secondAttribute="trailing" constant="8" symbolic="YES" id="LSc-G9-Ktf"/>
                     <constraint firstItem="469" firstAttribute="leading" secondItem="386" secondAttribute="leading" constant="20" symbolic="YES" id="LdL-ze-jE0"/>

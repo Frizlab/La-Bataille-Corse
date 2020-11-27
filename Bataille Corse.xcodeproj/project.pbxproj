@@ -86,10 +86,10 @@
 		0FDC7F1D078F0F0F00BEC676 /* FLPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC7F1B078F0F0F00BEC676 /* FLPreferencesController.m */; };
 		0FDC7F4C078F123A00BEC676 /* FLNewGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */; };
 		0FE160B607905210009F1372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FE160B507905210009F1372 /* Localizable.strings */; };
-		7B4814E41EDB6C9E00C82F8C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */; };
-		7B4814E81EDB6D6700C82F8C /* NewGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4814E61EDB6D6700C82F8C /* NewGame.xib */; };
-		7BFA1E241EDB706D0081AFC7 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA1E221EDB706D0081AFC7 /* Preferences.xib */; };
-		7BFA1E281EDB70C90081AFC7 /* Game.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA1E261EDB70C90081AFC7 /* Game.xib */; };
+		7B4C995425712BBC00AD1D21 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */; };
+		7B4C995625712BC000AD1D21 /* NewGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4814E61EDB6D6700C82F8C /* NewGame.xib */; };
+		7B4C995B25712BF200AD1D21 /* Game.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA1E261EDB70C90081AFC7 /* Game.xib */; };
+		7B4C995F25712F8000AD1D21 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA1E221EDB706D0081AFC7 /* Preferences.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -271,14 +271,18 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		7B4814E31EDB6C9E00C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		7B4814E51EDB6CBE00C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		7B4814E71EDB6D6700C82F8C /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/NewGame.xib; sourceTree = "<group>"; };
-		7B4814E91EDB6D7900C82F8C /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/NewGame.xib; sourceTree = "<group>"; };
-		7BFA1E231EDB706D0081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/Preferences.xib; sourceTree = "<group>"; };
-		7BFA1E251EDB70960081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/Preferences.xib; sourceTree = "<group>"; };
-		7BFA1E271EDB70C90081AFC7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = en.lproj/Game.xib; sourceTree = "<group>"; };
-		7BFA1E291EDB70E10081AFC7 /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = fr.lproj/Game.xib; sourceTree = "<group>"; };
+		7B020CE02570FB3A00F8B4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7B020CE12570FB3A00F8B4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NewGame.xib; sourceTree = "<group>"; };
+		7B020CE22570FB3A00F8B4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Preferences.xib; sourceTree = "<group>"; };
+		7B020CE32570FB3A00F8B4F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Game.xib; sourceTree = "<group>"; };
+		7B020CE52570FB5400F8B4F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		7B020CE72570FB5B00F8B4F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NewGame.strings; sourceTree = "<group>"; };
+		7B020CE92570FB6200F8B4F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Preferences.strings; sourceTree = "<group>"; };
+		7B020CEB2570FB6500F8B4F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Game.strings; sourceTree = "<group>"; };
+		7B4C995825712BD600AD1D21 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/NewGame.strings; sourceTree = "<group>"; };
+		7B4C995925712BDF00AD1D21 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		7B4C995A25712BE700AD1D21 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Preferences.strings; sourceTree = "<group>"; };
+		7B4C995D25712C0400AD1D21 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Game.strings; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Bataille Corse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bataille Corse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -553,6 +557,7 @@
 			knownRegions = (
 				en,
 				fr,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Bataille corse */;
 			projectDirPath = "";
@@ -568,15 +573,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4C995625712BC000AD1D21 /* NewGame.xib in Resources */,
 				0F31CAB6092F43EA00D395EE /* dos_des_cartes.tiff in Resources */,
 				0F2DF85B078F176A00B828FF /* app.icns in Resources */,
 				0F667EA5086F220F005DFA9A /* my_logo.pdf in Resources */,
-				7B4814E41EDB6C9E00C82F8C /* MainMenu.xib in Resources */,
-				7BFA1E241EDB706D0081AFC7 /* Preferences.xib in Resources */,
-				7BFA1E281EDB70C90081AFC7 /* Game.xib in Resources */,
-				7B4814E81EDB6D6700C82F8C /* NewGame.xib in Resources */,
+				7B4C995F25712F8000AD1D21 /* Preferences.xib in Resources */,
+				7B4C995B25712BF200AD1D21 /* Game.xib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				0FE160B607905210009F1372 /* Localizable.strings in Resources */,
+				7B4C995425712BBC00AD1D21 /* MainMenu.xib in Resources */,
 				0F77B03607FD24E4009EF9FB /* help in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,8 +650,9 @@
 		7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7B4814E31EDB6C9E00C82F8C /* English */,
-				7B4814E51EDB6CBE00C82F8C /* French */,
+				7B020CE02570FB3A00F8B4F0 /* Base */,
+				7B020CE52570FB5400F8B4F0 /* en */,
+				7B4C995925712BDF00AD1D21 /* fr */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -654,8 +660,9 @@
 		7B4814E61EDB6D6700C82F8C /* NewGame.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7B4814E71EDB6D6700C82F8C /* English */,
-				7B4814E91EDB6D7900C82F8C /* French */,
+				7B020CE12570FB3A00F8B4F0 /* Base */,
+				7B020CE72570FB5B00F8B4F0 /* en */,
+				7B4C995825712BD600AD1D21 /* fr */,
 			);
 			name = NewGame.xib;
 			sourceTree = "<group>";
@@ -663,8 +670,9 @@
 		7BFA1E221EDB706D0081AFC7 /* Preferences.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7BFA1E231EDB706D0081AFC7 /* English */,
-				7BFA1E251EDB70960081AFC7 /* French */,
+				7B020CE22570FB3A00F8B4F0 /* Base */,
+				7B020CE92570FB6200F8B4F0 /* en */,
+				7B4C995A25712BE700AD1D21 /* fr */,
 			);
 			name = Preferences.xib;
 			sourceTree = "<group>";
@@ -672,8 +680,9 @@
 		7BFA1E261EDB70C90081AFC7 /* Game.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7BFA1E271EDB70C90081AFC7 /* English */,
-				7BFA1E291EDB70E10081AFC7 /* French */,
+				7B020CE32570FB3A00F8B4F0 /* Base */,
+				7B020CEB2570FB6500F8B4F0 /* en */,
+				7B4C995D25712C0400AD1D21 /* fr */,
 			);
 			name = Game.xib;
 			sourceTree = "<group>";

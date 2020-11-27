@@ -1,0 +1,12 @@
+
+/* Class = "NSWindow"; title = "Bataille corse"; ObjectID = "15"; */
+"15.title" = "Bataille corse";
+
+/* Class = "NSTextFieldCell"; title = "playerName"; ObjectID = "160"; */
+"160.title" = "playerName";
+
+/* Class = "NSTextFieldCell"; title = "-27"; ObjectID = "161"; */
+"161.title" = "-27";
+
+/* Class = "NSTextFieldCell"; title = "carte(s)"; ObjectID = "163"; */
+"163.title" = "carte(s)";

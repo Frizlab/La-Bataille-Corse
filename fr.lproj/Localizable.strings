@@ -1,9 +1,9 @@
-"sureQuit"  = "Voulez-vous vraiment arrêter la partie en cours ?";
+"sureQuit"  = "Voulez-vous vraiment arrêter la partie en cours ?";
 "ifYouQuit" = "Si vous quittez, la partie actuelle sera perdue à jamais.";
 "yes"       = "Oui";
 "no"        = "Non";
 
-"sureStopCalibrate" = "Voulez-vous vraiment arrêter le calibrage en cours ?";
+"sureStopCalibrate" = "Voulez-vous vraiment arrêter le calibrage en cours ?";
 "ifYouStop"         = "";
 
 "newPlayer" = "Nouveau joueur";
@@ -39,8 +39,8 @@
 "with"          = "à";
 "cards between" = "étage(s)";
 
-"bravo"    = "Bravo !!!";
-"endMatch" = "%@ a gagné, c'est la fin du match mais les joueurs peuvent éventuellement prendre leur revanche !!!";
+"bravo"    = "Bravo !!!";
+"endMatch" = "%@ a gagné, c'est la fin du match mais les joueurs peuvent éventuellement prendre leur revanche !!!";
 "ok"       = "Ok";
 
 "dommage"  = "Désolé, j'ai gagné";
@@ -54,4 +54,4 @@
 "getCards"       = "%@ récupères toutes les cartes posées";
 "getCardsReflex" = "Bravo %@, tu récupère toutes les cartes posées car tu as vu le \"%@\" plus vite que les autres";
 "mustPutNCards"  = "%@ doit poser %d carte(s) jusqu'à ce que qqun tape ou qu'une carte haute (> 10) soit posée.";
-"noCards"        = "%@, tu n'as plus de cartes, tu peu continuer de jouer, mais fais attention à toi !!!";
+"noCards"        = "%@, tu n'as plus de cartes, tu peu continuer de jouer, mais fais attention à toi !!!";

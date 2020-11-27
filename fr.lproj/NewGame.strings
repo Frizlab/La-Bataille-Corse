@@ -1,0 +1,39 @@
+
+/* Class = "NSWindow"; title = "Nouvelle partie"; ObjectID = "45"; */
+"45.title" = "Nouvelle partie";
+
+/* Class = "NSTableColumn"; headerCell.title = "Temps de réaction"; ObjectID = "84"; */
+"84.headerCell.title" = "Temps de réaction";
+
+/* Class = "NSTableColumn"; headerCell.title = "Nom du joueur"; ObjectID = "86"; */
+"86.headerCell.title" = "Nom du joueur";
+
+/* Class = "NSTableColumn"; headerCell.title = "Touche pour taper"; ObjectID = "100"; */
+"100.headerCell.title" = "Touche pour taper";
+
+/* Class = "NSTableColumn"; headerCell.title = "Joue"; ObjectID = "122"; */
+"122.headerCell.title" = "Joue";
+
+/* Class = "NSButtonCell"; title = "Ok"; ObjectID = "137"; */
+"137.title" = "Ok";
+
+/* Class = "NSButtonCell"; title = "Calibrer votre temps de réaction…"; ObjectID = "138"; */
+"138.title" = "Calibrer votre temps de réaction…";
+
+/* Class = "NSButtonCell"; title = "Préférences…"; ObjectID = "139"; */
+"139.title" = "Préférences…";
+
+/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "140"; */
+"140.title" = "Annuler";
+
+/* Class = "NSButtonCell"; title = "Ajouter"; ObjectID = "141"; */
+"141.title" = "Ajouter";
+
+/* Class = "NSButtonCell"; title = "Supprimer"; ObjectID = "142"; */
+"142.title" = "Supprimer";
+
+/* Class = "NSTextFieldCell"; title = "Nombre de joueur informatique :"; ObjectID = "143"; */
+"143.title" = "Nombre de joueur informatique :";
+
+/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "144"; */
+"144.title" = "1";

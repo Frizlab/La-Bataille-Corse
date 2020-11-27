@@ -1,9 +1,9 @@
-"sureQuit"  = "Would you really like to stop the current game ?";
+"sureQuit"  = "Would you really like to stop the current game?";
 "ifYouQuit" = "If you quit now, the current game will be lost.";
 "yes"       = "Yes";
 "no"        = "No";
 
-"sureStopCalibrate" = "Would you really like to stop the current calibration ?";
+"sureStopCalibrate" = "Would you really like to stop the current calibration?";
 "ifYouStop"         = "";
 
 "newPlayer" = "New player";
@@ -39,8 +39,8 @@
 "with"          = "with";
 "cards between" = "level(s)";
 
-"bravo"    = "Bravo !!!";
-"endMatch" = "%@ won, the game is over, but other players could take their revenge !!!";
+"bravo"    = "Congrats!!!";
+"endMatch" = "%@ won, the game is over, but other players could take their revenge!!!";
 "ok"       = "Ok";
 
 "dommage"  = "Sorry, I won";
@@ -49,9 +49,9 @@
 "error"                  = "Error";
 "errWhenDistributeCards" = "An error has occured while distributing the cards, I can't begin the game.";
 
-"beware"         = "Beware %@, that's a wrong bang !";
+"beware"         = "Beware %@, that's a wrong bang!";
 "citationPut"    = "Beware %@, you loose %d card(s) because you've banged without reason";
 "getCards"       = "%@ gets the whole pile";
 "getCardsReflex" = "Bravo %@, you get the pile because you've seen the \"%@\" faster than the others";
 "mustPutNCards"  = "%@ must put %d card(s), unless a bang occurs or a court card is played";
-"noCards"        = "%@, you have no card left. You can continue to play, but beware !!!";
+"noCards"        = "%@, you have no card left. You can continue to play, but beware!!!";
