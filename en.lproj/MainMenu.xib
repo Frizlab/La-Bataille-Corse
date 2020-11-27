@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -95,7 +95,8 @@
                             <menuItem isSeparatorItem="YES" id="92">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Bring All to Front" id="5">
+                            <menuItem title="Bring All to Front" keyEquivalent="`" id="5">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                 <connections>
                                     <action selector="arrangeInFront:" target="-1" id="39"/>
                                 </connections>
@@ -115,6 +116,7 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="-101" y="151"/>
         </menu>
         <customObject id="246" userLabel="AppController" customClass="AppController">
             <connections>
@@ -132,60 +134,81 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="133" y="518" width="457" height="373"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
             <value key="minSize" type="size" width="213" height="107"/>
             <view key="contentView" id="260">
                 <rect key="frame" x="0.0" y="0.0" width="457" height="373"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView id="259">
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="259">
                         <rect key="frame" x="17" y="17" width="423" height="339"/>
-                        <autoresizingMask key="autoresizingMask"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="274"/>
                     </imageView>
-                    <imageView id="257">
-                        <rect key="frame" x="155" y="83" width="146" height="205"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="257">
+                        <rect key="frame" x="156" y="82" width="146" height="207"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="ZWn-Be-6RZ"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageFrameStyle="grayBezel" image="dos_des_cartes" id="272"/>
                     </imageView>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="258">
-                        <rect key="frame" x="129" y="61" width="199" height="17"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="258">
+                        <rect key="frame" x="134" y="61" width="189" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Loading images, please wait…" id="273">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator verticalHuggingPriority="750" maxValue="100" bezeled="NO" style="bar" id="256">
+                    <progressIndicator verticalHuggingPriority="750" maxValue="100" bezeled="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="256">
                         <rect key="frame" x="38" y="33" width="381" height="20"/>
-                        <autoresizingMask key="autoresizingMask"/>
                     </progressIndicator>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="268">
-                        <rect key="frame" x="118" y="309" width="220" height="36"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="268">
+                        <rect key="frame" x="128" y="310" width="202" height="35"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Bataille Corse" id="275">
                             <font key="font" metaFont="systemBold" size="30"/>
                             <color key="textColor" red="0.75294119000000004" green="0.090196080999999997" blue="0.19215687000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="269">
-                        <rect key="frame" x="128" y="293" width="201" height="14"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="By François LAMBOLEY, 14 years old" id="276">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="269">
+                        <rect key="frame" x="167" y="294" width="123" height="14"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="By François Lamboley" id="276">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" red="0.75294119000000004" green="0.090196080999999997" blue="0.19215687000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView id="270">
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="270">
                         <rect key="frame" x="389" y="317" width="34" height="21"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="bOt-08-iX8"/>
+                            <constraint firstAttribute="height" constant="21" id="qws-mU-Ex0"/>
+                        </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="my_logo" id="277"/>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="270" firstAttribute="top" secondItem="259" secondAttribute="top" constant="15" id="1bf-R4-eYv"/>
+                    <constraint firstItem="269" firstAttribute="top" secondItem="268" secondAttribute="bottom" constant="2" id="8un-NR-vgT"/>
+                    <constraint firstItem="259" firstAttribute="leading" secondItem="260" secondAttribute="leading" constant="20" symbolic="YES" id="DII-a0-Ooi"/>
+                    <constraint firstItem="256" firstAttribute="centerX" secondItem="260" secondAttribute="centerX" id="MTQ-y2-NJD"/>
+                    <constraint firstItem="268" firstAttribute="centerX" secondItem="260" secondAttribute="centerX" id="N62-o4-Xuh"/>
+                    <constraint firstItem="257" firstAttribute="top" secondItem="269" secondAttribute="bottom" constant="8" symbolic="YES" id="OV1-ZE-QH4"/>
+                    <constraint firstItem="256" firstAttribute="top" secondItem="258" secondAttribute="bottom" constant="9" id="QGz-08-ebl"/>
+                    <constraint firstItem="258" firstAttribute="centerX" secondItem="260" secondAttribute="centerX" id="Rq2-9j-Mr4"/>
+                    <constraint firstItem="259" firstAttribute="top" secondItem="260" secondAttribute="top" constant="20" symbolic="YES" id="Spv-qG-xzs"/>
+                    <constraint firstItem="257" firstAttribute="centerX" secondItem="260" secondAttribute="centerX" id="Sxn-HH-R3x"/>
+                    <constraint firstItem="259" firstAttribute="width" secondItem="256" secondAttribute="width" constant="36" id="ZJX-ST-Om2"/>
+                    <constraint firstAttribute="bottom" secondItem="259" secondAttribute="bottom" constant="20" symbolic="YES" id="ieQ-Ni-kwb"/>
+                    <constraint firstItem="259" firstAttribute="trailing" secondItem="270" secondAttribute="trailing" constant="14" id="jpp-qB-Stx"/>
+                    <constraint firstItem="258" firstAttribute="top" secondItem="257" secondAttribute="bottom" constant="8" symbolic="YES" id="lkB-ap-Ppi"/>
+                    <constraint firstAttribute="trailing" secondItem="259" secondAttribute="trailing" constant="20" symbolic="YES" id="oRt-S5-1HS"/>
+                    <constraint firstItem="259" firstAttribute="bottom" secondItem="256" secondAttribute="bottom" constant="14" id="pmM-Up-Hi2"/>
+                    <constraint firstItem="268" firstAttribute="top" secondItem="259" secondAttribute="top" constant="8" id="vVI-7r-Jit"/>
+                    <constraint firstItem="269" firstAttribute="centerX" secondItem="260" secondAttribute="centerX" id="xHN-HW-2h3"/>
+                </constraints>
             </view>
+            <point key="canvasLocation" x="-203" y="-133"/>
         </window>
     </objects>
     <resources>
