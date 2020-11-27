@@ -2,7 +2,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NotificationsNames.h"
-#import "NamesPrefs.h"
+#import "Constants.h"
 
 @interface FLPreferencesController : NSWindowController {
 	IBOutlet NSButton *checkButtonBeginner;

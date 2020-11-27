@@ -5,7 +5,7 @@
 #import "NotificationsNames.h"
 #import "FLComputerPlayer.h"
 #import "NSString+Keys.h"
-#import "NamesPrefs.h"
+#import "Constants.h"
 #import "FLPlayer.h"
 
 @interface FLNewGameController : NSWindowController {

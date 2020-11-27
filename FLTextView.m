@@ -7,6 +7,7 @@
 //
 
 #import "FLTextView.h"
+#import "Constants.h"
 
 @implementation FLTextView
 

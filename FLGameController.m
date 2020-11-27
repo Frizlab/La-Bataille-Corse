@@ -1,9 +1,10 @@
 #import <assert.h>
+#import "Constants.h"
 #import "FLGameController.h"
 
 @implementation FLGameController
 
-//////////////////////// MÈthodes d'initialisations ////////////////////////
+//////////////////////// Méthodes d'initialisations ////////////////////////
 - (id)init
 {
 	FLCard *newCard;
@@ -329,8 +330,8 @@
 			FLPlayer *actualPlayer = [players objectAtIndex:(cardPut % nPlayers)];
 			[actualPlayer addCard:[packet objectAtIndex:randomNumber]];
 			
-			sawValues[cardPut] = randomNumber+1; // +1 : Pour que 0 ne puisse pas y Ítre 
-															 // (le tableau a ÈtÈ initialisÈ ‡ 0)
+			sawValues[cardPut] = randomNumber+1; // +1 : Pour que 0 ne puisse pas y être 
+															 // (le tableau a été initialisé à 0)
 			cardPut++;
 		}
 	}
@@ -412,8 +413,8 @@
 	NSLog(@"player \"%@\" did hit", [aPlayer playerName]);
 #endif
 	if (mustHit) {
-		// Informe le joueur qu'il a rÈcupÈrÈ toutes les cartes gr‚ce ‡ son rÈflexe
-		// et dit pourquoi il a tapÈ (surtout pour les autres)
+		// Informe le joueur qu'il a récupéré toutes les cartes grâce à son réflexe
+		// et dit pourquoi il a tapé (surtout pour les autres)
 		[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"getCardsReflex", nil),
 																		[aPlayer playerName], [game lastReasonForHit]]
 													ifPlayerIsHuman:aPlayer];
@@ -447,7 +448,7 @@
 	NSLog(@"player \"%@\" did put a citation", [aPlayer playerName]);
 #endif
 	[self refreshMustHit];
-	// Informe le joueur aPlayer qu'il a perdu des cartes pour avoir tapÈ sans raison valable
+	// Informe le joueur aPlayer qu'il a perdu des cartes pour avoir tapé sans raison valable
 	[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"citationPut", nil),
 				[aPlayer playerName], [[NSUserDefaults standardUserDefaults] integerForKey:FLNbrCardsAmende]]
 								ifPlayerIsHuman:aPlayer];
@@ -473,7 +474,7 @@
 		return;
 	
 	[reasonHit setStringValue:[game lastReasonForHit]];
-	// Informe le joueur qu'il a rÈcupÈrÈ toutes les cartes.
+	// Informe le joueur qu'il a récupéré toutes les cartes.
 	[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"getCards", nil),
 																						[aPlayer playerName]]
 											ifPlayerIsHuman:aPlayer];
@@ -504,8 +505,8 @@
 	return cardView;
 }
 
-//////////////////////// Interception des ÈvÈnements ////////////////////////
-// …vÈnement clavier
+//////////////////////// Interception des événements ////////////////////////
+// …vénement clavier
 #ifndef NSPECIALKEY
 - (void)flagsChanged:(NSEvent *)e
 {
@@ -557,7 +558,7 @@
 	NSBeep();
 }
 
-// Pour demander si on veut vraiment arrÍter de jouer quand on ferme la fenÍtre
+// Pour demander si on veut vraiment arrêter de jouer quand on ferme la fenêtre
 - (BOOL)windowShouldClose:(id)sender
 {
 	if (gameIsFinish)
@@ -583,7 +584,7 @@
 	[reasonHit setHidden:(! [[NSUserDefaults standardUserDefaults] boolForKey:FLBeginner])];
 }
 
-//////////////////////// MÈthodes d'accËs ////////////////////////
+//////////////////////// Méthodes d'accès ////////////////////////
 - (NSArray *)packet
 {
 	return packet;
@@ -607,8 +608,8 @@
 	players = [newPlayers retain];
 }
 
-//////////////////////// MÈthodes d'action ////////////////////////
-// Comme son nom ne l'indique pas, le bouton qui appelle cette mÈthode est faite pour poser une carte !
+//////////////////////// Méthodes d'action ////////////////////////
+// Comme son nom ne l'indique pas, le bouton qui appelle cette méthode est faite pour poser une carte !
 - (IBAction)buttonHitClicked:(id)sender
 {
 	[sender setState:1];

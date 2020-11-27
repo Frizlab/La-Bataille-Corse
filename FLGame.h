@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NamesPrefs.h"
+#import "Constants.h"
 #import "FLCard.h"
 
 @interface FLGame : NSObject {

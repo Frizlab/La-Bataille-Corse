@@ -1,5 +1,5 @@
 /*
- *  NotificationsNames.h
+ *  Constants.h
  *  Bataille corse
  *
  *  Created by François on 10/01/05.
@@ -7,7 +7,11 @@
  *
  */
 
-// Ce fchier defini tous les nom pour les preferences qui vont être utilisés dans cette appli
+#define NDEBUG
+#define NSPECIALKEY
+#define NUMBER_OF_CARDS 54
+
+// Prefs
 #define FLShowLoadWindow @"FLShowLoadWindow"
 
 #define FLBeginner               @"FLBeginner"

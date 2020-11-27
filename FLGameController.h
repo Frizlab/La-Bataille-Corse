@@ -1,15 +1,16 @@
 /* FLGameController */
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 #import "FLCycleArray.h"
 #import "NotificationsNames.h"
 #import "FLNSMutableArray.h"
 #import "FLPlayerView.h"
-#import "NamesPrefs.h"
+#import "Constants.h"
 #import "FLCardView.h"
 #import "FLPlayer.h"
 #import "FLCard.h"
 #import "FLGame.h"
+#import "Constants.h"
 
 @interface FLGameController : NSWindowController {
     IBOutlet FLCardView *cardView;
@@ -25,7 +26,7 @@
     FLGame *game;
 }
 
-// MÈthodes d'initialisations //
+// Méthodes d'initialisations //
 - (id)initWithPacket:(NSArray *)newPacket;
 - (id)initWithPacket:(NSArray *)newPacket andPlayers:(NSArray *)newPlayers;
 
@@ -65,27 +66,27 @@
 - (FLCycleArray *)arrayOfPlayers;
 - (FLCardView *)cardView;
 
-// Interception des ÈvÈnements //
-// …vÈnement clavier
+// Interception des événements //
+// …vénement clavier
 #ifndef NSPECIALKEY
 - (void)flagsChanged:(NSEvent *)e;
 #endif
 - (void)keyDown:(NSEvent *)event;
 
-// Pour demander si on veut vraiment arrÍter de jouer quand on ferme la fenÍtre
+// Pour demander si on veut vraiment arrêter de jouer quand on ferme la fenêtre
 - (BOOL)windowShouldClose:(id)sender;
 
 // Notification //
 - (void)refreshReasonForHit:(NSNotification *)n;
 
-// MÈthodes d'accËs //
+// Méthodes d'accès //
 - (NSArray *)packet;
 - (void)setPacket:(NSArray *)newPacket;
 - (FLCycleArray *)players;
 - (void)setPlayers:(FLCycleArray *)newPlayers;
 
-// MÈthodes d'action //
-// Comme son nom ne l'indique pas, le bouton qui appelle cette mÈthode est fait pour poser une carte !
+// Méthodes d'action //
+// Comme son nom ne l'indique pas, le bouton qui appelle cette méthode est fait pour poser une carte !
 - (IBAction)buttonHitClicked:(id)sender;
 
 @end

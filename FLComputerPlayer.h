@@ -10,7 +10,7 @@
 #import <Cocoa/Cocoa.h>
 #import <math.h>
 #import "FLCycleArray.h"
-#import "NamesPrefs.h"
+#import "Constants.h"
 #import "FLPlayer.h"
 
 typedef struct minMax {

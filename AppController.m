@@ -4,7 +4,7 @@
 
 + (void)initialize
 {
-	// Crée un dictionnaire
+	// CrŽe un dictionnaire
 	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
 	[defaultValues setObject:[NSNumber numberWithBool:YES] forKey:FLShowLoadWindow];
 	[defaultValues setObject:[NSNumber numberWithBool:YES] forKey:FLBeginner];
@@ -41,7 +41,7 @@
 	return self;
 }
 
-////////// Appelé quand l'application à fini de se charger //////////
+////////// AppelŽ quand l'application a fini de se charger //////////
 - (void)applicationWillFinishLaunching:(NSNotification *)n
 {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -57,7 +57,7 @@
 	[self newGame:nil];
 }
 
-////////// Appelé pour savoir si l'application doit quitter //////////
+////////// AppelŽ pour savoir si l'application doit quitter //////////
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
 #ifndef NDEBUG
@@ -70,7 +70,7 @@
 		return NSTerminateNow;
 }
 
-////////// Appelé quand l'application va quitter //////////
+////////// AppelŽ quand l'application va quitter //////////
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
 	[self release];
