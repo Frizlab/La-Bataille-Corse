@@ -52,7 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F0543E50792EAFA009F5182 /* NotificationsNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationsNames.h; sourceTree = "<group>"; };
 		0F0D437F079FF6A000368A61 /* FLNSMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLNSMutableArray.h; sourceTree = "<group>"; };
 		0F0D4380079FF6A000368A61 /* FLNSMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLNSMutableArray.m; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		0FDC7F49078F123A00BEC676 /* FLNewGameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLNewGameController.h; sourceTree = "<group>"; };
 		0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLNewGameController.m; sourceTree = "<group>"; };
 		0FE160B3079051EB009F1372 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0FE3266907ECA67D0012B670 /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0FE3266907ECA67D0012B670 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0FE3266A07ECA67D0012B670 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
