@@ -20,14 +20,12 @@ do {
 	}
 	
 	try runAndPrint(
-		"locmapper", "update_xcode_strings_from_code",
-		"--colored-output",
-		"--encoding=utf8", "--delete-missing-keys",
-		"--unlocalized-xibs-files-list=.locmapper/unlocalized_xibs",
-		"--unused-stringsfiles-files-list=.locmapper/unused_stringfiles",
-		"--localizables-path=Bataille Corse/Supporting Files/Localizables",
+		"locmapper", "merge_xcode_locs",
+		"--csv-separator=,",
 		"--exclude-list=.git/,Scripts/",
-		"."
+		"--include-list=/en.lproj/",
+		".", "Locs.lcm",
+		"en.lproj", " English"
 	)
 } catch {
 	exit(error)
