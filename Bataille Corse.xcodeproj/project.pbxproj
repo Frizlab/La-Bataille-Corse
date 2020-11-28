@@ -140,70 +140,14 @@
 			isa = PBXGroup;
 			children = (
 				7B4C996825728DB900AD1D21 /* Bataille Corse.entitlements */,
+				7B50DA7E2572D431006E740B /* App */,
 				7B50DA782572B048006E740B /* Conveniences */,
+				7B50DA7D2572D3D8006E740B /* Model */,
 				7B4C99622571361200AD1D21 /* Views and Controllers */,
-				0F53764E07C61C4200879E62 /* Game */,
-				0F3419B707A6B0E400B78052 /* New game */,
-				0F1619420789AE5C000A2F03 /* FLCustomWindow.h */,
-				0F1619430789AE5C000A2F03 /* FLCustomWindow.m */,
-				0FA76CBD0789B5A000BC5655 /* AppInit.h */,
-				0FA76CBE0789B5A000BC5655 /* AppInit.m */,
-				0F2171A2078B083C00C6387E /* AppController.h */,
-				0F2171A3078B083C00C6387E /* AppController.m */,
-				0FDC7F1A078F0F0F00BEC676 /* FLPreferencesController.h */,
-				0FDC7F1B078F0F0F00BEC676 /* FLPreferencesController.m */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				7B4C99642571371900AD1D21 /* Supporting Files */,
 			);
 			path = "Bataille Corse";
-			sourceTree = "<group>";
-		};
-		0F3419B707A6B0E400B78052 /* New game */ = {
-			isa = PBXGroup;
-			children = (
-				0FA7209707EF3BA100D09301 /* Calibrate time */,
-				0F3419B807A6B16900B78052 /* FLTextViewController.h */,
-				0F3419B907A6B16900B78052 /* FLTextViewController.m */,
-				0F34198B07A6AED500B78052 /* FLTextView.h */,
-				0F34198C07A6AED500B78052 /* FLTextView.m */,
-				0FDC7F49078F123A00BEC676 /* FLNewGameController.h */,
-				0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */,
-			);
-			name = "New game";
-			sourceTree = "<group>";
-		};
-		0F53764E07C61C4200879E62 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				0FA167500796E99900A931F9 /* FLGameController.h */,
-				0FA167510796E99900A931F9 /* FLGameController.m */,
-				0F316BB507A183F500939E82 /* FLComputerPlayer.h */,
-				0F316BB607A183F500939E82 /* FLComputerPlayer.m */,
-				0F0D437F079FF6A000368A61 /* FLNSMutableArray.h */,
-				0F0D4380079FF6A000368A61 /* FLNSMutableArray.m */,
-				0F34210B079AC97200E38185 /* FLGame.h */,
-				0F34210C079AC97200E38185 /* FLGame.m */,
-				0F552A6B07882DCB002E73B1 /* FLCardValue.h */,
-				0F552A6C07882DCB002E73B1 /* FLCardValue.m */,
-				0F698B89078821590037374C /* FLCard.h */,
-				0F698B8A078821590037374C /* FLCard.m */,
-				0F698B6907881B720037374C /* FLCardView.h */,
-				0F698B6A07881B720037374C /* FLCardView.m */,
-				0F4558B007B1152F002727CB /* FLPlayerView.h */,
-				0F4558B107B1152F002727CB /* FLPlayerView.m */,
-				0F6F85C0079554DE00AC967C /* FLPlayer.h */,
-				0F6F85C1079554DE00AC967C /* FLPlayer.m */,
-			);
-			name = Game;
-			sourceTree = "<group>";
-		};
-		0FA7209707EF3BA100D09301 /* Calibrate time */ = {
-			isa = PBXGroup;
-			children = (
-				0FA7210907EF482D00D09301 /* FLCalibrateTimeController.h */,
-				0FA7210A07EF482D00D09301 /* FLCalibrateTimeController.m */,
-			);
-			name = "Calibrate time";
 			sourceTree = "<group>";
 		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
@@ -269,8 +213,8 @@
 				7B4814E61EDB6D6700C82F8C /* NewGame.xib */,
 				7BFA1E221EDB706D0081AFC7 /* Preferences.xib */,
 				7BFA1E261EDB70C90081AFC7 /* Game.xib */,
-				0F950D030856099100458D5F /* FLFlashView.h */,
-				0F950D040856099100458D5F /* FLFlashView.m */,
+				7B50DA7F2572D450006E740B /* Views */,
+				7B50DA802572D45F006E740B /* Controllers */,
 			);
 			path = "Views and Controllers";
 			sourceTree = "<group>";
@@ -302,8 +246,72 @@
 				0F594ECE0801A06E00C57AA0 /* NSString+Keys.m */,
 				0F5375F107C60DEC00879E62 /* FLCycleArray.h */,
 				0F5375F207C60DEC00879E62 /* FLCycleArray.m */,
+				0F0D437F079FF6A000368A61 /* FLNSMutableArray.h */,
+				0F0D4380079FF6A000368A61 /* FLNSMutableArray.m */,
+				0F1619420789AE5C000A2F03 /* FLCustomWindow.h */,
+				0F1619430789AE5C000A2F03 /* FLCustomWindow.m */,
 			);
 			path = Conveniences;
+			sourceTree = "<group>";
+		};
+		7B50DA7D2572D3D8006E740B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F34210B079AC97200E38185 /* FLGame.h */,
+				0F34210C079AC97200E38185 /* FLGame.m */,
+				0F698B89078821590037374C /* FLCard.h */,
+				0F698B8A078821590037374C /* FLCard.m */,
+				0F552A6B07882DCB002E73B1 /* FLCardValue.h */,
+				0F552A6C07882DCB002E73B1 /* FLCardValue.m */,
+				0F6F85C0079554DE00AC967C /* FLPlayer.h */,
+				0F6F85C1079554DE00AC967C /* FLPlayer.m */,
+				0F316BB507A183F500939E82 /* FLComputerPlayer.h */,
+				0F316BB607A183F500939E82 /* FLComputerPlayer.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B50DA7E2572D431006E740B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0FA76CBD0789B5A000BC5655 /* AppInit.h */,
+				0FA76CBE0789B5A000BC5655 /* AppInit.m */,
+				0F2171A2078B083C00C6387E /* AppController.h */,
+				0F2171A3078B083C00C6387E /* AppController.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7B50DA7F2572D450006E740B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F950D030856099100458D5F /* FLFlashView.h */,
+				0F950D040856099100458D5F /* FLFlashView.m */,
+				0F698B6907881B720037374C /* FLCardView.h */,
+				0F698B6A07881B720037374C /* FLCardView.m */,
+				0F4558B007B1152F002727CB /* FLPlayerView.h */,
+				0F4558B107B1152F002727CB /* FLPlayerView.m */,
+				0F34198B07A6AED500B78052 /* FLTextView.h */,
+				0F34198C07A6AED500B78052 /* FLTextView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B50DA802572D45F006E740B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FA167500796E99900A931F9 /* FLGameController.h */,
+				0FA167510796E99900A931F9 /* FLGameController.m */,
+				0FA7210907EF482D00D09301 /* FLCalibrateTimeController.h */,
+				0FA7210A07EF482D00D09301 /* FLCalibrateTimeController.m */,
+				0F3419B807A6B16900B78052 /* FLTextViewController.h */,
+				0F3419B907A6B16900B78052 /* FLTextViewController.m */,
+				0FDC7F1A078F0F0F00BEC676 /* FLPreferencesController.h */,
+				0FDC7F1B078F0F0F00BEC676 /* FLPreferencesController.m */,
+				0FDC7F49078F123A00BEC676 /* FLNewGameController.h */,
+				0FDC7F4A078F123A00BEC676 /* FLNewGameController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
