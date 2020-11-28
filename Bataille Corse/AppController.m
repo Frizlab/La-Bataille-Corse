@@ -113,8 +113,8 @@
 
 - (void)calibrateTime:(NSNotification *)n
 {
-	if ((gameController && ! [gameController windowShouldClose:nil]) ||
-		 (timeCalibrater && ! [timeCalibrater windowShouldClose:nil]))
+	if ((gameController && ![gameController windowShouldClose:nil]) ||
+		 (timeCalibrater && ![timeCalibrater windowShouldClose:nil]))
 		return;
 	[gameController close];
 	gameController = nil;

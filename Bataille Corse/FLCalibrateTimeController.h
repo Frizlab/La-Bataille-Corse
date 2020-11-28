@@ -11,6 +11,8 @@
 #import "FLCardView.h"
 #import "FLPlayer.h"
 
+
+
 #define NBR_TRUE_TO_HAVE 15
 
 @interface FLCalibrateTimeController : NSWindowController {
@@ -61,6 +63,6 @@
 - (void)player:(FLPlayer *)aPlayer didPutCitation:(NSArray *)cards;
 - (void)playerWillGetAllPutCards:(FLPlayer *)aPlayer;
 - (void)playerDidGetAllPutCards:(FLPlayer *)aPlayer;
-@property(nonatomic, readonly) FLCardView *cardView;
+@property(nonatomic, retain) IBOutlet FLCardView *cardView;
 
 @end

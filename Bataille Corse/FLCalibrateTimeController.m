@@ -10,6 +10,8 @@
 #import "NotificationsNames.h"
 #import "Constants.h"
 
+
+
 @implementation FLCalibrateTimeController
 
 - (id)init
@@ -75,6 +77,8 @@
 
 - (void)windowDidLoad
 {
+	[super windowDidLoad];
+	
 	[self distributeCards];
 	
 	NSPoint currentPoint = NSMakePoint(0, 0);
@@ -140,7 +144,7 @@
 		randomNumber = random() % NUMBER_OF_CARDS;
 		assert(randomNumber < NUMBER_OF_CARDS);
 		
-		if (! [self isInt:randomNumber+1 inArray:sawValues sizeOfArray:NUMBER_OF_CARDS]) {
+		if (![self isInt:randomNumber+1 inArray:sawValues sizeOfArray:NUMBER_OF_CARDS]) {
 			[_player addCard:_packet[randomNumber]];
 			
 			sawValues[cardPut] = randomNumber+1; /* Pour que 0 ne puisse pas y être
@@ -166,7 +170,7 @@
 #endif
 	[self refreshMustHit];
 	if (! mustHit)
-		if (! isCalibrateFinish)
+		if (!isCalibrateFinish)
 			[_player putOneCardAfter:self.timeBeforePlayerPutACard];
 	[self setNow:[NSDate new]];
 	
@@ -180,7 +184,7 @@
 #endif
 	if (mustHit) {
 		nbrTrue++;
-		somme += (-[_now timeIntervalSinceNow]);
+		somme += -_now.timeIntervalSinceNow;
 		_player.tempsReaction = (somme/nbrTrue) * 1000;
 		/* Inform FLNewGameController the time of reaction of one player has changed */
 		NSNotificationCenter *nc = NSNotificationCenter.defaultCenter;
