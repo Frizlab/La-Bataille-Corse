@@ -26,8 +26,8 @@
 #define MAX_VALUE 13
 
 
-typedef unsigned int cardForm;
-typedef unsigned int cardValue;
+typedef NSUInteger cardForm;
+typedef NSUInteger cardValue;
 
 
 @interface FLCardValue : NSObject

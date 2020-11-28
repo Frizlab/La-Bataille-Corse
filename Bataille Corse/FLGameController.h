@@ -20,7 +20,7 @@
 	 
 	 BOOL mustHit, someOneWillGetPutCards, gameIsFinish;
 	 FLPlayer *playerWhoPutTheLastSpecialCard;
-	 signed int nbrCardsToAdd;
+	 NSInteger nbrCardsToAdd;
     FLGame *game;
 }
 
@@ -32,7 +32,7 @@
 - (id)initWithPacket:(NSArray *)newPacket andPlayers:(NSArray *)newPlayers;
 
 /* Utils */
-- (BOOL)isInt:(unsigned int)numb inArray:(unsigned int *)array sizeOfArray:(unsigned int)size;
+- (BOOL)isInt:(NSUInteger)numb inArray:(NSUInteger *)array sizeOfArray:(NSUInteger)size;
 - (void)showPlayersInScreen;
 - (void)refreshPlayersView;
 - (void)removePacketOfAllPlayers;

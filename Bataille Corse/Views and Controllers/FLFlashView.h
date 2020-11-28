@@ -12,7 +12,7 @@
 
 @interface FLFlashView : NSView {
 	NSTimeInterval interval;
-	unsigned int nFrame;
+	NSUInteger nFrame;
 }
 
 @property(nonatomic, retain) NSColor *color;

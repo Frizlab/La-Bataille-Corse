@@ -41,7 +41,7 @@
 	NSImage *currentImage;
 	if ((self = [super init]) != nil) {
 		[self setValue:cardVal];
-		fileName = [NSString stringWithFormat:@"%d_%d", [newCardVal valeur], [newCardVal forme]];
+		fileName = [NSString stringWithFormat:@"%lu_%lu", (unsigned long)newCardVal.valeur, (unsigned long)newCardVal.forme];
 		currentImage = [NSImage imageNamed:fileName];
 		if (! currentImage) {
 #ifndef NDEBUG

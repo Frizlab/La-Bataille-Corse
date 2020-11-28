@@ -14,7 +14,7 @@
 @property(nonatomic, retain) IBOutlet NSTextField *textFieldPlayerName;
 
 @property(nonatomic, assign) BOOL enabled;
-@property(nonatomic, assign) unsigned int nbrCards;
+@property(nonatomic, assign) NSUInteger nbrCards;
 @property(nonatomic, retain) NSString *playerName;
 
 - (void)flash;

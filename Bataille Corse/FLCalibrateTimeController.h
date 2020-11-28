@@ -19,7 +19,7 @@
 	IBOutlet NSView *viewWithPlayers;
 	
 	BOOL mustHit, isCalibrateFinish;
-	unsigned int nbrTrue;
+	NSUInteger nbrTrue;
 	FLGame *game;
 	float somme;
 }
@@ -36,7 +36,7 @@
 - (float)timeBeforePlayerPutACard;
 - (void)refreshPlayerView;
 - (void)refreshMustHit;
-- (BOOL)isInt:(unsigned int)numb inArray:(unsigned int *)array sizeOfArray:(unsigned int)size;
+- (BOOL)isInt:(NSUInteger)numb inArray:(NSUInteger *)array sizeOfArray:(NSUInteger)size;
 - (void)distributeCards;
 
 /* *** Interception des événements *** */

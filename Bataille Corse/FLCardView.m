@@ -43,7 +43,7 @@
 
 - (void)drawRect:(NSRect)rect
 {
-	unsigned int i;
+	NSUInteger i;
 //	NSSize currentSize;
 	NSImage *currentImage;
 	NSPoint origin = rect.origin;

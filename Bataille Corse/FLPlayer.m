@@ -189,10 +189,10 @@
  * On peut choisir plusieurs suites de cartes possible jusqu'à ce que l'on
  * trouve une suite convenable en s'arrêtant à un certain nombre d'essai
  * pour que l'attente ne soit pas trop longue */
-- (NSArray *)cardsForCitation:(signed int)nbrCardsAmende
+- (NSArray *)cardsForCitation:(NSInteger)nbrCardsAmende
 {
 	NSUInteger length = [_packet count], i, lastIndexBasesLevel;
-	signed int nbrCardsToPut = MIN(nbrCardsAmende, (signed)_packet.count);
+	NSInteger nbrCardsToPut = MIN(nbrCardsAmende, (NSInteger)_packet.count);
 	NSArray *putCards = [self putCardsOnGame];
 	NSMutableArray *bases, *level, *returnArray;
 	FLGame *game = [FLGame new];
@@ -271,7 +271,7 @@
 - (void)putTheLateCitation
 {
 	NSArray *cardsToAdd;
-	signed int nbrCardsToPut;
+	NSInteger nbrCardsToPut;
 	FLCardView *cardView = nil;
 	
 	if ([_delegate respondsToSelector:@selector(cardView)])
@@ -316,7 +316,7 @@
 	
 	if (![_delegate respondsToSelector:@selector(cardView)]) {
 #ifndef NDEBUG
-		NSLog(@"*** Can't get put card because I can't have the cardView !!! ***");
+		NSLog(@"*** Can't get put card because I can't have the cardView!!! ***");
 #endif
 		return;
 	} else

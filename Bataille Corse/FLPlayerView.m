@@ -23,8 +23,10 @@
 		[self setButtonState:[decoder decodeObject]];
 		
 		[self setPlayerName:[decoder decodeObject]];
-		[decoder decodeValueOfObjCType:@encode(unsigned int) at:&_nbrCards];
-		[decoder decodeValueOfObjCType:@encode(unsigned int) at:&_enabled];
+		
+		unsigned int encoded;
+		encoded = (unsigned int)_nbrCards; [decoder decodeValueOfObjCType:@encode(unsigned int) at:&encoded];
+		encoded = (unsigned int)_enabled;  [decoder decodeValueOfObjCType:@encode(unsigned int) at:&encoded];
 	}
 	return self;
 }
@@ -39,14 +41,28 @@
 	[coder encodeObject:_buttonState];
 	
 	[coder encodeObject:_playerName];
-	[coder encodeValueOfObjCType:@encode(unsigned int) at:&_nbrCards];
-	[coder encodeValueOfObjCType:@encode(unsigned int) at:&_enabled];
+	
+	unsigned int decoded;
+	[coder encodeValueOfObjCType:@encode(unsigned int) at:&decoded]; _nbrCards = decoded;
+	[coder encodeValueOfObjCType:@encode(unsigned int) at:&decoded]; _enabled  = decoded;
 }
 
 /* ************************ */
 - (void)drawRect:(NSRect)rect
 {
 	[super drawRect:rect];
+}
+
+- (void)setNbrCards:(NSUInteger)newNbr
+{
+	_nbrCards = newNbr;
+	[_textFieldNbrCard setIntegerValue:(NSInteger)_nbrCards];
+}
+
+- (void)setPlayerName:(NSString *)newName
+{
+	_playerName = newName;
+	[_textFieldPlayerName setStringValue:_playerName];
 }
 
 /* ************************ */

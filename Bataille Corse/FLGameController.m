@@ -53,8 +53,6 @@
 {
 	NSNotificationCenter *nc;
 	if ((self = [super initWithWindowNibName:@"Game"]) != nil) {
-		srandom((unsigned int)time(NULL));
-		
 		[self setWindowFrameAutosaveName:@"FLGameWindow"];
 		[self setPacket:newPacket];
 		[self setShouldCascadeWindows:NO];
@@ -78,9 +76,9 @@
 }
 
 /* ********************** Utils ********************** */
-- (BOOL)isInt:(unsigned int)numb inArray:(unsigned int *)array sizeOfArray:(unsigned int)size
+- (BOOL)isInt:(NSUInteger)numb inArray:(NSUInteger *)array sizeOfArray:(NSUInteger)size
 {
-	unsigned int i;
+	NSUInteger i;
 	for (i = 0 ; i<size ; i++) {
 		if (array[i] == numb)
 			return YES;
@@ -94,7 +92,7 @@
 	FLPlayerView *currentView;
 	FLPlayer *currentPlayerInMethod;
 	NSPoint currentPoint;
-	unsigned int i;
+	NSUInteger i;
 	
 	for (i = 0 ; i<_players.count ; i++) {
 		currentView = [playerView copy];
@@ -111,7 +109,7 @@
 
 - (void)refreshPlayersView
 {
-	unsigned int i;
+	NSUInteger i;
 	FLPlayerView *currentView;
 	FLPlayer *currentPlayerInMethod;
 	NSArray *views = [viewWithPlayers subviews];
@@ -129,21 +127,21 @@
 
 - (void)removePacketOfAllPlayers
 {
-	unsigned int i;
+	NSUInteger i;
 	for (i = 0 ; i<_players.count ; i++)
 		[[_players objectAtIndex:i] removePacket];
 }
 
 - (void)initPlayers
 {
-	unsigned int i;
+	NSUInteger i;
 	for (i = 0 ; i<_players.count ; i++)
 		[[_players objectAtIndex:i] setDelegate:self];
 }
 
 - (void)invalidateTimersOfPlayers
 {
-	unsigned int i;
+	NSUInteger i;
 	FLPlayer *currentPlayer;
 	for (i = 0 ; i<_players.count ; i++) {
 		currentPlayer = [_players objectAtIndex:i];
@@ -153,7 +151,7 @@
 
 - (void)invalidateHitTimerOfComputersPlayer
 {
-	unsigned int i;
+	NSUInteger i;
 	FLPlayer *currentPlayer;
 	for (i = 0 ; i<_players.count ; i++) {
 		currentPlayer = [_players objectAtIndex:i];
@@ -198,7 +196,7 @@
 {
 	FLPlayer *currentPlayer;
 	FLPlayer *thePlayer = nil;
-	unsigned int i, count = 0;
+	NSUInteger i, count = 0;
 	for (i = 0 ; i<_players.count ; i++) {
 		currentPlayer = [_players objectAtIndex:i];
 		if ([currentPlayer numberOfCards] > 0) {
@@ -213,7 +211,7 @@
 
 - (BOOL)allPlayersHaveNoCards
 {
-	unsigned int i;
+	NSUInteger i;
 	FLPlayer *currentPlayer;
 	for (i = 0 ; i<[_players count] ; i++) {
 		currentPlayer = [_players objectAtIndex:i];
@@ -225,9 +223,9 @@
 
 - (void)distributePutCards
 {
-	unsigned int i;
+	NSUInteger i;
 	NSArray *putCards;
-	while ([self allPlayersHaveNoCards] && ! mustHit) {
+	while ([self allPlayersHaveNoCards] && !mustHit) {
 		putCards = [cardView cards];
 		[cardView removeAllCards];
 		for (i = 0 ; i<[putCards count] ; i++)
@@ -465,7 +463,7 @@
 	if ([self checkIfOnePlayerWon])
 		return;
 	
-	[reasonHit setStringValue:[game lastReasonForHit]];
+	[reasonHit setStringValue:game.lastReasonForHit];
 	/* Informe le joueur qu'il a récupéré toutes les cartes. */
 	[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"getCards", nil),
 																						[aPlayer playerName]]
@@ -501,9 +499,9 @@
 #ifndef NSPECIALKEY
 - (void)flagsChanged:(NSEvent *)e
 {
-	unsigned int i;
+	NSUInteger i;
 	FLPlayer *currentPlayer;
-	unsigned int code = [e modifierFlags];
+	NSUInteger code = [e modifierFlags];
 	if ((code & NSAlphaShiftKeyMask) || (code == 256 /* CapsLock release */ )) {
 		[super flagsChanged:e];
 		return;
@@ -523,7 +521,7 @@
 
 - (void)keyDown:(NSEvent *)event
 {
-	unsigned int i;
+	NSUInteger i;
 	FLPlayer *currentPlayer;
 	NSString *input = [event characters];
 	if ([event isARepeat])

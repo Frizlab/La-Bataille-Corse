@@ -15,7 +15,7 @@
 @property(nonatomic, retain) NSString *lastReasonForHit;
 
 - (BOOL)isNecessaryToChangePlayerWithCard:(FLCard *)card;
-- (unsigned int)numberOfCardsToAddWithCard:(FLCard *)card;
+- (NSUInteger)numberOfCardsToAddWithCard:(FLCard *)card;
 - (BOOL)isHitNecessaryWithCards:(NSArray *)cards;
 
 @end

@@ -10,17 +10,17 @@
 
 @implementation NSMutableArray (extendedMutableArray)
 
-- (void)addArray:(NSArray *)array invertingAtIndex:(unsigned int)anIndex
+- (void)addArray:(NSArray *)array invertingAtIndex:(NSUInteger)anIndex
 {
-	unsigned int i;
-	for (i = 0 ; i<[array count] ; i++)
+	NSUInteger i;
+	for (i = 0 ; i<array.count ; i++)
 		[self insertObject:[array objectAtIndex:i] atIndex:anIndex];
 }
 
-- (void)addArray:(NSArray *)array atIndex:(unsigned int)anIndex
+- (void)addArray:(NSArray *)array atIndex:(NSUInteger)anIndex
 {
-	unsigned int i;
-	for (i = 0 ; i<[array count] ; i++)
+	NSUInteger i;
+	for (i = 0 ; i<array.count ; i++)
 		[self insertObject:[array objectAtIndex:i] atIndex:anIndex + i];
 }
 

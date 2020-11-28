@@ -7,6 +7,7 @@
 - (NSArray *)appInit:(BOOL)refresh
 {
 	if (! refresh) {
+		srandom((unsigned int)time(NULL));
 		_scroller = nil;
 		_cardImage = nil;
 	}
@@ -27,7 +28,7 @@
 			currentCard = [[FLCard alloc] initWithValue:i andForme:j];
 			if (currentCard) {
 #ifndef NDEBUG
-				NSLog(@"I have loaded image %d_%d", i, j);
+				NSLog(@"I have loaded image %lu_%lu", (unsigned long)i, (unsigned long)j);
 #endif
 				[_cardImage setImage:currentCard.image];
 				[_cardImage display];

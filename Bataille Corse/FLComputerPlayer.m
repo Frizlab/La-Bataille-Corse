@@ -14,8 +14,6 @@
 - (id)init
 {
 	if ((self = [super init]) != nil) {
-		srandom((unsigned int)time(NULL));
-		
 		[self setPlayerName:NSLocalizedString(@"computer", nil)];
 		[self setHitKey:nil];
 		

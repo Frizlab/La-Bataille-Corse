@@ -27,7 +27,7 @@
 @property(nonatomic, retain) NSMutableArray *packet;
 /* Devient négatif quand le joueur doit mettre une amende et qu'il n'a plus
  * assez de cartes pour la mettre */
-@property(nonatomic, readonly) signed int numberOfCards;
+@property(nonatomic, readonly) NSInteger numberOfCards;
 
 @property(nonatomic, weak) id delegate;
 
@@ -47,7 +47,7 @@
  * soit excessivement long avec cette methode
  * Il faudrait la changer pour que l'echange se fasse entre la première
  * et la derniere carte, la premiere et l'avant derniere... (trouver l'algo) */
-- (NSArray *)cardsForCitation:(signed int)nbrCardsAmende;
+- (NSArray *)cardsForCitation:(NSInteger)nbrCardsAmende;
 /* Fin anagrammes */
 - (void)putTheLateCitation;
 - (void)getAllPutCardsBySelf:(NSTimer *)t;

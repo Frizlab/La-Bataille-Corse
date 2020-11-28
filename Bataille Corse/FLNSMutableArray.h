@@ -11,7 +11,7 @@
 
 @interface NSMutableArray (extendedMutableArray)
 
-- (void)addArray:(NSArray *)array invertingAtIndex:(unsigned int)index;
-- (void)addArray:(NSArray *)array          atIndex:(unsigned int)index;
+- (void)addArray:(NSArray *)array invertingAtIndex:(NSUInteger)index;
+- (void)addArray:(NSArray *)array          atIndex:(NSUInteger)index;
 
 @end

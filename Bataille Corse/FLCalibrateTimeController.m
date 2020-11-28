@@ -106,9 +106,9 @@
 		[self setNow:[NSDate new]];
 }
 
-- (BOOL)isInt:(unsigned int)numb inArray:(unsigned int *)array sizeOfArray:(unsigned int)size
+- (BOOL)isInt:(NSUInteger)numb inArray:(NSUInteger *)array sizeOfArray:(NSUInteger)size
 {
-	unsigned int i;
+	NSUInteger i;
 	for (i = 0 ; i<size ; i++) {
 		if (array[i] == numb)
 			return YES;
@@ -119,7 +119,7 @@
 - (void)distributeCards
 {
 	cardValue sawValues[NUMBER_OF_CARDS], randomNumber;
-	unsigned int cardPut = 0, i;
+	NSUInteger cardPut = 0, i;
 	
 	if (NUMBER_OF_CARDS > _packet.count) {
 		NSLog(@"*** In distributeCards of FLGameController, NUMBER_OF_CARDS > [packet count]");

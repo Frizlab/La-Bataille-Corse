@@ -35,7 +35,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"Forme : %d, Valeur : %d", _forme, _valeur];
+	return [NSString stringWithFormat:@"Forme : %lu, Valeur : %lu", (unsigned long)_forme, (unsigned long)_valeur];
 }
 
 @end

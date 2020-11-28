@@ -87,7 +87,7 @@
 		NSBeep();
 		return;
 	}
-	unsigned int i;
+	NSUInteger i;
 	FLPlayer *currentPlayer;
 	NSMutableArray *playersWillPlay = [NSMutableArray new];
 	
@@ -126,7 +126,7 @@
 
 - (id)tableView:(NSTableView *)aTableView
 objectValueForTableColumn:(NSTableColumn *)aTableColumn
-				row:(int)rowIndex
+				row:(NSInteger)rowIndex
 {
 	NSString *identifier = [aTableColumn identifier];
 	FLPlayer *player = [players objectAtIndex:rowIndex];
@@ -142,7 +142,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 - (void)tableView:(NSTableView *)aTableView
 	setObjectValue:(id)anObject
 	forTableColumn:(NSTableColumn *)aTableColumn
-				  row:(int)rowIndex
+				  row:(NSInteger)rowIndex
 {
 	NSString *identifier = [aTableColumn identifier];
 	FLPlayer *player = [players objectAtIndex:rowIndex];
@@ -160,7 +160,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 
 - (BOOL)tableView:(NSTableView *)aTableView
 shouldEditTableColumn:(NSTableColumn *)aTableColumn
-				  row:(int)rowIndex
+				  row:(NSInteger)rowIndex
 {
 	[textViewController setCurrentRowIdentifier:[aTableColumn identifier]];
 	return YES;
@@ -178,7 +178,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 /* ********************** Utils ********************** */
 - (BOOL)isCorrectNumberOfPlayersSelectedForPlay
 {
-	unsigned int i, nbrWillPlay = 0;
+	NSUInteger i, nbrWillPlay = 0;
 	[tableViewListOfPlayersView reloadData];
 	for (i = 0 ; i<[players count] ; i++)
 		if ([[players objectAtIndex:i] willPlay])
@@ -196,7 +196,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 
 - (BOOL)isValidKey:(NSString *)key forPlayer:(FLPlayer *)p
 {
-	unsigned int i;
+	NSUInteger i;
 	FLPlayer *currentPlayer;
 	if ([key isEqualToString:@" "] || [key isEqualToString:@"\e"] || [key length] != 1)
 		return NO;

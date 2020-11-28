@@ -24,7 +24,7 @@
 	return [card amIASpecialCard];
 }
 
-- (unsigned int)numberOfCardsToAddWithCard:(FLCard *)card
+- (NSUInteger)numberOfCardsToAddWithCard:(FLCard *)card
 {
 	cardValue valeur = [[card value] valeur];
 	switch (valeur) {

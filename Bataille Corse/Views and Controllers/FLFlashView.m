@@ -87,7 +87,7 @@
 
 - (void)computeInterval
 {
-	nFrame = (int)(_fps * _tts);
+	nFrame = (NSUInteger)(_fps * _tts);
 	interval = (_tts/nFrame)/2;
 }
 

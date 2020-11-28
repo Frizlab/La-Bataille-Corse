@@ -32,17 +32,17 @@
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView;
 - (id)tableView:(NSTableView *)aTableView
 objectValueForTableColumn:(NSTableColumn *)aTableColumn
-				row:(int)rowIndex;
+				row:(NSInteger)rowIndex;
 - (void)tableView:(NSTableView *)aTableView
 	setObjectValue:(id)anObject
 	forTableColumn:(NSTableColumn *)aTableColumn
-				  row:(int)rowIndex;
+				  row:(NSInteger)rowIndex;
 
 /* *** Delegate du tableau *** */
 - (void)tableViewSelectionDidChange:(NSNotification *)n;
 - (BOOL)tableView:(NSTableView *)aTableView
 shouldEditTableColumn:(NSTableColumn *)aTableColumn
-				  row:(int)rowIndex;
+				  row:(NSInteger)rowIndex;
 /* *** Delegate du control du tableau *** */
 - (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor;
 
