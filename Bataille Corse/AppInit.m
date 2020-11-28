@@ -26,7 +26,7 @@
 			currentCard = [[FLCard alloc] initWithValue:i andForme:j];
 			if (currentCard) {
 #ifndef NDEBUG
-				NSLog(@"I have loaded image %d_%d.tiff", i, j);
+				NSLog(@"I have loaded image %d_%d", i, j);
 #endif
 				[cardImage setImage:[currentCard image]];
 				[cardImage display];
