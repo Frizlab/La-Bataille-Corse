@@ -173,61 +173,6 @@
 		0F2DF85A078F176A00B828FF /* app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app.icns; sourceTree = "<group>"; };
 		0F316BB507A183F500939E82 /* FLComputerPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLComputerPlayer.h; sourceTree = "<group>"; };
 		0F316BB607A183F500939E82 /* FLComputerPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLComputerPlayer.m; sourceTree = "<group>"; };
-		0F31CA49092F43EA00D395EE /* 0_0.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 0_0.tiff; sourceTree = "<group>"; };
-		0F31CA4A092F43EA00D395EE /* 0_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 0_1.tiff; sourceTree = "<group>"; };
-		0F31CA4B092F43EA00D395EE /* 1_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 1_1.tiff; sourceTree = "<group>"; };
-		0F31CA4C092F43EA00D395EE /* 1_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 1_2.tiff; sourceTree = "<group>"; };
-		0F31CA4D092F43EA00D395EE /* 1_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 1_3.tiff; sourceTree = "<group>"; };
-		0F31CA4E092F43EA00D395EE /* 1_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 1_4.tiff; sourceTree = "<group>"; };
-		0F31CA4F092F43EA00D395EE /* 2_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 2_1.tiff; sourceTree = "<group>"; };
-		0F31CA50092F43EA00D395EE /* 2_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 2_2.tiff; sourceTree = "<group>"; };
-		0F31CA51092F43EA00D395EE /* 2_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 2_3.tiff; sourceTree = "<group>"; };
-		0F31CA52092F43EA00D395EE /* 2_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 2_4.tiff; sourceTree = "<group>"; };
-		0F31CA53092F43EA00D395EE /* 3_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 3_1.tiff; sourceTree = "<group>"; };
-		0F31CA54092F43EA00D395EE /* 3_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 3_2.tiff; sourceTree = "<group>"; };
-		0F31CA55092F43EA00D395EE /* 3_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 3_3.tiff; sourceTree = "<group>"; };
-		0F31CA56092F43EA00D395EE /* 3_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 3_4.tiff; sourceTree = "<group>"; };
-		0F31CA57092F43EA00D395EE /* 4_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 4_1.tiff; sourceTree = "<group>"; };
-		0F31CA58092F43EA00D395EE /* 4_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 4_2.tiff; sourceTree = "<group>"; };
-		0F31CA59092F43EA00D395EE /* 4_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 4_3.tiff; sourceTree = "<group>"; };
-		0F31CA5A092F43EA00D395EE /* 4_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 4_4.tiff; sourceTree = "<group>"; };
-		0F31CA5B092F43EA00D395EE /* 5_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 5_1.tiff; sourceTree = "<group>"; };
-		0F31CA5C092F43EA00D395EE /* 5_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 5_2.tiff; sourceTree = "<group>"; };
-		0F31CA5D092F43EA00D395EE /* 5_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 5_3.tiff; sourceTree = "<group>"; };
-		0F31CA5E092F43EA00D395EE /* 5_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 5_4.tiff; sourceTree = "<group>"; };
-		0F31CA5F092F43EA00D395EE /* 6_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 6_1.tiff; sourceTree = "<group>"; };
-		0F31CA60092F43EA00D395EE /* 6_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 6_2.tiff; sourceTree = "<group>"; };
-		0F31CA61092F43EA00D395EE /* 6_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 6_3.tiff; sourceTree = "<group>"; };
-		0F31CA62092F43EA00D395EE /* 6_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 6_4.tiff; sourceTree = "<group>"; };
-		0F31CA63092F43EA00D395EE /* 7_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 7_1.tiff; sourceTree = "<group>"; };
-		0F31CA64092F43EA00D395EE /* 7_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 7_2.tiff; sourceTree = "<group>"; };
-		0F31CA65092F43EA00D395EE /* 7_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 7_3.tiff; sourceTree = "<group>"; };
-		0F31CA66092F43EA00D395EE /* 7_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 7_4.tiff; sourceTree = "<group>"; };
-		0F31CA67092F43EA00D395EE /* 8_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 8_1.tiff; sourceTree = "<group>"; };
-		0F31CA68092F43EA00D395EE /* 8_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 8_2.tiff; sourceTree = "<group>"; };
-		0F31CA69092F43EA00D395EE /* 8_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 8_3.tiff; sourceTree = "<group>"; };
-		0F31CA6A092F43EA00D395EE /* 8_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 8_4.tiff; sourceTree = "<group>"; };
-		0F31CA6B092F43EA00D395EE /* 9_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 9_1.tiff; sourceTree = "<group>"; };
-		0F31CA6C092F43EA00D395EE /* 9_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 9_2.tiff; sourceTree = "<group>"; };
-		0F31CA6D092F43EA00D395EE /* 9_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 9_3.tiff; sourceTree = "<group>"; };
-		0F31CA6E092F43EA00D395EE /* 9_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 9_4.tiff; sourceTree = "<group>"; };
-		0F31CA6F092F43EA00D395EE /* 10_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 10_1.tiff; sourceTree = "<group>"; };
-		0F31CA70092F43EA00D395EE /* 10_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 10_2.tiff; sourceTree = "<group>"; };
-		0F31CA71092F43EA00D395EE /* 10_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 10_3.tiff; sourceTree = "<group>"; };
-		0F31CA72092F43EA00D395EE /* 10_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 10_4.tiff; sourceTree = "<group>"; };
-		0F31CA73092F43EA00D395EE /* 11_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 11_1.tiff; sourceTree = "<group>"; };
-		0F31CA74092F43EA00D395EE /* 11_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 11_2.tiff; sourceTree = "<group>"; };
-		0F31CA75092F43EA00D395EE /* 11_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 11_3.tiff; sourceTree = "<group>"; };
-		0F31CA76092F43EA00D395EE /* 11_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 11_4.tiff; sourceTree = "<group>"; };
-		0F31CA77092F43EA00D395EE /* 12_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 12_1.tiff; sourceTree = "<group>"; };
-		0F31CA78092F43EA00D395EE /* 12_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 12_2.tiff; sourceTree = "<group>"; };
-		0F31CA79092F43EA00D395EE /* 12_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 12_3.tiff; sourceTree = "<group>"; };
-		0F31CA7A092F43EA00D395EE /* 12_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 12_4.tiff; sourceTree = "<group>"; };
-		0F31CA7B092F43EA00D395EE /* 13_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 13_1.tiff; sourceTree = "<group>"; };
-		0F31CA7C092F43EA00D395EE /* 13_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 13_2.tiff; sourceTree = "<group>"; };
-		0F31CA7D092F43EA00D395EE /* 13_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 13_3.tiff; sourceTree = "<group>"; };
-		0F31CA7E092F43EA00D395EE /* 13_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = 13_4.tiff; sourceTree = "<group>"; };
-		0F31CA7F092F43EA00D395EE /* dos_des_cartes.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dos_des_cartes.tiff; sourceTree = "<group>"; };
 		0F34198B07A6AED500B78052 /* FLTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLTextView.h; sourceTree = "<group>"; };
 		0F34198C07A6AED500B78052 /* FLTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLTextView.m; sourceTree = "<group>"; };
 		0F3419B807A6B16900B78052 /* FLTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLTextViewController.h; sourceTree = "<group>"; };
@@ -283,6 +228,9 @@
 		7B4C995925712BDF00AD1D21 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		7B4C995A25712BE700AD1D21 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Preferences.strings; sourceTree = "<group>"; };
 		7B4C995D25712C0400AD1D21 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Game.strings; sourceTree = "<group>"; };
+		7B4C99612571350800AD1D21 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		7B4C996825728DB900AD1D21 /* Bataille Corse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bataille Corse.entitlements"; sourceTree = "<group>"; };
+		7BA5FEE525728F0400F96547 /* Readme.adoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.adoc; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Bataille Corse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bataille Corse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -299,9 +247,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		080E96DDFE201D6D7F000001 /* Bataille Corse */ = {
 			isa = PBXGroup;
 			children = (
+				7B4C996825728DB900AD1D21 /* Bataille Corse.entitlements */,
+				7B4C99622571361200AD1D21 /* Views and Controllers */,
 				0F950D030856099100458D5F /* FLFlashView.h */,
 				0F950D040856099100458D5F /* FLFlashView.m */,
 				0F594ECD0801A06E00C57AA0 /* NSString+Keys.h */,
@@ -316,16 +266,10 @@
 				0F2171A3078B083C00C6387E /* AppController.m */,
 				0FDC7F1A078F0F0F00BEC676 /* FLPreferencesController.h */,
 				0FDC7F1B078F0F0F00BEC676 /* FLPreferencesController.m */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				7B4C99642571371900AD1D21 /* Supporting Files */,
 			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		0F05CAF207F43BAE004D2FF4 /* Help */ = {
-			isa = PBXGroup;
-			children = (
-				0F77B03507FD24E4009EF9FB /* help */,
-			);
-			name = Help;
+			path = "Bataille Corse";
 			sourceTree = "<group>";
 		};
 		0F3419B707A6B0E400B78052 /* New game */ = {
@@ -369,7 +313,7 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
-		0F698B7607881E760037374C /* cartes */ = {
+		0F698B7607881E760037374C /* cards */ = {
 			isa = PBXGroup;
 			children = (
 				0F31CA49092F43EA00D395EE /* 0_0.tiff */,
@@ -428,7 +372,7 @@
 				0F31CA7E092F43EA00D395EE /* 13_4.tiff */,
 				0F31CA7F092F43EA00D395EE /* dos_des_cartes.tiff */,
 			);
-			path = cartes;
+			path = cards;
 			sourceTree = "<group>";
 		};
 		0FA7209707EF3BA100D09301 /* Calibrate time */ = {
@@ -468,10 +412,9 @@
 		29B97314FDCFA39411CA2CEA /* Bataille corse */ = {
 			isa = PBXGroup;
 			children = (
-				0F05CAF207F43BAE004D2FF4 /* Help */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
+				7BA5FEE525728F0400F96547 /* Readme.adoc */,
+				080E96DDFE201D6D7F000001 /* Bataille Corse */,
+				7B4C99612571350800AD1D21 /* Scripts */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -485,24 +428,7 @@
 				0FCD1B21078FE5C20096D90C /* Constants.h */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		29B97317FDCFA39411CA2CEA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0F667EA4086F220F005DFA9A /* my_logo.pdf */,
-				0F2DF85A078F176A00B828FF /* app.icns */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-				0F698B7607881E760037374C /* cartes */,
-				0FE160B507905210009F1372 /* Localizable.strings */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */,
-				7B4814E61EDB6D6700C82F8C /* NewGame.xib */,
-				7BFA1E221EDB706D0081AFC7 /* Preferences.xib */,
-				7BFA1E261EDB70C90081AFC7 /* Game.xib */,
-			);
-			name = Resources;
+			path = "Other Sources";
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -512,6 +438,39 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B4C99622571361200AD1D21 /* Views and Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B4814E21EDB6C9E00C82F8C /* MainMenu.xib */,
+				7B4814E61EDB6D6700C82F8C /* NewGame.xib */,
+				7BFA1E221EDB706D0081AFC7 /* Preferences.xib */,
+				7BFA1E261EDB70C90081AFC7 /* Game.xib */,
+			);
+			path = "Views and Controllers";
+			sourceTree = "<group>";
+		};
+		7B4C99642571371900AD1D21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B4C99652571372D00AD1D21 /* Localizables */,
+				0F77B03507FD24E4009EF9FB /* help */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				0F2DF85A078F176A00B828FF /* app.icns */,
+				0F667EA4086F220F005DFA9A /* my_logo.pdf */,
+				0F698B7607881E760037374C /* cards */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B4C99652571372D00AD1D21 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				0FE160B507905210009F1372 /* Localizable.strings */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			path = Localizables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,11 +654,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Bataille Corse/Bataille Corse.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = DVL8GW97S8;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -720,7 +681,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "Bataille Corse/Supporting Files/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.frostland.Bataille-Corse";
@@ -737,11 +698,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Bataille Corse/Bataille Corse.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = DVL8GW97S8;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
@@ -752,7 +715,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = "Bataille Corse/Supporting Files/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.frostland.Bataille-Corse";
