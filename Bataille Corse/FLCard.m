@@ -38,17 +38,17 @@
 
 - (id)initWithFLCardValue:(FLCardValue *)newCardVal
 {
+	NSString *fileName;
 	NSImage *currentImage;
-	NSString *fileName, *fullPathName;
 	if ((self = [super init]) != nil) {
 		[self setValue:cardVal];
 		fileName = [NSString stringWithFormat:@"%d_%d", [newCardVal valeur], [newCardVal forme]];
 //		fullPathName = [[NSBundle mainBundle] pathForResource:fileName ofType:@"tiff"];
-		fullPathName = [[NSBundle mainBundle] pathForResource:fileName ofType:@"tiff" inDirectory:@"cartes"];
-		currentImage = [[NSImage alloc] initWithContentsOfFile:fullPathName];
+//		fullPathName = [[NSBundle mainBundle] pathForResource:fileName ofType:@"tiff" inDirectory:@"cartes"];
+		currentImage = [NSImage imageNamed:fileName];
 		if (! currentImage) {
 #ifndef NDEBUG
-			NSLog(@"Can't load image %@", fullPathName);
+			NSLog(@"Can't load image %@", fileName);
 #endif
 			[self release];
 			return nil;
