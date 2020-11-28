@@ -1,7 +1,3 @@
 # Finder and Xcode ignored files
-Icon?
 .DS_Store
 xcuserdata/
-
-# Other ignored files
-/gfx building/
