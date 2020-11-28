@@ -1,10 +1,10 @@
-//
-//  FLPlayer.m
-//  Bataille corse
-//
-//  Created by François on 12/01/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLPlayer.m
+ * Bataille corse
+ *
+ * Created by François on 12/01/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import "FLPlayer.h"
 
@@ -13,7 +13,7 @@
 
 + (void)initialize
 {
-	if (self == [FLPlayer class])
+	if (self == FLPlayer.class)
 		[self setVersion:1];
 }
 
@@ -23,14 +23,14 @@
 		[self setPlayerName:NSLocalizedString(@"newPlayer", nil)];
 		[self setTempsReaction:750.];
 		[self setHitKey:@"\r"];
-		nbrCards = 0;
+		_numberOfCards = 0;
 		
 		putCardTimer     = nil;
 		getPutCardsTimer = nil;
-		willPlay         = YES;
-		delegate = self;
+		_willPlay         = YES;
+		_delegate = self;
 		
-		packet = [[NSMutableArray alloc] init];
+		_packet = [NSMutableArray new];
 	}
 	return self;
 }
@@ -41,10 +41,10 @@
 	if ((self = [self init]) != nil) {
 		version = [decoder versionForClassName:@"FLPlayer"];
 		[self setPlayerName:[decoder decodeObject]];
-		[decoder decodeValueOfObjCType:@encode(int) at:&tempsReaction];
+		[decoder decodeValueOfObjCType:@encode(int) at:&_tempsReaction];
 		[self setHitKey:[decoder decodeObject]];
 		if (version > 0) {
-			[decoder decodeValueOfObjCType:@encode(BOOL) at:&willPlay];
+			[decoder decodeValueOfObjCType:@encode(BOOL) at:&_willPlay];
 /*			if (version > 1)
 				;*/
 		}
@@ -55,132 +55,69 @@
 
 - (void)encodeWithCoder:(NSCoder *)coder
 {
-	[coder encodeObject:playerName];
-	[coder encodeValueOfObjCType:@encode(int) at:&tempsReaction];
-	[coder encodeObject:hitKey];
-	// Version 1
-	[coder encodeValueOfObjCType:@encode(BOOL) at:&willPlay];
+	[coder encodeObject:_playerName];
+	[coder encodeValueOfObjCType:@encode(int) at:&_tempsReaction];
+	[coder encodeObject:_hitKey];
+	/* Version 1 */
+	[coder encodeValueOfObjCType:@encode(BOOL) at:&_willPlay];
 }
 
-/////////////////////////////// Accessor methods ///////////////////////////////
-- (BOOL)willPlay
-{
-	return willPlay;
-}
-
-- (void)setWillPlay:(BOOL)newWillPlay
-{
-	willPlay = newWillPlay;
-}
-
-- (NSString *)playerName
-{
-	return playerName;
-}
-
-- (void)setPlayerName:(NSString *)newPlayerName
-{
-	[playerName release];
-	playerName = [newPlayerName retain];
-}
-
-- (float)tempsReaction
-{
-	return tempsReaction;
-}
-
-- (void)setTempsReaction:(float)newValue
-{
-	tempsReaction = newValue;
-}
-
-- (NSString *)hitKey
-{
-	return hitKey;
-}
-
-- (void)setHitKey:(NSString *)key
-{
-	[hitKey release];
-	hitKey = [key retain];
-}
-
-- (NSMutableArray *)packet
-{
-	return packet;
-}
-
-- (void)setPacket:(NSMutableArray *)newPacket
-{
-	[packet release];
-	packet = [newPacket retain];
-}
-
-- (id)delegate
-{
-	return delegate;
-}
-
+/* ***************************** Accessor methods ***************************** */
 - (void)setDelegate:(id)anObject
 {
-	delegate = anObject;
-	if (! [delegate respondsToSelector:@selector(cardView)])
+	_delegate = anObject;
+	if (![_delegate respondsToSelector:@selector(cardView)])
 		NSLog(@"*** The delegate of an FLPlayer should respond to selector cardView ***");
 }
 
-- (signed int)numberOfCards
-{
-	return nbrCards;
-}
-
-/////////////////////////////// Necessary ///////////////////////////////
+/* ***************************** Necessary ***************************** */
 - (void)putTheCitation
 {
 	FLCardView *cardView = nil;
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	NSArray *cardsForCitation = [self cardsForCitation:(signed)[defaults integerForKey:FLNbrCardsAmende]];
 	
-	if ([delegate respondsToSelector:@selector(player:willPutCitation:)])
-		[delegate player:self willPutCitation:cardsForCitation];
+	if ([_delegate respondsToSelector:@selector(player:willPutCitation:)])
+		[_delegate player:self willPutCitation:cardsForCitation];
 	
-	if ([delegate respondsToSelector:@selector(cardView)])
-		cardView = [delegate cardView];
+	if ([_delegate respondsToSelector:@selector(cardView)])
+		cardView = [_delegate cardView];
 	
 	[cardView insertArrayOfCards:cardsForCitation];
 	
-	if ([delegate respondsToSelector:@selector(player:didPutCitation:)])
-		[delegate player:self didPutCitation:cardsForCitation];
+	if ([_delegate respondsToSelector:@selector(player:didPutCitation:)])
+		[_delegate player:self didPutCitation:cardsForCitation];
 }
 
 - (void)reallyPutLastCard
 {
-	if (! [packet count]) {
+	if (!_packet.count) {
 #ifndef NDEBUG
 		NSLog(@"I'd like to put a card, but I can't, I have no card !!!");
 #endif
 		return;
 	}
-	FLCard *lastCard = [packet lastObject];
+	FLCard *lastCard = _packet.lastObject;
 	FLCardView *cardView = nil;
-	if ([delegate respondsToSelector:@selector(cardView)])
-		cardView = [delegate cardView];
+	if ([_delegate respondsToSelector:@selector(cardView)])
+		cardView = [_delegate cardView];
 	
 	[cardView addACard:lastCard];
-	[packet removeLastObject];
+	[_packet removeLastObject];
 	
-	nbrCards--;
+	_numberOfCards--;
 	
-	if ([delegate respondsToSelector:@selector(player:didPutTheCard:)])
-		[delegate player:self didPutTheCard:lastCard];
+	if ([_delegate respondsToSelector:@selector(player:didPutTheCard:)])
+		[_delegate player:self didPutTheCard:lastCard];
 }
 
 - (void)putOneCard
 {
 	FLCard *lastCard;
 	
-	lastCard = [packet lastObject];
-	if ([delegate respondsToSelector:@selector(player:willPutTheCard:)]) {
-		if ([delegate player:self willPutTheCard:lastCard])
+	lastCard = [_packet lastObject];
+	if ([_delegate respondsToSelector:@selector(player:willPutTheCard:)]) {
+		if ([_delegate player:self willPutTheCard:lastCard])
 			[self reallyPutLastCard];
 	} else
 		[self reallyPutLastCard];
@@ -211,28 +148,28 @@
 
 - (void)hit
 {
-	if ([delegate respondsToSelector:@selector(playerWillHit:)]) {
-		if ([delegate playerWillHit:self])
+	if ([_delegate respondsToSelector:@selector(playerWillHit:)]) {
+		if ([_delegate playerWillHit:self])
 			[self getAllPutCards];
 		else
 			[self putTheCitation];
 	} else
 		[self getAllPutCards];
 	
-	if ([delegate respondsToSelector:@selector(playerDidHit:)])
-		[delegate playerDidHit:self];
+	if ([_delegate respondsToSelector:@selector(playerDidHit:)])
+		[_delegate playerDidHit:self];
 }
 
-/////////////////////////////// Utils ///////////////////////////////
+/* ***************************** Utils ***************************** */
 - (NSArray *)putCardsOnGame
 {
-	if ([delegate respondsToSelector:@selector(cardView)])
-		return [[delegate cardView] cards];
+	if ([_delegate respondsToSelector:@selector(cardView)])
+		return [[_delegate cardView] cards];
 	else
-		return [[NSArray new] autorelease];
+		return [NSArray new];
 }
 
-// Anagrammes //
+/* Anagrammes */
 - (NSInteger)passage:(NSUInteger)length withLevels:(NSMutableArray *)levels
 {
 	NSUInteger i;
@@ -244,43 +181,43 @@
 	return -1;
 }
 
-// FLFL
-// Il est possible que le temps pour trouver un anagramme correct
-// soit excessivement long avec cette methode
-// Il faudrait la changer pour que l'echange se fasse entre la première
-// et la derniere carte, la premiere et l'avant derniere... (trouver l'algo)
-// On peut choisir plusieurs suites de cartes possible jusqu'à ce que l'on
-// trouve une suite convenable en s'arrêtant à un certain nombre d'essai
-// pour que l'attente ne soit pas trop longue
+/* FLFL
+ * Il est possible que le temps pour trouver un anagramme correct
+ * soit excessivement long avec cette methode
+ * Il faudrait la changer pour que l'echange se fasse entre la première
+ * et la derniere carte, la premiere et l'avant derniere... (trouver l'algo)
+ * On peut choisir plusieurs suites de cartes possible jusqu'à ce que l'on
+ * trouve une suite convenable en s'arrêtant à un certain nombre d'essai
+ * pour que l'attente ne soit pas trop longue */
 - (NSArray *)cardsForCitation:(signed int)nbrCardsAmende
 {
-	NSUInteger length = [packet count], i, lastIndexBasesLevel;
-	signed int nbrCardsToPut = MIN(nbrCardsAmende, (signed)[packet count]);
+	NSUInteger length = [_packet count], i, lastIndexBasesLevel;
+	signed int nbrCardsToPut = MIN(nbrCardsAmende, (signed)_packet.count);
 	NSArray *putCards = [self putCardsOnGame];
 	NSMutableArray *bases, *level, *returnArray;
-	FLGame *game = [[FLGame new] autorelease];
+	FLGame *game = [FLGame new];
 	NSArray *testArray, *result;
 	NSRange rangeNbrCards;
 	
-	nbrCards -= nbrCardsAmende;
+	_numberOfCards -= nbrCardsAmende;
 	if (nbrCardsToPut <= 0)
-		return [[NSArray new] autorelease];
+		return [NSArray new];
 	
 	rangeNbrCards = NSMakeRange(length-nbrCardsToPut, nbrCardsToPut);
-	result = [packet subarrayWithRange:rangeNbrCards];
-	returnArray = [[NSMutableArray new] autorelease];
+	result = [_packet subarrayWithRange:rangeNbrCards];
+	returnArray = [NSMutableArray new];
 	[returnArray addArray:result invertingAtIndex:0];
 	testArray = [returnArray arrayByAddingObjectsFromArray:putCards];
 	if (! [game isHitNecessaryWithCards:testArray]) {
-		[packet removeObjectsInRange:rangeNbrCards];
+		[_packet removeObjectsInRange:rangeNbrCards];
 		return returnArray;
 	}
 	
-	bases = [[NSMutableArray new] autorelease];
-	level = [[NSMutableArray new] autorelease];
+	bases = [NSMutableArray new];
+	level = [NSMutableArray new];
 	for (i = 0 ; i < (length-1) ; i++) {
-		[bases addObject:[[packet mutableCopy] autorelease]];
-		[level addObject:[NSNumber numberWithInt:0]]; // The NSNumber is autoreleased
+		[bases addObject:[_packet mutableCopy]];
+		[level addObject:@0];
 	}
 	lastIndexBasesLevel = [bases count];
 	
@@ -291,7 +228,7 @@
 		[[bases objectAtIndex:i] exchangeObjectAtIndex:lastIndexBasesLevel-currentLevel-1
 											  withObjectAtIndex:lastIndexBasesLevel-i];
 		
-		returnArray = [[NSMutableArray new] autorelease];
+		returnArray = [NSMutableArray new];
 		result = [[bases objectAtIndex:i] subarrayWithRange:rangeNbrCards];
 		[returnArray addArray:result atIndex:0];
 		testArray = [returnArray arrayByAddingObjectsFromArray:putCards];
@@ -299,8 +236,8 @@
 		NSLog(@"%@", returnArray);
 #endif
 		if (! [game isHitNecessaryWithCards:testArray]) {
-			[self setPacket:[[[bases objectAtIndex:i] mutableCopy] autorelease]];
-			[packet removeObjectsInRange:rangeNbrCards];
+			[self setPacket:[bases[i] mutableCopy]];
+			[_packet removeObjectsInRange:rangeNbrCards];
 			return returnArray;
 		}
 		[level replaceObjectAtIndex:i withObject:[NSNumber numberWithInteger:++currentLevel]];
@@ -312,8 +249,8 @@
 #ifndef NDEBUG
 			NSLog(@"Can't find cards to put under packet whithout hit become necessary");
 #endif
-			[self setPacket:[[[bases objectAtIndex:i] mutableCopy] autorelease]];
-			[packet removeObjectsInRange:rangeNbrCards];
+			[self setPacket:[bases[i] mutableCopy]];
+			[_packet removeObjectsInRange:rangeNbrCards];
 			return returnArray;
 		}
 		if (augment) {
@@ -329,7 +266,7 @@
 	assert(0);
 	return nil;
 }
-/////////////////
+/* ************* */
 
 - (void)putTheLateCitation
 {
@@ -337,14 +274,14 @@
 	signed int nbrCardsToPut;
 	FLCardView *cardView = nil;
 	
-	if ([delegate respondsToSelector:@selector(cardView)])
-		cardView = [delegate cardView];
+	if ([_delegate respondsToSelector:@selector(cardView)])
+		cardView = [_delegate cardView];
 	
-	nbrCardsToPut = (-nbrCards);
+	nbrCardsToPut = -_numberOfCards;
 	cardsToAdd = [self cardsForCitation:nbrCardsToPut];
 	[cardView insertArrayOfCards:cardsToAdd];
 	
-	nbrCards += nbrCardsToPut;
+	_numberOfCards += nbrCardsToPut;
 }
 
 - (void)getAllPutCardsBySelf:(NSTimer *)t
@@ -374,39 +311,39 @@
 {
 	NSArray *putCards;
 	FLCardView *cardView;
-	if ([delegate respondsToSelector:@selector(playerWillGetAllPutCards:)])
-		[delegate playerWillGetAllPutCards:self];
+	if ([_delegate respondsToSelector:@selector(playerWillGetAllPutCards:)])
+		[_delegate playerWillGetAllPutCards:self];
 	
-	if (! [delegate respondsToSelector:@selector(cardView)]) {
+	if (![_delegate respondsToSelector:@selector(cardView)]) {
 #ifndef NDEBUG
 		NSLog(@"*** Can't get put card because I can't have the cardView !!! ***");
 #endif
 		return;
 	} else
-		cardView = [delegate cardView];
+		cardView = [_delegate cardView];
 	
-	putCards = [cardView cards];
-	[packet addArray:putCards invertingAtIndex:0];
+	putCards = cardView.cards;
+	[_packet addArray:putCards invertingAtIndex:0];
 	[cardView removeAllCards];
 	[self putTheLateCitation];
 	
-	nbrCards += [putCards count];
+	_numberOfCards += [putCards count];
 	
-	if ([delegate respondsToSelector:@selector(playerDidGetAllPutCards:)])
-		[delegate playerDidGetAllPutCards:self];
+	if ([_delegate respondsToSelector:@selector(playerDidGetAllPutCards:)])
+		[_delegate playerDidGetAllPutCards:self];
 }
 
 - (void)addCard:(FLCard *)card
 {
-	[packet addObject:card];
+	[_packet addObject:card];
 	[self putTheLateCitation];
-	nbrCards++;
+	_numberOfCards++;
 }
 
 - (void)removePacket
 {
-	[self setPacket:[[[NSMutableArray alloc] init] autorelease]];
-	nbrCards = 0;
+	[self setPacket:[NSMutableArray new]];
+	_numberOfCards = 0;
 }
 
 - (BOOL)player:(FLPlayer *)aPlayer willPutTheCard:(FLCard *)theCard {return YES;}
@@ -420,11 +357,11 @@
 - (FLCycleArray *)arrayOfPlayers {return nil;}
 - (FLCardView *)cardView {return nil;}
 
-/////////////////////////////// Description ///////////////////////////////
+/* ***************************** Description ***************************** */
 - (NSString *)description
 {
 	return [NSString stringWithFormat:@"player name : %@, tempsReaction : %f, packet : (%@), willPlay %d",
-															  playerName,      tempsReaction,    packet,      willPlay];
+															 _playerName,     _tempsReaction,   _packet,     _willPlay];
 }
 
 - (void)invalidateGetPutCardsTimer
@@ -450,17 +387,11 @@
 #ifndef NDEBUG
 	NSLog(@"Dealloc FLPlayer named \"%@\"", [self playerName]);
 #endif
-	[getPutCardsTimer release];
-	[putCardTimer     release];
-	[playerName       release];
-	[hitKey           release];
-	[packet           release];
-	[super dealloc];
 }
 
 
 
-// Pour le tableau de FLNewGameController (overwrite de la méthode de NSObject)
+/* Pour le tableau de FLNewGameController (overwrite de la méthode de NSObject) */
 - (void)setNilValueForKey:(NSString *)key
 {
 	if ([key isEqual:@"tempsReaction"]) {

@@ -36,7 +36,7 @@
 {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	[defaults setBool:[sender state] forKey:FLBeginner];
-	// Sent notification for refresh in real time
+	/* Sent notification for refresh in real time */
 	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 	[nc postNotificationName:FLRefreshBeginner object:nil];
 }

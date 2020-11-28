@@ -4,26 +4,18 @@
 #import "FLComputerPlayer.h"
 #import "FLFlashView.h"
 
-@interface FLPlayerView : NSView <NSCopying, NSCoding> {
-	IBOutlet NSButton *buttonState;
-	IBOutlet FLFlashView *flashView;
-	IBOutlet NSTextField *textFieldNbrCard;
-	IBOutlet NSTextField *textFieldPlayerName;
-	
-	unsigned int enabled, nbrCards;
-	NSString *playerName;
-}
-- (void)setButtonState:(NSButton *)newButton;
-- (void)setFlashView:(FLFlashView *)newFlashView;
-- (void)setTextFieldNbrCard:(NSTextField *)newTextField;
-- (void)setTextFieldPlayerName:(NSTextField *)newTextField;
 
-- (unsigned int)enabled;
-- (void)setEnabled:(unsigned int)newState;
-- (unsigned int)nbrCards;
-- (void)setNbrCards:(signed int)newNbr;
-- (NSString *)playerName;
-- (void)setPlayerName:(NSString *)newName;
+
+@interface FLPlayerView : NSView <NSCopying, NSCoding>
+
+@property(nonatomic, retain) IBOutlet NSButton *buttonState;
+@property(nonatomic, retain) IBOutlet FLFlashView *flashView;
+@property(nonatomic, retain) IBOutlet NSTextField *textFieldNbrCard;
+@property(nonatomic, retain) IBOutlet NSTextField *textFieldPlayerName;
+
+@property(nonatomic, assign) BOOL enabled;
+@property(nonatomic, assign) unsigned int nbrCards;
+@property(nonatomic, retain) NSString *playerName;
 
 - (void)flash;
 

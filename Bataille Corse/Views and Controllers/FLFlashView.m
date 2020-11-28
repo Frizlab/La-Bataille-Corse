@@ -1,10 +1,10 @@
-//
-//  FLFlashView.m
-//  Bataille corse
-//
-//  Created by François on 07/06/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLFlashView.m
+ * Bataille corse
+ *
+ * Created by François on 07/06/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import "FLFlashView.h"
 
@@ -17,8 +17,8 @@
 															  green:23./255.
 																blue:49./255.
 															  alpha:0.]];
-		fps = 30.;
-		tts = 0.5;
+		self.fps = 30.;
+		self.tts = 0.5;
 		[self computeInterval];
 	}
 	return self;
@@ -30,8 +30,8 @@
 		[self setColor:[decoder decodeObject]];
 		
 		[decoder decodeValueOfObjCType:@encode(NSTimeInterval) at:&interval];
-		[decoder decodeValueOfObjCType:@encode(double)         at:&fps];
-		[decoder decodeValueOfObjCType:@encode(double)         at:&tts];
+		[decoder decodeValueOfObjCType:@encode(double)         at:&_fps];
+		[decoder decodeValueOfObjCType:@encode(double)         at:&_tts];
 		
 		[self computeInterval];
 	}
@@ -42,30 +42,28 @@
 {
 	[super encodeWithCoder:coder];
 	
-	[coder encodeObject:color];
+	[coder encodeObject:_color];
 	
 	[coder encodeValueOfObjCType:@encode(NSTimeInterval) at:&interval];
-	[coder encodeValueOfObjCType:@encode(double)         at:&fps];
-	[coder encodeValueOfObjCType:@encode(double)         at:&tts];
+	[coder encodeValueOfObjCType:@encode(double)         at:&_fps];
+	[coder encodeValueOfObjCType:@encode(double)         at:&_tts];
 }
 
 - (void)timerDecrease:(NSTimer *)t
 {
-	[self setColor:[[color colorWithAlphaComponent:[color alphaComponent]-(1./nFrame)] retain]];
-	[color release];
+	self.color = [_color colorWithAlphaComponent:_color.alphaComponent - (1./nFrame)];
 	[self display];
 	
-	if ([color alphaComponent] <= 0.)
+	if (_color.alphaComponent <= 0.)
 		[t invalidate];
 }
 
 - (void)timerIncrease:(NSTimer *)t
 {
-	[self setColor:[[color colorWithAlphaComponent:[color alphaComponent]+(1./nFrame)] retain]];
-	[color release];
+	self.color = [_color colorWithAlphaComponent:_color.alphaComponent + (1./nFrame)];
 	[self display];
 	
-	if ([color alphaComponent] >= 1.) {
+	if (_color.alphaComponent >= 1.) {
 		[t invalidate];
 		[NSTimer scheduledTimerWithTimeInterval:interval target:self
 												 selector:@selector(timerDecrease:)
@@ -75,7 +73,7 @@
 
 - (void)flash
 {
-	if ([color alphaComponent] <= 0.)
+	if ([_color alphaComponent] <= 0.)
 		[NSTimer scheduledTimerWithTimeInterval:interval target:self
 												 selector:@selector(timerIncrease:)
 												 userInfo:nil repeats:YES];
@@ -83,48 +81,25 @@
 
 - (void)drawRect:(NSRect)rect
 {
-	[color set];
+	[_color set];
 	[NSBezierPath fillRect:rect];
 }
 
 - (void)computeInterval
 {
-	nFrame = (int)(fps*tts);
-	interval = (tts/nFrame)/2;
-}
-
-- (NSColor *)color
-{
-	return color;
-}
-
-- (void)setColor:(NSColor *)newColor
-{
-	[color release];
-	color = [newColor retain];
-}
-
-// Frame per seconds
-- (double)fps
-{
-	return fps;
+	nFrame = (int)(_fps * _tts);
+	interval = (_tts/nFrame)/2;
 }
 
 - (void)setFps:(double)newFps
 {
-	fps = newFps;
+	_fps = newFps;
 	[self computeInterval];
-}
-
-// Temps total en secondes
-- (double)tts
-{
-	return tts;
 }
 
 - (void)setTts:(double)newTts
 {
-	tts = newTts;
+	_tts = newTts;
 	[self computeInterval];
 }
 

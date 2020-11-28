@@ -1,18 +1,12 @@
-//
-//  FLCycleArray.m
-//  Bataille corse
-//
-//  Created by Fran√ßois on 18/02/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLCycleArray.m
+ * Bataille corse
+ *
+ * Created by François on 18/02/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import "FLCycleArray.h"
-
-@interface FLCycleArray (private)
-
-- (void)setBackingStore:(NSArray *)array;
-
-@end
 
 
 
@@ -24,8 +18,7 @@
 	if ((self = [super init]) != nil) {
 		[self setCurrentIndex:0];
 		backStore = [[NSArray alloc] init];
-		[self setBackingStore:backStore];
-		[backStore release];
+		backingStore = backStore;
 	}
 	return self;
 }
@@ -35,7 +28,7 @@
 	NSArray *backStore;
 	if ((self = [super init]) != nil) {
 		backStore = [NSArray arrayWithArray:array];
-		[self setBackingStore:backStore];
+		backingStore = backStore;
 		[self setCurrentIndex:0];
 	}
 	return self;
@@ -104,19 +97,6 @@
 #ifndef NDEBUG
 	NSLog(@"Deallocing <%@ : %@>...", [self className], self);
 #endif
-	[backingStore release];
-	[super dealloc];
-}
-
-@end
-
-
-@implementation FLCycleArray (private)
-
-- (void)setBackingStore:(NSArray *)array
-{
-	[backingStore release];
-	backingStore = [array retain];
 }
 
 @end

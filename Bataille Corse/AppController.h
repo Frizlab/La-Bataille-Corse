@@ -11,6 +11,8 @@
 #import "Constants.h"
 #import "AppInit.h"
 
+
+
 @interface AppController : NSObject {
 	IBOutlet FLCustomWindow *loadWindow;
 	IBOutlet AppInit *loadObject;
@@ -21,21 +23,18 @@
 	NSArray *cards;
 }
 
-/// Appelé quand l'application a fini de se charger ///
+/* *** Appelé quand l'application a fini de se charger *** */
 - (void)applicationWillFinishLaunching:(NSNotification *)n;
 
-/// Appelé pour savoir si l'application doit quitter ///
+/* *** Appelé pour savoir si l'application doit quitter *** */
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender;
 
-/// Appelé quand l'application va quitter ///
-- (void)applicationWillTerminate:(NSNotification *)aNotification;
-
-/// Action methods ///
-// Notification et action
+/* *** Action methods *** */
+/* Notification et action */
 - (void)preferences:(id)sender;
 - (void)newGame:(id)sender;
 
-// Notification
+/* Notification */
 - (void)beginGame:(NSNotification *)n;
 
 @end

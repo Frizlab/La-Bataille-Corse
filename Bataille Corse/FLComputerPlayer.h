@@ -1,22 +1,25 @@
-//
-//  FLComputerPlayer.h
-//  Bataille corse
-//
-//  Created by François on 21/01/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLComputerPlayer.h
+ * Bataille corse
+ *
+ * Created by François on 21/01/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
-#import <ScreenSaver/ScreenSaver.h> // Just for have "float SSRandomFloatBetween(float a, float b);"
+#import <ScreenSaver/ScreenSaver.h> /* Just for have "float SSRandomFloatBetween(float a, float b);" */
 #import <Cocoa/Cocoa.h>
 #import <math.h>
 #import "FLCycleArray.h"
 #import "Constants.h"
 #import "FLPlayer.h"
 
+
+
 typedef struct minMax {
 	float min;
 	float max;
 } minMax;
+
 
 @interface FLComputerPlayer : FLPlayer {
 	NSTimer *hitTimer;

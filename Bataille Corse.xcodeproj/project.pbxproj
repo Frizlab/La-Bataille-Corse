@@ -140,11 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				7B4C996825728DB900AD1D21 /* Bataille Corse.entitlements */,
+				7B50DA782572B048006E740B /* Conveniences */,
 				7B4C99622571361200AD1D21 /* Views and Controllers */,
-				0F950D030856099100458D5F /* FLFlashView.h */,
-				0F950D040856099100458D5F /* FLFlashView.m */,
-				0F594ECD0801A06E00C57AA0 /* NSString+Keys.h */,
-				0F594ECE0801A06E00C57AA0 /* NSString+Keys.m */,
 				0F53764E07C61C4200879E62 /* Game */,
 				0F3419B707A6B0E400B78052 /* New game */,
 				0F1619420789AE5C000A2F03 /* FLCustomWindow.h */,
@@ -180,8 +177,6 @@
 			children = (
 				0FA167500796E99900A931F9 /* FLGameController.h */,
 				0FA167510796E99900A931F9 /* FLGameController.m */,
-				0F5375F107C60DEC00879E62 /* FLCycleArray.h */,
-				0F5375F207C60DEC00879E62 /* FLCycleArray.m */,
 				0F316BB507A183F500939E82 /* FLComputerPlayer.h */,
 				0F316BB607A183F500939E82 /* FLComputerPlayer.m */,
 				0F0D437F079FF6A000368A61 /* FLNSMutableArray.h */,
@@ -274,6 +269,8 @@
 				7B4814E61EDB6D6700C82F8C /* NewGame.xib */,
 				7BFA1E221EDB706D0081AFC7 /* Preferences.xib */,
 				7BFA1E261EDB70C90081AFC7 /* Game.xib */,
+				0F950D030856099100458D5F /* FLFlashView.h */,
+				0F950D040856099100458D5F /* FLFlashView.m */,
 			);
 			path = "Views and Controllers";
 			sourceTree = "<group>";
@@ -296,6 +293,17 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
 			path = Localizables;
+			sourceTree = "<group>";
+		};
+		7B50DA782572B048006E740B /* Conveniences */ = {
+			isa = PBXGroup;
+			children = (
+				0F594ECD0801A06E00C57AA0 /* NSString+Keys.h */,
+				0F594ECE0801A06E00C57AA0 /* NSString+Keys.m */,
+				0F5375F107C60DEC00879E62 /* FLCycleArray.h */,
+				0F5375F207C60DEC00879E62 /* FLCycleArray.m */,
+			);
+			path = Conveniences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +334,9 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FL;
 				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = Frizlab;
 				TargetAttributes = {
 					8D1107260486CEB800E47090 = {
 						DevelopmentTeam = DVL8GW97S8;
@@ -556,6 +566,7 @@
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -597,6 +608,7 @@
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;

@@ -1,10 +1,10 @@
-//
-//  FLComputerPlayer.m
-//  Bataille corse
-//
-//  Created by François on 21/01/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLComputerPlayer.m
+ * Bataille corse
+ *
+ * Created by François on 21/01/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import <assert.h>
 #import "FLComputerPlayer.h"
@@ -59,8 +59,8 @@
 		(*averageVar) = (somme/nbrPlayersSeen);
 		(*ecartTypeVar) = sqrt(fabs((sommeCarre/nbrPlayersSeen) - ((*averageVar)*(*averageVar))));
 	} else {
-		// There is no real players, I must choose values different than 0
-		// to make the game slower
+		/* There is no real players, I must choose values different than 0
+		 * to make the game slower */
 		minMaxVar->min  = 500.;
 		minMaxVar->max  = 500.;
 		(*averageVar)   = 500.;
@@ -89,7 +89,7 @@
 															 repeats:NO];
 }
 
-// OverWrite
+/* OverWrite */
 - (void)putOneCardBySelf:(NSTimer *)t
 {
 	[putCardTimer invalidate];
@@ -138,11 +138,11 @@
 	
 	diffMaxMin  = useMinMax.max - useMinMax.min;
 	diffPercent = fabsf(percentMinMax.max - percentMinMax.min);
-	// Ce sera la variance utilisée pour la répartition normale
+	/* Ce sera la variance utilisée pour la répartition normale */
 	variance = ecartTypeOfOtherReactionTime + ((diffMaxMin*diffPercent)/100.)/2.;
 	
-	// Crée un nombre au hasard avec une distribution normale jusqu'à
-	// ce qu'il soit entre useMinMax.min et useMinMax.max
+	/* Crée un nombre au hasard avec une distribution normale jusqu'à
+	 * ce qu'il soit entre useMinMax.min et useMinMax.max */
 	do {
 		randomNumber = [self normalDistributionWithMean:averageOfOtherReactionTime andVariance:variance];
 	} while (randomNumber < useMinMax.min || randomNumber > useMinMax.max);
@@ -164,8 +164,8 @@
 															(unsigned long)levelDifficulty];
 	}
 	factor = SSRandomFloatBetween(factorMinMax.min, factorMinMax.max);
-	// Multiplie le nombre créé au hasard par un facteur choisi au hasard
-	// entre deux bornes qui respectent le niveau de jeu
+	/* Multiplie le nombre créé au hasard par un facteur choisi au hasard
+	 * entre deux bornes qui respectent le niveau de jeu */
 	randomNumber *= factor;
 	randomNumber = MAX(useMinMax.min, randomNumber);
 	randomNumber = MIN(useMinMax.max, randomNumber);
@@ -177,8 +177,8 @@
 
 - (void)setDelegate:(id)anObject
 {
-	[super setDelegate:anObject];
-	if (! [delegate respondsToSelector:@selector(arrayOfPlayers)]) {
+	super.delegate = anObject;
+	if (![self.delegate respondsToSelector:@selector(arrayOfPlayers)]) {
 		NSLog(@"*** The delegate of an FLComputerPlayer should respond to selector arrayOfPlayers ***");
 		return;
 	}
@@ -186,14 +186,14 @@
 	[self computeAverage:&averageOfOtherReactionTime
 				  ecartType:&ecartTypeOfOtherReactionTime
 				  andMinMax:&minAndMaxOfOtherReactionTime
-	ofOtherReactionTimes:[delegate arrayOfPlayers]];
+	ofOtherReactionTimes:[self.delegate arrayOfPlayers]];
 #ifndef NDEBUG
 	NSLog(@"average   : %g", averageOfOtherReactionTime);
 	NSLog(@"ecartType : %g", ecartTypeOfOtherReactionTime);
 	NSLog(@"min       : %g", minAndMaxOfOtherReactionTime.min);
 	NSLog(@"max       : %g", minAndMaxOfOtherReactionTime.max);
 #endif
-	// Check if the average is between min and max only if NDEBUG is not define
+	/* Check if the average is between min and max only if NDEBUG is not define */
 	assert(minAndMaxOfOtherReactionTime.max >= averageOfOtherReactionTime);
 	assert(minAndMaxOfOtherReactionTime.min <= averageOfOtherReactionTime);
 }
@@ -216,7 +216,6 @@
 	NSLog(@"Deallocing <FLComputerPlayer: 0x%x>...", self);
 #endif
 	[self invalidateAllMyTimers];
-	[super dealloc];
 }
 
 @end

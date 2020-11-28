@@ -1,12 +1,14 @@
-//
-//  NSString+Keys.m
-//  Bataille corse
-//
-//  Created by François on 04/04/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * NSString+Keys.m
+ * Bataille corse
+ *
+ * Created by François on 04/04/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import "NSString+Keys.h"
+
+
 
 @implementation NSString (NSString_Keys)
 
@@ -86,10 +88,10 @@
 		case NSPageUpFunctionKey     : return NSLocalizedString(@"pageUp"    , nil) ; break;
 		case NSDeleteFunctionKey     : return NSLocalizedString(@"delete"    , nil) ; break;
 		case NSClearLineFunctionKey  : return NSLocalizedString(@"verNum"    , nil) ; break;
-		case 3                       : return NSLocalizedString(@"numEnter"  , nil) ; break; // Pas trouvé code clair d'apple
+		case 3                       : return NSLocalizedString(@"numEnter"  , nil) ; break; /* Pas trouvé code clair d'Apple */
 	}
 	
-	// If it's no a know key or if it is not a key 
+	/* If it's no a know key or if it is not a key */
 	return self;
 }
 

@@ -1,9 +1,9 @@
 /*
- *  Constants.h
- *  Bataille corse
+ * Constants.h
+ * Bataille corse
  *
- *  Created by Fran√ßois on 10/01/05.
- *  Copyright 2005 __MyCompanyName__. All rights reserved.
+ * Created by François on 10/01/05.
+ * Copyright 2005 Frizlab. All rights reserved.
  *
  */
 
@@ -11,7 +11,7 @@
 #define NSPECIALKEY
 #define NUMBER_OF_CARDS 54
 
-// Prefs
+/* Prefs */
 #define FLShowLoadWindow @"FLShowLoadWindow"
 
 #define FLBeginner               @"FLBeginner"
@@ -32,7 +32,7 @@
 #define FLDifficultyNormal     2
 #define FLDifficultyHard       3
 #define FLDifficultyVeryHard   4
-// Il y a une s√©paration qui augmente l'index de 1
+/* Il y a une séparation qui augmente l'index de 1 */
 #define FLDifficultyImpossible 6
 
 #define FLNamesOfPlayers @"FLNamesOfPlayers"

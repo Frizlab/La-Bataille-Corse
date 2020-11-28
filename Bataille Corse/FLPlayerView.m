@@ -1,5 +1,7 @@
 #import "FLPlayerView.h"
 
+
+
 @implementation FLPlayerView
 
 - (id)initWithFrame:(NSRect)frameRect
@@ -21,8 +23,8 @@
 		[self setButtonState:[decoder decodeObject]];
 		
 		[self setPlayerName:[decoder decodeObject]];
-		[decoder decodeValueOfObjCType:@encode(unsigned int) at:&nbrCards];
-		[decoder decodeValueOfObjCType:@encode(unsigned int) at:&enabled];
+		[decoder decodeValueOfObjCType:@encode(unsigned int) at:&_nbrCards];
+		[decoder decodeValueOfObjCType:@encode(unsigned int) at:&_enabled];
 	}
 	return self;
 }
@@ -31,100 +33,35 @@
 {
 	[super encodeWithCoder:coder];
 	
-	[coder encodeObject:textFieldNbrCard];
-	[coder encodeObject:textFieldPlayerName];
-	[coder encodeObject:flashView];
-	[coder encodeObject:buttonState];
+	[coder encodeObject:_textFieldNbrCard];
+	[coder encodeObject:_textFieldPlayerName];
+	[coder encodeObject:_flashView];
+	[coder encodeObject:_buttonState];
 	
-	[coder encodeObject:playerName];
-	[coder encodeValueOfObjCType:@encode(unsigned int) at:&nbrCards];
-	[coder encodeValueOfObjCType:@encode(unsigned int) at:&enabled];
+	[coder encodeObject:_playerName];
+	[coder encodeValueOfObjCType:@encode(unsigned int) at:&_nbrCards];
+	[coder encodeValueOfObjCType:@encode(unsigned int) at:&_enabled];
 }
 
-////////////////////////////
+/* ************************ */
 - (void)drawRect:(NSRect)rect
 {
 	[super drawRect:rect];
 }
 
-////////////////////////////
-- (void)setButtonState:(NSButton *)newButton
-{
-	[buttonState release];
-	buttonState = [newButton retain];
-}
-
-- (void)setFlashView:(FLFlashView *)newFlashView
-{
-	[flashView release];
-	flashView = [newFlashView retain];
-}
-
-- (void)setTextFieldNbrCard:(NSTextField *)newTextField
-{
-	[textFieldNbrCard release];
-	textFieldNbrCard = [newTextField retain];
-}
-
-- (void)setTextFieldPlayerName:(NSTextField *)newTextField
-{
-	[textFieldPlayerName release];
-	textFieldPlayerName = [newTextField retain];
-}
-
-- (unsigned int)enabled
-{
-	return enabled;
-}
-
-- (void)setEnabled:(unsigned int)newState
-{
-	enabled = newState;
-	[buttonState setEnabled:enabled];
-}
-
-- (unsigned int)nbrCards
-{
-	return nbrCards;
-}
-
-- (void)setNbrCards:(signed int)newNbr
-{
-	nbrCards = newNbr;
-	[textFieldNbrCard setIntValue:nbrCards];
-}
-
-- (NSString *)playerName
-{
-	return playerName;
-}
-
-- (void)setPlayerName:(NSString *)newName
-{
-	[playerName release];
-	playerName = [newName retain];
-	[textFieldPlayerName setStringValue:playerName];
-}
-
+/* ************************ */
 - (void)flash
 {
-	[flashView flash];
+	[_flashView flash];
 }
 
-
-// NSCopying
+/* NSCopying */
 - (id)copyWithZone:(NSZone *)zone
 {
+	/* Note from self in the future: 😅! */
 	NSData *data = [NSArchiver archivedDataWithRootObject:self];
 	FLPlayerView *copyPlayer = [NSUnarchiver unarchiveObjectWithData:data];
-	// data is in an autoreleasePool, so, I don't have to release it
 	return copyPlayer;
-}
-
-- (void)dealloc
-{
-	[playerName release];
-	[super dealloc];
 }
 
 @end

@@ -1,12 +1,14 @@
 #import "AppInit.h"
 
+
+
 @implementation AppInit
 
-- (NSArray *)initApp:(BOOL)refresh
+- (NSArray *)appInit:(BOOL)refresh
 {
 	if (! refresh) {
-		scroller = nil;
-		cardImage = nil;
+		_scroller = nil;
+		_cardImage = nil;
 	}
 	return [self chargeImages];
 }
@@ -18,9 +20,8 @@
 	float k = 1;
 	FLCard *currentCard;
 	NSMutableArray *allCards = [[NSMutableArray alloc] init];
-	NSArray *retour;
 	
-	[scroller setMaxValue:MAX_FORME*MAX_VALUE];
+	[_scroller setMaxValue:MAX_FORME*MAX_VALUE];
 	for (i = MIN_VALUE ; i<=MAX_VALUE ; i++) {
 		for (j = MIN_FORME ; j<=MAX_FORME ; j++) {
 			currentCard = [[FLCard alloc] initWithValue:i andForme:j];
@@ -28,18 +29,15 @@
 #ifndef NDEBUG
 				NSLog(@"I have loaded image %d_%d", i, j);
 #endif
-				[cardImage setImage:[currentCard image]];
-				[cardImage display];
+				[_cardImage setImage:currentCard.image];
+				[_cardImage display];
 				[allCards addObject:currentCard];
-				[scroller setDoubleValue:++k];
-				[scroller display];
+				[_scroller setDoubleValue:++k];
+				[_scroller display];
 			}
 		}
 	}
-	retour = [allCards copy];
-	// Le copy ne fait pas de retain des objets !!!!!!!!!!!
-	[allCards release];
-	return retour;
+	return [allCards copy];
 }
 
 @end

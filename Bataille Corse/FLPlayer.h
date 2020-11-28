@@ -1,10 +1,10 @@
-//
-//  FLPlayer.h
-//  Bataille corse
-//
-//  Created by François on 12/01/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLPlayer.h
+ * Bataille corse
+ *
+ * Created by François on 12/01/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import <Cocoa/Cocoa.h>
 #import "FLNSMutableArray.h"
@@ -13,37 +13,25 @@
 #import "FLGame.h"
 #import "FLCard.h"
 
+
+
 @interface FLPlayer : NSObject <NSCoding> {
-	id delegate;
-	NSMutableArray *packet;
-	signed int nbrCards; // Devient négatif quand le joueur doit mettre une amende
-								// et qu'il n'a plus assez de cartes pour la mettre
-	
 	NSTimer *getPutCardsTimer;
 	NSTimer *putCardTimer;
-	
-	NSString *playerName;
-	float tempsReaction;
-	NSString *hitKey;
-	BOOL willPlay;
 }
 
-/// Accessor methods ///
-- (BOOL)willPlay;
-- (void)setWillPlay:(BOOL)newWillPlay;
-- (NSString *)playerName;
-- (void)setPlayerName:(NSString *)newPlayerName;
-- (float)tempsReaction;
-- (void)setTempsReaction:(float)newValue;
-- (NSString *)hitKey;
-- (void)setHitKey:(NSString *)key;
-- (NSMutableArray *)packet;
-- (void)setPacket:(NSMutableArray *)newPacket;
-- (id)delegate;
-- (void)setDelegate:(id)anObject;
-- (signed int)numberOfCards;
+@property(nonatomic, assign) BOOL willPlay;
+@property(nonatomic, retain) NSString *playerName;
+@property(nonatomic, assign) float tempsReaction;
+@property(nonatomic, retain) NSString *hitKey;
+@property(nonatomic, retain) NSMutableArray *packet;
+/* Devient négatif quand le joueur doit mettre une amende et qu'il n'a plus
+ * assez de cartes pour la mettre */
+@property(nonatomic, readonly) signed int numberOfCards;
 
-//// Necessary ///
+@property(nonatomic, weak) id delegate;
+
+/* *** Necessary *** */
 - (void)putTheCitation;
 - (void)reallyPutLastCard;
 - (void)putOneCard;
@@ -51,16 +39,16 @@
 - (void)putOneCardAfter:(float)seconds;
 - (void)hit;
 
-/// Utils ///
+/* *** Utils *** */
 - (NSArray *)putCardsOnGame;
-// Anagrammes //
+/* Anagrammes */
 - (NSInteger)passage:(NSUInteger)length withLevels:(NSMutableArray *)levels;
-// Il est possible que le temps pour trouver un anagramme correct
-// soit excessivement long avec cette methode
-// Il faudrait la changer pour que l'echange se fasse entre la première
-// et la derniere carte, la premiere et l'avant derniere... (trouver l'algo)
+/* Il est possible que le temps pour trouver un anagramme correct
+ * soit excessivement long avec cette methode
+ * Il faudrait la changer pour que l'echange se fasse entre la première
+ * et la derniere carte, la premiere et l'avant derniere... (trouver l'algo) */
 - (NSArray *)cardsForCitation:(signed int)nbrCardsAmende;
-// Fin anagrammes //
+/* Fin anagrammes */
 - (void)putTheLateCitation;
 - (void)getAllPutCardsBySelf:(NSTimer *)t;
 - (void)getAllPutCardsAfter:(float)seconds;
@@ -71,7 +59,7 @@
 - (void)invalidatePutCardTimer;
 - (void)invalidateAllMyTimers;
 
-// The delegate object should have this methods :
+/* The delegate object should have this methods : */
 - (BOOL)player:(FLPlayer *)aPlayer willPutTheCard:(FLCard *)theCard;
 - (void)player:(FLPlayer *)aPlayer  didPutTheCard:(FLCard *)theCard;
 - (BOOL)playerWillHit:(FLPlayer *)aPlayer;

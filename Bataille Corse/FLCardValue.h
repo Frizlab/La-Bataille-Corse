@@ -1,12 +1,14 @@
-//
-//  FLCardValue.h
-//  Bataille corse
-//
-//  Created by François on 02/01/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLCardValue.h
+ * Bataille corse
+ *
+ * Created by François on 02/01/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import <Cocoa/Cocoa.h>
+
+
 
 #define JOKER 0
 
@@ -23,20 +25,17 @@
 #define MIN_VALUE 0
 #define MAX_VALUE 13
 
+
 typedef unsigned int cardForm;
 typedef unsigned int cardValue;
 
-@interface FLCardValue : NSObject {
-	cardForm forme;
-	cardValue valeur;
-}
-// Initialisations //
-- (id)initWithValue:(cardValue)initValue andForme:(cardForm)initForme;
 
-// Méthodes d'accès //
-- (cardForm)forme;
-- (void)setForme:(cardForm)newForme;
-- (cardValue)valeur;
-- (void)setValeur:(cardValue)newValeur;
+@interface FLCardValue : NSObject
+
+@property(nonatomic) cardForm forme;
+@property(nonatomic) cardValue valeur;
+
+/* Initialisations */
+- (id)initWithValue:(cardValue)initValue andForme:(cardForm)initForme;
 
 @end

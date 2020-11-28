@@ -4,11 +4,13 @@
 #import "FLNSMutableArray.h"
 #import "FLCard.h"
 
+
+
 @interface FLCardView : NSView {
-	NSMutableArray *cards;
+	NSMutableArray *_cards;
 }
-- (NSArray *)cards;
-- (void)setCards:(NSMutableArray *)newCards;
+
+@property(nonatomic, retain) NSArray *cards;
 
 - (void)addACard:(FLCard *)aCard;
 - (void)insertArrayOfCards:(NSArray *)cardsToAdd;

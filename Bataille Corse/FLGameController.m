@@ -4,30 +4,26 @@
 
 @implementation FLGameController
 
-//////////////////////// Méthodes d'initialisations ////////////////////////
+/* ********************** Méthodes d'initialisations ********************** */
 - (id)init
 {
 	FLCard *newCard;
 	NSArray *newPacket;
 	NSLog(@"*** A game controller should be init with a packet and players ***");
 	
-	newCard = [[FLCard alloc] init];
+	newCard = [FLCard new];
 	if (! newCard) {
 		NSLog(@"Can't alloc a card in init method of FLGameController");
-		[self release];
 		return nil;
 	}
 	
-	newPacket = [[NSArray arrayWithObject:newCard] retain];
+	newPacket = @[newCard];
 	if (! newPacket) {
 		NSLog(@"Can't alloc an array in init method of FLGameController");
-		[self release];
 		return nil;
 	}
 	
 	self = [self initWithPacket:newPacket];
-	[newCard   release];
-	[newPacket release];
 	return self;
 }
 
@@ -37,23 +33,19 @@
 	NSArray *newPlayers;
 	NSLog(@"*** A game controller should be init with players ***");
 	
-	newPlayer = [[FLPlayer alloc] init];
+	newPlayer = [FLPlayer new];
 	if (! newPlayer) {
 		NSLog(@"Can't alloc a player in initWithPacket: method of FLGameController");
-		[self release];
 		return nil;
 	}
 	
-	newPlayers = [[NSArray arrayWithObject:newPlayer] retain];
+	newPlayers = @[newPlayer];
 	if (! newPacket) {
 		NSLog(@"Can't alloc an array in initWithPacket: method of FLGameController");
-		[self release];
 		return nil;
 	}
 	
 	self = [self initWithPacket:newPacket andPlayers:newPlayers];
-	[newPlayer  release];
-	[newPlayers release];
 	return self;
 }
 
@@ -66,7 +58,7 @@
 		[self setWindowFrameAutosaveName:@"FLGameWindow"];
 		[self setPacket:newPacket];
 		[self setShouldCascadeWindows:NO];
-		players = [[FLCycleArray alloc] initWithArray:newPlayers];
+		_players = [[FLCycleArray alloc] initWithArray:newPlayers];
 		someOneWillGetPutCards = NO;
 		game = [FLGame new];
 		nbrCardsToAdd = 0;
@@ -85,7 +77,7 @@
 	[self beginToPlay];
 }
 
-//////////////////////// Utils ////////////////////////
+/* ********************** Utils ********************** */
 - (BOOL)isInt:(unsigned int)numb inArray:(unsigned int *)array sizeOfArray:(unsigned int)size
 {
 	unsigned int i;
@@ -104,16 +96,16 @@
 	NSPoint currentPoint;
 	unsigned int i;
 	
-	for (i = 0 ; i<[players count] ; i++) {
+	for (i = 0 ; i<_players.count ; i++) {
 		currentView = [playerView copy];
 		currentPoint = NSMakePoint((sizeOfOneView + 20) * i, 0);
 		[viewWithPlayers addSubview:currentView];
 		[currentView setFrameOrigin:currentPoint];
 		
-		currentPlayerInMethod = [players objectAtIndex:i];
+		currentPlayerInMethod = [_players objectAtIndex:i];
 		[currentView setNbrCards:[currentPlayerInMethod numberOfCards]];
 		[currentView setPlayerName:[currentPlayerInMethod playerName]];
-		[currentView setEnabled:([players currentObject] == currentPlayerInMethod)];
+		[currentView setEnabled:(_players.currentObject == currentPlayerInMethod)];
 	}
 }
 
@@ -124,37 +116,37 @@
 	FLPlayer *currentPlayerInMethod;
 	NSArray *views = [viewWithPlayers subviews];
 	
-	assert([views count] == [players count]);
+	assert([views count] == _players.count);
 	
 	for (i = 0 ; i<[views count] ; i++) {
 		currentView = [views objectAtIndex:i];
-		currentPlayerInMethod = [players objectAtIndex:i];
+		currentPlayerInMethod = [_players objectAtIndex:i];
 		
-		[currentView setNbrCards:[currentPlayerInMethod numberOfCards]];
-		[currentView setEnabled:([players currentObject] == currentPlayerInMethod)];
+		[currentView setNbrCards:currentPlayerInMethod.numberOfCards];
+		[currentView setEnabled:(_players.currentObject == currentPlayerInMethod)];
 	}
 }
 
 - (void)removePacketOfAllPlayers
 {
 	unsigned int i;
-	for (i = 0 ; i<[players count] ; i++)
-		[[players objectAtIndex:i] removePacket];
+	for (i = 0 ; i<_players.count ; i++)
+		[[_players objectAtIndex:i] removePacket];
 }
 
 - (void)initPlayers
 {
 	unsigned int i;
-	for (i = 0 ; i<[players count] ; i++)
-		[[players objectAtIndex:i] setDelegate:self];
+	for (i = 0 ; i<_players.count ; i++)
+		[[_players objectAtIndex:i] setDelegate:self];
 }
 
 - (void)invalidateTimersOfPlayers
 {
 	unsigned int i;
 	FLPlayer *currentPlayer;
-	for (i = 0 ; i<[players count] ; i++) {
-		currentPlayer = [players objectAtIndex:i];
+	for (i = 0 ; i<_players.count ; i++) {
+		currentPlayer = [_players objectAtIndex:i];
 		[currentPlayer invalidateAllMyTimers];
 	}
 }
@@ -163,8 +155,8 @@
 {
 	unsigned int i;
 	FLPlayer *currentPlayer;
-	for (i = 0 ; i<[players count] ; i++) {
-		currentPlayer = [players objectAtIndex:i];
+	for (i = 0 ; i<_players.count ; i++) {
+		currentPlayer = [_players objectAtIndex:i];
 		if ([currentPlayer class] == [FLComputerPlayer class])
 			[(FLComputerPlayer *)currentPlayer invalidateHitTimer];
 	}
@@ -172,8 +164,8 @@
 
 - (void)currentPlayerPutACardIfItIsAComputerPlayer
 {
-	if ([[players currentObject] class] == [FLComputerPlayer class]) {
-		FLComputerPlayer *player = [players currentObject];
+	if ([_players.currentObject class] == FLComputerPlayer.class) {
+		FLComputerPlayer *player = _players.currentObject;
 		
 		[player invalidatePutCardTimer];
 		[player putOneCardAfter:([player tempsReaction] / 1000.)];
@@ -183,14 +175,14 @@
 - (void)computerPlayersHit
 {
 	FLPlayer *currentPlayer;
-	NSUInteger n, nPlayers = [players count], i;
+	NSUInteger n, nPlayers = _players.count, i;
 	
 	[self invalidateHitTimerOfComputersPlayer];
 	i = random() % nPlayers;
-	for (n = 0 ; n<[players count] ; n++, i++) {
-		currentPlayer = [players objectAtIndex:(i % nPlayers)];
-		if ([currentPlayer class] == [FLComputerPlayer class])
-			[(FLComputerPlayer *)currentPlayer hitAfter:([currentPlayer tempsReaction] / 1000.)];
+	for (n = 0 ; n<_players.count ; n++, i++) {
+		currentPlayer = [_players objectAtIndex:(i % nPlayers)];
+		if ([currentPlayer class] == FLComputerPlayer.class)
+			[(FLComputerPlayer *)currentPlayer hitAfter:(currentPlayer.tempsReaction / 1000.)];
 	}
 }
 
@@ -207,8 +199,8 @@
 	FLPlayer *currentPlayer;
 	FLPlayer *thePlayer = nil;
 	unsigned int i, count = 0;
-	for (i = 0 ; i<[players count] ; i++) {
-		currentPlayer = [players objectAtIndex:i];
+	for (i = 0 ; i<_players.count ; i++) {
+		currentPlayer = [_players objectAtIndex:i];
 		if ([currentPlayer numberOfCards] > 0) {
 			thePlayer = currentPlayer;
 			count++;
@@ -223,8 +215,8 @@
 {
 	unsigned int i;
 	FLPlayer *currentPlayer;
-	for (i = 0 ; i<[players count] ; i++) {
-		currentPlayer = [players objectAtIndex:i];
+	for (i = 0 ; i<[_players count] ; i++) {
+		currentPlayer = [_players objectAtIndex:i];
 		if ([currentPlayer numberOfCards] > 0)
 			return NO;
 	}
@@ -239,21 +231,21 @@
 		putCards = [cardView cards];
 		[cardView removeAllCards];
 		for (i = 0 ; i<[putCards count] ; i++)
-			[[players objectAtIndex:(i % [players count])] addACard:[putCards objectAtIndex:i]];
+			[[_players objectAtIndex:(i % _players.count)] addACard:[putCards objectAtIndex:i]];
 	}
 }
 
 - (void)selectNextValidPlayer
 {
 	if ([self allPlayersHaveNoCards]) {
-		[players selectNextIndex];
+		[_players selectNextIndex];
 		if (! mustHit)
 			[self distributePutCards];
 		return;
 	}
 	do {
-		[players selectNextIndex];
-	} while ([[players currentObject] numberOfCards] <= 0);
+		[_players selectNextIndex];
+	} while ([_players.currentObject numberOfCards] <= 0);
 }
 
 - (void)putMessage:(NSString *)message ifPlayerIsHuman:(FLPlayer *)player
@@ -265,12 +257,12 @@
 
 - (void)flashPlayer:(FLPlayer *)aPlayer
 {
-	NSUInteger idx = [players indexOfObject:aPlayer];
+	NSUInteger idx = [_players indexOfObject:aPlayer];
 	assert(idx != NSNotFound);
 	[[[viewWithPlayers subviews] objectAtIndex:idx] flash];
 }
 
-//////////////////////// Game methods ////////////////////////
+/* ********************** Game methods ********************** */
 - (BOOL)checkIfOnePlayerWon
 {
 	FLPlayer *winner = [self whoIsTheOnlyOneToHaveCards];
@@ -297,15 +289,15 @@
 
 - (void)determineFirstPlayer
 {
-	[players setCurrentIndex:(random() % [players count])];
+	_players.currentIndex = (random() % _players.count);
 }
 
 - (void)distributeCards
 {
 	cardValue sawValues[NUMBER_OF_CARDS], randomNumber;
-	NSUInteger cardPut = 0, nPlayers = [players count], i;
+	NSUInteger cardPut = 0, nPlayers = _players.count, i;
 	
-	if (NUMBER_OF_CARDS > [packet count]) {
+	if (NUMBER_OF_CARDS > _packet.count) {
 		NSLog(@"*** In distributeCards of FLGameController, NUMBER_OF_CARDS > [packet count]");
 		NSLog(@"so, I must stop the game ***");
 		NSAlert *alert = [NSAlert new];
@@ -315,7 +307,7 @@
 		[alert runModal];
 		[NSException raise:@"Can't distribute cards"
 						format:@"NUMBER_OF_CARDS > [packet count] (%d > %lu)",
-																 NUMBER_OF_CARDS, (unsigned long)[packet count]];
+																 NUMBER_OF_CARDS, (unsigned long)_packet.count];
 	}
 	
 	for (i = 0 ; i<NUMBER_OF_CARDS ; i++)
@@ -327,11 +319,11 @@
 		assert(randomNumber < NUMBER_OF_CARDS);
 		
 		if (! [self isInt:randomNumber+1 inArray:sawValues sizeOfArray:NUMBER_OF_CARDS]) {
-			FLPlayer *actualPlayer = [players objectAtIndex:(cardPut % nPlayers)];
-			[actualPlayer addCard:[packet objectAtIndex:randomNumber]];
+			FLPlayer *actualPlayer = [_players objectAtIndex:(cardPut % nPlayers)];
+			[actualPlayer addCard:[_packet objectAtIndex:randomNumber]];
 			
-			sawValues[cardPut] = randomNumber+1; // +1 : Pour que 0 ne puisse pas y être 
-															 // (le tableau a été initialisé à 0)
+			sawValues[cardPut] = randomNumber+1; /* +1 : Pour que 0 ne puisse pas y être
+															  * (le tableau a été initialisé à 0) */
 			cardPut++;
 		}
 	}
@@ -346,7 +338,7 @@
 	[self currentPlayerPutACardIfItIsAComputerPlayer];
 }
 
-//////////////////////// Delegate de FLPlayer ////////////////////////
+/* ********************** Delegate de FLPlayer ********************** */
 - (BOOL)player:(FLPlayer *)aPlayer willPutTheCard:(FLCard *)theCard
 {
 #ifndef NDEBUG
@@ -365,7 +357,7 @@
 	
 	[reasonHit setStringValue:@""];
 	if ([aPlayer numberOfCards] <= 0) {
-		// Informe le joueur actif qu'il n'a plus de cartes
+		/* Informe le joueur actif qu'il n'a plus de cartes */
 		[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"noCards", nil),
 																					[aPlayer playerName]]
 															ifPlayerIsHuman:aPlayer];
@@ -374,10 +366,10 @@
 		playerWhoPutTheLastSpecialCard = aPlayer;
 		nbrCardsToAdd = [game numberOfCardsToAddWithCard:[cardView lastCard]];
 		[self selectNextValidPlayer];
-		// Indique au joueur actif qu'il doit poser nbrCardsToAdd cartes
+		/* Indique au joueur actif qu'il doit poser nbrCardsToAdd cartes */
 		[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"mustPutNCards", nil),
-																[[players currentObject] playerName], nbrCardsToAdd]
-							ifPlayerIsHuman:[players currentObject]];
+																[_players.currentObject playerName], nbrCardsToAdd]
+							ifPlayerIsHuman:_players.currentObject];
 	} else if (nbrCardsToAdd == 0 && ! mustHit) {
 		someOneWillGetPutCards = YES;
 		[playerWhoPutTheLastSpecialCard getAllPutCardsAfter:
@@ -387,11 +379,11 @@
 		nbrCardsToAdd = 0;
 		[self selectNextValidPlayer];
 	}
-	if ([[players currentObject] numberOfCards] <= 0) {
-		// Informe le joueur actif qu'il n'a plus de cartes
+	if ([_players.currentObject numberOfCards] <= 0) {
+		/* Informe le joueur actif qu'il n'a plus de cartes */
 		[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"noCards", nil),
-																		[[players currentObject] playerName]]
-										ifPlayerIsHuman:[players currentObject]];
+																		[_players.currentObject playerName]]
+										ifPlayerIsHuman:_players.currentObject];
 		[self selectNextValidPlayer];
 	}
 	[self currentPlayerPutACardIfItIsAComputerPlayer];
@@ -413,19 +405,19 @@
 	NSLog(@"player \"%@\" did hit", [aPlayer playerName]);
 #endif
 	if (mustHit) {
-		// Informe le joueur qu'il a récupéré toutes les cartes grâce à son réflexe
-		// et dit pourquoi il a tapé (surtout pour les autres)
+		/* Informe le joueur qu'il a récupéré toutes les cartes grâce à son réflexe
+		 * et dit pourquoi il a tapé (surtout pour les autres) */
 		[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"getCardsReflex", nil),
 																		[aPlayer playerName], [game lastReasonForHit]]
 													ifPlayerIsHuman:aPlayer];
 	}
 	
 	[self refreshMustHit];
-	if ([[players currentObject] numberOfCards] <= 0) {
-		// Informe le joueur actif qu'il n'a plus de cartes
+	if ([_players.currentObject numberOfCards] <= 0) {
+		/* Informe le joueur actif qu'il n'a plus de cartes */
 		[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"noCards", nil),
-																		[[players currentObject] playerName]]
-										ifPlayerIsHuman:[players currentObject]];
+																		[_players.currentObject playerName]]
+										ifPlayerIsHuman:_players.currentObject];
 		[self selectNextValidPlayer];
 		[self currentPlayerPutACardIfItIsAComputerPlayer];
 	}
@@ -448,7 +440,7 @@
 	NSLog(@"player \"%@\" did put a citation", [aPlayer playerName]);
 #endif
 	[self refreshMustHit];
-	// Informe le joueur aPlayer qu'il a perdu des cartes pour avoir tapé sans raison valable
+	/* Informe le joueur aPlayer qu'il a perdu des cartes pour avoir tapé sans raison valable */
 	[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"citationPut", nil),
 				[aPlayer playerName], [[NSUserDefaults standardUserDefaults] integerForKey:FLNbrCardsAmende]]
 								ifPlayerIsHuman:aPlayer];
@@ -468,24 +460,24 @@
 #ifndef NDEBUG
 	NSLog(@"player \"%@\" did get all put cards", [aPlayer playerName]);
 #endif
-	[players setCurrentObject:aPlayer];
+	[_players setCurrentObject:aPlayer];
 	[self refreshPlayersView];
 	if ([self checkIfOnePlayerWon])
 		return;
 	
 	[reasonHit setStringValue:[game lastReasonForHit]];
-	// Informe le joueur qu'il a récupéré toutes les cartes.
+	/* Informe le joueur qu'il a récupéré toutes les cartes. */
 	[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"getCards", nil),
 																						[aPlayer playerName]]
 											ifPlayerIsHuman:aPlayer];
-	// Fais clignoter le joueur qui a recupere toute les cartes
-	// pour une information visuelle efficace
+	/* Fais clignoter le joueur qui a recupere toute les cartes
+	 * pour une information visuelle efficace */
 	[self flashPlayer:aPlayer];
 	
 	nbrCardsToAdd = 0;
 	someOneWillGetPutCards = NO;
 	if ([aPlayer numberOfCards] <= 0) {
-		// Informe le joueur actif qu'il n'a plus de cartes
+		/* Informe le joueur actif qu'il n'a plus de cartes */
 		[self putMessage:[NSString stringWithFormat:NSLocalizedString(@"noCards", nil),
 																		[aPlayer playerName]]
 									ifPlayerIsHuman:aPlayer];
@@ -497,7 +489,7 @@
 
 - (FLCycleArray *)arrayOfPlayers
 {
-	return players;
+	return _players;
 }
 
 - (FLCardView *)cardView
@@ -505,8 +497,7 @@
 	return cardView;
 }
 
-//////////////////////// Interception des événements ////////////////////////
-// …vénement clavier
+/* ********************** Interception des événements clavier ********************** */
 #ifndef NSPECIALKEY
 - (void)flagsChanged:(NSEvent *)e
 {
@@ -542,14 +533,14 @@
 		if (someOneWillGetPutCards) {
 			[playerWhoPutTheLastSpecialCard getAllPutCards];
 		} else {
-			[[players currentObject] putOneCard];
+			[_players.currentObject putOneCard];
 		}
 		return;
 	}
 	
-	for (i = 0 ; i<[players count] ; i++) {
-		currentPlayer = [players objectAtIndex:i];
-		if ([input isEqualToString:[currentPlayer hitKey]]) {
+	for (i = 0 ; i<_players.count ; i++) {
+		currentPlayer = [_players objectAtIndex:i];
+		if ([input isEqualToString:currentPlayer.hitKey]) {
 			[currentPlayer hit];
 			return;
 		}
@@ -558,7 +549,7 @@
 	NSBeep();
 }
 
-// Pour demander si on veut vraiment arrêter de jouer quand on ferme la fenêtre
+/* Pour demander si on veut vraiment arrêter de jouer quand on ferme la fenêtre */
 - (BOOL)windowShouldClose:(id)sender
 {
 	if (gameIsFinish)
@@ -578,59 +569,28 @@
 	return NO;
 }
 
-//////////////////////// Notification ////////////////////////
+/* ********************** Notification ********************** */
 - (void)refreshReasonForHit:(NSNotification *)n
 {
 	[reasonHit setHidden:(! [[NSUserDefaults standardUserDefaults] boolForKey:FLBeginner])];
 }
 
-//////////////////////// Méthodes d'accès ////////////////////////
-- (NSArray *)packet
-{
-	return packet;
-}
-
-- (void)setPacket:(NSArray *)newPacket
-{
-	[packet release];
-	packet = [newPacket retain];
-}
-
-- (FLCycleArray *)players
-{
-	return players;
-}
-
-- (void)setPlayers:(FLCycleArray *)newPlayers
-{
-	[self invalidateTimersOfPlayers];
-	[players release];
-	players = [newPlayers retain];
-}
-
-//////////////////////// Méthodes d'action ////////////////////////
-// Comme son nom ne l'indique pas, le bouton qui appelle cette méthode est faite pour poser une carte !
+/* ********************** Méthodes d'action ********************** */
+/* Comme son nom ne l'indique pas, le bouton qui appelle cette méthode est faite pour poser une carte ! */
 - (IBAction)buttonHitClicked:(id)sender
 {
 	[sender setState:1];
-	[[players currentObject] putOneCard];
+	[_players.currentObject putOneCard];
 }
 
-//////////////////////// Methods for the others ////////////////////////
+/* *********************** Methods for the others ********************** */
 - (void)dealloc
 {
 #ifndef NDEBUG
 	NSLog(@"Deallocing %@...", self);
 #endif
-	NSNotificationCenter *nc;
-	nc = [NSNotificationCenter defaultCenter];
-	[nc removeObserver:self];
-	
+	[NSNotificationCenter.defaultCenter removeObserver:self];
 	[self invalidateTimersOfPlayers];
-//	[game    release];
-	[packet  release];
-	[players release];
-	[super dealloc];
 }
 
 @end

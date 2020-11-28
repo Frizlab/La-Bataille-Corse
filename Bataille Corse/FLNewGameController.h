@@ -19,7 +19,7 @@
 	NSMutableArray *players;
 }
 
-/// Action methods ///
+/* *** Action methods *** */
 - (IBAction)calibrateTempsReactionPlayer:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)addPlayer:(id)sender;
@@ -28,7 +28,7 @@
 - (IBAction)prefs:(id)sender;
 - (IBAction)refreshButtonOk:(id)sender;
 
-/// dataSource du tableau ///
+/* *** dataSource du tableau *** */
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView;
 - (id)tableView:(NSTableView *)aTableView
 objectValueForTableColumn:(NSTableColumn *)aTableColumn
@@ -38,15 +38,15 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	forTableColumn:(NSTableColumn *)aTableColumn
 				  row:(int)rowIndex;
 
-/// Delegate du tableau ///
+/* *** Delegate du tableau *** */
 - (void)tableViewSelectionDidChange:(NSNotification *)n;
 - (BOOL)tableView:(NSTableView *)aTableView
 shouldEditTableColumn:(NSTableColumn *)aTableColumn
 				  row:(int)rowIndex;
-/// Delegate du control du tableau ///
+/* *** Delegate du control du tableau *** */
 - (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor;
 
-/// Utils ///
+/* *** Utils *** */
 - (BOOL)isCorrectNumberOfPlayersSelectedForPlay;
 - (BOOL)isHitKeyColumnEdited;
 - (BOOL)isValidKey:(NSString *)key forPlayer:(FLPlayer *)p;

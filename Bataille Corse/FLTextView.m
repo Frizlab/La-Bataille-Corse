@@ -1,10 +1,10 @@
-//
-//  FLTextView.m
-//  Bataille corse
-//
-//  Created by François on 25/01/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLTextView.m
+ * Bataille corse
+ *
+ * Created by François on 25/01/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import "FLTextView.h"
 #import "Constants.h"
@@ -13,7 +13,7 @@
 
 - (BOOL)resignFirstResponder
 {
-	// The [super resignFirstResponder] must be here
+	/* The [super resignFirstResponder] must be here */
 	if ([(id)[self superview] textShouldEndEditing:self])
 		return [super resignFirstResponder];
 	else

@@ -1,10 +1,10 @@
-//
-//  FLCycleArray.h
-//  Bataille corse
-//
-//  Created by Fran√ßois on 18/02/05.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
+/*
+ * FLCycleArray.h
+ * Bataille corse
+ *
+ * Created by François on 18/02/05.
+ * Copyright 2005 Frizlab. All rights reserved.
+ */
 
 #import <Cocoa/Cocoa.h>
 

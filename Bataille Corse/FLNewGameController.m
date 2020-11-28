@@ -8,10 +8,10 @@
 	if ((self = [super initWithWindowNibName:@"NewGame"]) != nil) {
 		[self setShouldCascadeWindows:NO];
 		[self setWindowFrameAutosaveName:@"FLNewGameWindow"];
-		players = [[NSUnarchiver unarchiveObjectWithData:
-			[[NSUserDefaults standardUserDefaults] valueForKey:FLNamesOfPlayers]] retain];
+		players = [NSUnarchiver unarchiveObjectWithData:
+			[NSUserDefaults.standardUserDefaults valueForKey:FLNamesOfPlayers]];
 		
-		nc = [NSNotificationCenter defaultCenter];
+		nc = NSNotificationCenter.defaultCenter;
 		[nc addObserver:self selector:@selector(refreshPLayer:) name:FLChangeTimeOfOnePlayer object:nil];
 	}
 	
@@ -56,7 +56,6 @@
 	}
 	FLPlayer *newPlayer = [[FLPlayer alloc] init];
 	[players addObject:newPlayer];
-	[newPlayer release];
 	
 	[tableViewListOfPlayersView reloadData];
 	
@@ -90,7 +89,7 @@
 	}
 	unsigned int i;
 	FLPlayer *currentPlayer;
-	NSMutableArray *playersWillPlay = [[NSMutableArray new] autorelease];
+	NSMutableArray *playersWillPlay = [NSMutableArray new];
 	
 	for (i = 0 ; i<[players count] ; i++) {
 		currentPlayer = [players objectAtIndex:i];
@@ -98,20 +97,20 @@
 			[playersWillPlay addObject:currentPlayer];
 	}
 	for (i = 1 ; i<=(unsigned)[nbrComputerPlayers intValue] ; i++)
-		[playersWillPlay addObject:[[FLComputerPlayer new] autorelease]];
+		[playersWillPlay addObject:[FLComputerPlayer new]];
 	
-	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+	NSNotificationCenter *nc = NSNotificationCenter.defaultCenter;
 	[nc postNotificationName:FLBeginGame object:[playersWillPlay copy]];
 }
 
 - (IBAction)prefs:(id)sender
 {
-	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+	NSNotificationCenter *nc = NSNotificationCenter.defaultCenter;
 	[nc postNotificationName:FLShowPrefs object:nil];
 }
 
-// FLFL : si jamais on sait comment rafraichir players depuis le tableau, on peut remettre
-// le setEnabled de buttonOk
+/* FLFL : si jamais on sait comment rafraichir players depuis le tableau, on peut remettre
+ * le setEnabled de buttonOk */
 - (IBAction)refreshButtonOk:(id)sender
 {
 	[[NSUserDefaults standardUserDefaults] setInteger:[nbrComputerPlayers intValue]
@@ -119,7 +118,7 @@
 //	[buttonOk setEnabled:[self isCorrectNumberOfPlayersSelectedForPlay]];
 }
 
-//////////////////////// dataSource du tableau ////////////////////////
+/* ********************** dataSource du tableau ********************** */
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
 	return [players count];
@@ -133,7 +132,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	FLPlayer *player = [players objectAtIndex:rowIndex];
 	
 	id value = [player valueForKey:identifier];
-	// Permet d'afficher Return au lieu d'un \r interprété, Tabulation au lieu d'un \t interprété...
+	/* Permet d'afficher Return au lieu d'un \r interprété, Tabulation au lieu d'un \t interprété... */
 	if ([identifier isEqualToString:@"hitKey"])
 		return [value nameForKey];
 	
@@ -152,7 +151,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	[self saveArray];
 }
 
-//////////////////////// Delegate du tableau ////////////////////////
+/* ********************** Delegate du tableau ********************** */
 - (void)tableViewSelectionDidChange:(NSNotification *)n
 {
 	[[NSUserDefaults standardUserDefaults] setInteger:[tableViewListOfPlayersView selectedRow]
@@ -167,7 +166,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 	return YES;
 }
 
-//////////////////////// Delegate du control du tableau ////////////////////////
+/* ********************** Delegate du control du tableau ********************** */
 - (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
 {
 	if ([self isHitKeyColumnEdited])
@@ -176,7 +175,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 	return YES;
 }
 
-//////////////////////// Utils ////////////////////////
+/* ********************** Utils ********************** */
 - (BOOL)isCorrectNumberOfPlayersSelectedForPlay
 {
 	unsigned int i, nbrWillPlay = 0;
@@ -243,12 +242,7 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 #ifndef NDEBUG
 	NSLog(@"Deallocing %@", self);
 #endif
-	NSNotificationCenter *nc;
-	nc = [NSNotificationCenter defaultCenter];
-	[nc removeObserver:self];
-	
-	[players release];
-	[super dealloc];
+	[NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 @end

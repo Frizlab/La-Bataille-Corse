@@ -1,10 +1,12 @@
 #import "AppController.h"
 
+
+
 @implementation AppController
 
 + (void)initialize
 {
-	// Crée un dictionnaire
+	/* Crée un dictionnaire */
 	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
 	[defaultValues setObject:[NSNumber numberWithBool:YES] forKey:FLShowLoadWindow];
 	[defaultValues setObject:[NSNumber numberWithBool:YES] forKey:FLBeginner];
@@ -25,7 +27,7 @@
 							forKey:FLNamesOfPlayers];
 	[defaultValues setObject:[NSNumber numberWithInt:0] forKey:FLCurrentPlayer];
 	[defaultValues setObject:[NSNumber numberWithInt:1] forKey:FLNumberOfComputerPlayers];
-	// Enregistre le dictionnaire de defaults
+	/* Enregistre le dictionnaire de defaults */
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
 }
 
@@ -41,7 +43,7 @@
 	return self;
 }
 
-////////// Appelé quand l'application a fini de se charger //////////
+/* ******** Appelé quand l'application a fini de se charger ******** */
 - (void)applicationWillFinishLaunching:(NSNotification *)n
 {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -52,12 +54,12 @@
 		[loadWindow makeKeyAndOrderFront:nil];
 	}
 	
-	cards = [loadObject initApp:showLoadWindow];
+	cards = [loadObject appInit:showLoadWindow];
 	[loadWindow close];
 	[self newGame:nil];
 }
 
-////////// Appelé pour savoir si l'application doit quitter //////////
+/* ******** Appelé pour savoir si l'application doit quitter ******** */
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
 #ifndef NDEBUG
@@ -70,14 +72,9 @@
 		return NSTerminateNow;
 }
 
-////////// Appelé quand l'application va quitter //////////
-- (void)applicationWillTerminate:(NSNotification *)aNotification
-{
-	[self release];
-}
-
-////////// Action methods //////////
-// Notification et action
+/* ******** Appelé quand l'application va quitter ******** */
+/* ******** Action methods ******** */
+/* Notification et action */
 - (void)preferences:(id)sender
 {
 	if (! prefsController)
@@ -90,7 +87,6 @@
 	if (gameController && ! [gameController windowShouldClose:nil])
 		return;
 	[gameController close];
-	[gameController release];
 	gameController = nil;
 	
 	if (! newGameController) {
@@ -99,7 +95,7 @@
 	[newGameController showWindow:self];
 }
 
-// Notification
+/* Notification */
 - (void)beginGame:(NSNotification *)n
 {
 	if ((gameController && ! [gameController windowShouldClose:nil]) ||
@@ -108,12 +104,10 @@
 	[newGameController close];
 	
 	[timeCalibrater close];
-	[timeCalibrater release];
 	timeCalibrater = nil;
 	
 	[gameController close];
-	[gameController release];
-	gameController = [[FLGameController alloc] initWithPacket:cards andPlayers:[n object]];
+	gameController = [[FLGameController alloc] initWithPacket:cards andPlayers:n.object];
 	[gameController showWindow:self];
 }
 
@@ -123,12 +117,10 @@
 		 (timeCalibrater && ! [timeCalibrater windowShouldClose:nil]))
 		return;
 	[gameController close];
-	[gameController release];
 	gameController = nil;
 	
 	[timeCalibrater close];
-	[timeCalibrater release];
-	timeCalibrater = [[FLCalibrateTimeController alloc] initWithPacket:cards andPlayer:[n object]];
+	timeCalibrater = [[FLCalibrateTimeController alloc] initWithPacket:cards andPlayer:n.object];
 	[timeCalibrater showWindow:self];
 }
 
@@ -137,15 +129,7 @@
 #ifndef NDEBUG	
 	NSLog(@"Deallocing %@...", self);
 #endif
-	NSNotificationCenter *nc;
-	nc = [NSNotificationCenter defaultCenter];
-	[nc removeObserver:self];
-	
-	[newGameController release];
-	[prefsController release];
-	[gameController release];
-	[cards release];
-	[super dealloc];
+	[NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
 @end

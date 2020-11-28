@@ -7,24 +7,24 @@
 						backing:(NSBackingStoreType)bufferingType
 						  defer:(BOOL)flag
 {
-	// Change the style mask to NSBorderlessWindowMask. So, the window will not have title-bar.
+	/* Change the style mask to NSBorderlessWindowMask. So, the window will not have title-bar. */
 	FLCustomWindow* result = [super initWithContentRect:contentRect
 															styleMask:NSWindowStyleMaskBorderless
 															  backing:bufferingType
 																 defer:NO];
-	// Efface le fond par dÈfaut d'une fenÍtre
+	/* Efface le fond par défaut d'une fenêtre */
 	[result setBackgroundColor:[NSColor clearColor]];
-	// Mais, on est obligÈ de rendre la fenÍtre non opaque pour pas qu'elle s'affiche en noir
+	/* Mais, on est obligé de rendre la fenêtre non opaque pour pas qu'elle s'affiche en noir */
 	[result setOpaque:NO];
-	// Pour mettre la fenetre devant toute les autres fenetres, mÍme celles des autres applis
+	/* Pour mettre la fenetre devant toute les autres fenetres, même celles des autres applis */
 //	[result setLevel:NSStatusWindowLevel];
-	// Pour remettre l'ombre de la fenÍtre, ce qui est automatiquement enlevÈ pour ce type de fenÍtre
+	/* Pour remettre l'ombre de la fenêtre, ce qui est automatiquement enlevé pour ce type de fenêtre */
 	[result setHasShadow:YES];
 	
 	return result;
 }
 
-// Autorise la fenÍtre ‡ reÁevoir les Èvenement clavier
+/* Autorise la fenêtre à reçevoir les événement clavier */
 - (BOOL)canBecomeKeyWindow
 {
 	return YES;
