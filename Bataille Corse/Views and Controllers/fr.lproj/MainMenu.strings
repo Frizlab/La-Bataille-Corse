@@ -1,0 +1,91 @@
+/* ••••••••••••••••••••••••••••••••••••• DO NOT TOUCH THIS BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+"29.title" = ""; "255.title" = "";
+
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* ••••••••••••••••••••••••••••••• */
+/*            Main Menu            */
+/* ••••••••••••••••••••••••••••••• */
+
+/* •••••••••• App Menu •••••••••• */
+
+/* Standard macOS App menu item title (should be the app name) */
+"56.title" = "Bataille corse";
+/* Standard macOS App menu title (should be the app name) */
+"57.title" = "Bataille corse";
+
+/* Standard macOS “About” menu item title in the App menu */
+"58.title" = "À propos de Bataille corse…";
+
+/* Standard macOS “Preferences” menu item title in the App menu */
+"129.title" = "Préférences…";
+
+/* Standard macOS “Services” menu title in the App menu */
+"130.title" = "Services";
+/* Standard macOS “Services” menu item title in the App menu */
+"131.title" = "Services";
+
+/* Standard macOS “Hide App” menu item title in the App menu */
+"134.title" = "Masquer Bataille corse";
+
+/* Standard macOS “Hide Others” menu item title in the App menu */
+"145.title" = "Masquer les autres";
+
+/* Standard macOS “Show All” menu item title in the App menu */
+"150.title" = "Tout afficher";
+
+/* Standard macOS “Quit App” menu item title in the App menu */
+"136.title" = "Quitter Bataille corse";
+
+/* •••••••••• File Menu •••••••••• */
+
+/* Standard macOS “File” menu item title */
+"83.title" = "Fichier";
+/* Standard macOS “File” menu title */
+"81.title" = "Fichier";
+
+/* The “New Game…” menu item title in the “File” menu */
+"82.title" = "Nouveau jeu…";
+
+/* •••••••••• Window Menu •••••••••• */
+
+/* Standard macOS “Window” menu item title */
+"19.title" = "Fenêtre";
+/* Standard macOS “Window” menu title */
+"24.title" = "Fenêtre";
+
+/* Standard macOS “Minimize” menu item title in the “Window” menu */
+"23.title" = "Placer dans le Dock";
+
+/* Standard macOS “Zoom” menu item title in the “Window” menu */
+"239.title" = "Agrandir/réduire";
+
+/* Standard macOS “Bring All to Front” menu item title in the “Window” menu */
+"5.title" = "Tout ramener au premier plan";
+
+/* •••••••••• Help Menu •••••••••• */
+
+/* Standard macOS “Help” menu item title */
+"103.title" = "Aide";
+/* Standard macOS “Help” menu title */
+"106.title" = "Aide";
+
+/* Standard macOS “App Help” menu item title in the “Help” menu */
+"111.title" = "Aide Bataille corse";
+
+
+/* ••••••••••••••••••••••••••••••••••• */
+/*            Splash Screen            */
+/* ••••••••••••••••••••••••••••••••••• */
+
+/* App title in the splash screen window */
+"275.title" = "Bataille Corse";
+
+/* App author in the splash screen window */
+"276.title" = "Par François Lamboley";
+
+/* Loading images label in the splash screen window */
+"273.title" = "Je charge les images, veuillez patienter…";

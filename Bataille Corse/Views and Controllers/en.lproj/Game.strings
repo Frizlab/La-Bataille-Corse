@@ -1,0 +1,13 @@
+/* ••••••••••••••••••••••••••••••••••••• DO NOT TOUCH THIS BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+"161.title" = ""; "160.title" = "";
+
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* Title of the Game window (should be the app name) */
+"15.title" = "Bataille Corse";
+
+/* “card(s)” */
+"163.title" = "card(s)";

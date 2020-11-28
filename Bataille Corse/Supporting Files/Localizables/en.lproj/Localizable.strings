@@ -1,0 +1,54 @@
+"sureQuit"  = "Would you really like to stop the current game?";
+"ifYouQuit" = "If you quit now, the current game will be lost.";
+"yes"       = "Yes";
+"no"        = "No";
+
+"sureStopCalibrate" = "Would you really like to stop the current calibration?";
+"ifYouStop"         = "";
+
+"newPlayer" = "New player";
+"computer"  = "Computer";
+
+"return"     = "Return";
+"tab"        = "Tabulation";
+"space"      = "Space";
+"backSpace"  = "Backspace";
+"escape"     = "Escape";
+"shift"      = "Shift";
+"control"    = "Control";
+"alt"        = "Alt";
+"cmd"        = "Command (Apple key)";
+"arrowUp"    = "Arrow up";
+"arrowDown"  = "Arrow down";
+"arrowLeft"  = "Arrow left";
+"arrowRight" = "Arrow right";
+"verNum"     = "Lock numbers";
+"pagEnd"     = "Page end";
+"pagBegin"   = "Page begin";
+"pageDown"   = "Page down";
+"pageUp"     = "Page up";
+"delete"     = "Delete";
+"numEnter"   = "Return (num.)";
+
+"joker"         = "Jolly";
+"start-end"     = "Begin-end";
+"start-end ten" = "Begin-end ten";
+"doubles"       = "Sandwich";
+"ten"           = "Sandwich-ten";
+"with"          = "with";
+"cards between" = "level(s)";
+
+"bravo"    = "Congrats!!!";
+"endMatch" = "%@ won, the game is over, but other players could take their revenge!!!";
+"ok"       = "OK";
+
+"dommage"  = "Sorry, I won";
+"improve"  = "But you may play again to try and beat me, if you like.";
+
+"error"                  = "Error";
+"errWhenDistributeCards" = "An error has occured while distributing the cards, I can't begin the game.";
+"citationPut"    = "Beware %@, you loose %d card(s) because you've banged without reason";
+"getCards"       = "%@ gets the whole pile";
+"getCardsReflex" = "Bravo %@, you get the pile because you've seen the “%@” faster than the others";
+"mustPutNCards"  = "%@ must put %d card(s), unless a bang occurs or a court card is played";
+"noCards"        = "%@, you have no card left. You can continue to play, but beware!!!";

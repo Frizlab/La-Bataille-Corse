@@ -1,0 +1,57 @@
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+"406.title" = ""; "490.title" = ""; "491.title" = ""; "485.title" = "";
+"495.title" = ""; "498.title" = "";
+
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* Title of the Preferences window */
+"385.title" = "Preferences";
+
+/* “Show splash screen” */
+"486.title" = "Show splash screen";
+/* “Beginner mode” */
+"481.title" = "Beginner mode";
+
+/* “Minimum reaction time of computers players = your reaction time -” */
+"488.title" = "Minimum reaction time of computers players = your reaction time -";
+/* “Maximum reaction time of computers players = your reaction time +” */
+"489.title" = "Maximum reaction time of computers players = your reaction time +";
+
+/* “Difficulty level:” */
+"484.title" = "Difficulty level:";
+/* “Very easy” */
+"395.title" = "Very Easy";
+/* “Easy” */
+"405.title" = "Easy";
+/* “Normal” */
+"401.title" = "Normal";
+/* “Difficult” */
+"408.title" = "Difficult";
+/* “Very Difficult” */
+"410.title" = "Very Difficult";
+/* “Unbeatable” */
+"414.title" = "Unbeatable";
+
+/* “Variants” group title */
+"420.title" = "Variants";
+/* “Sandwich with up to” */
+"499.title" = "Sandwich with up to";
+/* “Sandwich-ten with up to” */
+"496.title" = "Sandwich-ten with up to";
+/* “level(s)” (for the sandwiches) */
+"492.title" = "level(s)";
+/* “level(s)” (for the sandwiches-ten) */
+"497.title" = "level(s)";
+/* “Begin-end” */
+"494.title" = "Begin-end";
+/* “Begin-end ten” */
+"493.title" = "Begin-end ten";
+
+/* “Allow “force next card”” */
+"487.title" = "Allow “force next card”";
+
+/* “Fine for wrong bang:” */
+"483.title" = "Fine for wrong bang:";

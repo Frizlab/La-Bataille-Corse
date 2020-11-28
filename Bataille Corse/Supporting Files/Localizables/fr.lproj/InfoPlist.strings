@@ -1,0 +1,5 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Bataille Corse";
+NSHumanReadableCopyright = "Frizlab’s Apps, © 2005-2020";
+CFBundleHelpBookName = "Aide Bataille Corse";

@@ -1,0 +1,39 @@
+/* ••••••••••••••••••••••••••••••••••••• DO NOT TOUCH THIS BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+"144.title" = "";
+
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* Title of the “New Game” window */
+"45.title" = "New Game";
+
+/* Title of the “Reaction Time” column */
+"84.headerCell.title" = "Reaction Time";
+/* Title of the “Player’s Name” column */
+"86.headerCell.title" = "Player’s Name";
+/* Title of the “Key for Banging” column */
+"100.headerCell.title" = "Key for Banging";
+/* Title of the “Is Active?” column */
+"122.headerCell.title" = "Active";
+
+/* Title of the button to calibrate the reaction time */
+"138.title" = "Calibrate Your Reaction Time…";
+
+/* Title of the preferences button */
+"139.title" = "Preferences…";
+
+/* Title of the “Add Player” button */
+"141.title" = "Add";
+
+/* Title of the “Delete Player” button */
+"142.title" = "Delete";
+
+/* “Number of computer players:” */
+"143.title" = "Number of computer players:";
+
+/* Cancel button title */
+"140.title" = "Cancel";
+/* OK button title */
+"137.title" = "OK";

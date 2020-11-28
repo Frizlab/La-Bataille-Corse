@@ -1,0 +1,57 @@
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+"406.title" = ""; "490.title" = ""; "491.title" = ""; "485.title" = "";
+"495.title" = ""; "498.title" = "";
+
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* Title of the Preferences window */
+"385.title" = "Préférences";
+
+/* “Show splash screen” */
+"486.title" = "Afficher la fenêtre de démarrage";
+/* “Beginner mode” */
+"481.title" = "Mode débutant";
+
+/* “Minimum reaction time of computers players = your reaction time -” */
+"488.title" = "Temps de réaction minimum de l'ordinateur = votre temps de réaction -";
+/* “Maximum reaction time of computers players = your reaction time +” */
+"489.title" = "Temps de réaction maximum de l'ordinateur = votre temps de réaction +";
+
+/* “Difficulty level:” */
+"484.title" = "Difficulté du jeu :";
+/* “Very easy” */
+"395.title" = "Très facile";
+/* “Easy” */
+"405.title" = "Facile";
+/* “Normal” */
+"401.title" = "Normal";
+/* “Difficult” */
+"408.title" = "Difficile";
+/* “Very Difficult” */
+"410.title" = "Très difficile";
+/* “Unbeatable” */
+"414.title" = "Imbattable";
+
+/* “Variants” group title */
+"420.title" = "Variantes";
+/* “Sandwich with up to” */
+"499.title" = "Sandwich avec au moins";
+/* “Sandwich-ten with up to” */
+"496.title" = "Sandwich dix avec au mois";
+/* “level(s)” (for the sandwiches) */
+"492.title" = "étage(s)";
+/* “level(s)” (for the sandwiches-ten) */
+"497.title" = "étage(s)";
+/* “Begin-end” */
+"494.title" = "Début-fin";
+/* “Begin-end ten” */
+"493.title" = "Début-fin dix";
+
+/* “Allow “force next card”” */
+"487.title" = "Autoriser à forcer la carte suivante";
+
+/* “Fine for wrong bang:” */
+"483.title" = "Amende pour avoir mal tapé :";
