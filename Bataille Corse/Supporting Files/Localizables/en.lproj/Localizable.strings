@@ -43,7 +43,7 @@
 "ok"       = "OK";
 
 "dommage"  = "Sorry, I won";
-"improve"  = "But you may play again to try and beat me, if you like";
+"improve"  = "But you may play again to try and beat me, if you like.";
 
 "error"                  = "Error";
 "errWhenDistributeCards" = "An error has occured while distributing the cards, I can't begin the game.";

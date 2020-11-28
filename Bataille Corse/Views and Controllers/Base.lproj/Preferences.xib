@@ -92,15 +92,15 @@
                             </menu>
                         </popUpButtonCell>
                     </popUpButton>
-                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="399">
-                        <rect key="frame" x="232" y="20" width="129" height="16"/>
+                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="399">
+                        <rect key="frame" x="203" y="20" width="129" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Fine for wrong bang:" id="483">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="403">
+                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="403">
                         <rect key="frame" x="18" y="192" width="94" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Difficulty level:" id="484">
                             <font key="font" metaFont="system"/>
@@ -109,7 +109,7 @@
                         </textFieldCell>
                     </textField>
                     <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="411">
-                        <rect key="frame" x="367" y="17" width="30" height="21"/>
+                        <rect key="frame" x="338" y="17" width="30" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="SD6-1e-uNX"/>
                         </constraints>
@@ -149,7 +149,7 @@
                             <rect key="frame" x="3" y="3" width="512" height="105"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="396">
+                                <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="396">
                                     <rect key="frame" x="198" y="73" width="49" height="16"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="level(s)" id="492">
                                         <font key="font" metaFont="system"/>
@@ -212,7 +212,7 @@
                                         <action selector="changeDix:" target="-2" id="442"/>
                                     </connections>
                                 </button>
-                                <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="412">
+                                <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="412">
                                     <rect key="frame" x="223" y="47" width="49" height="16"/>
                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="level(s)" id="497">
                                         <font key="font" metaFont="system"/>
@@ -282,7 +282,7 @@
                             <constraint firstAttribute="height" constant="119" id="Dct-vT-589"/>
                         </constraints>
                     </box>
-                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="469">
+                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="469">
                         <rect key="frame" x="18" y="245" width="408" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Minimum reaction time of computers players = your reaction time -" id="488">
                             <font key="font" metaFont="system"/>
@@ -290,7 +290,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="470">
+                    <textField autoresizesSubviews="NO" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="470">
                         <rect key="frame" x="18" y="220" width="413" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Maximum reaction time of computers players = your reaction time +" id="489">
                             <font key="font" metaFont="system"/>
@@ -361,7 +361,7 @@
                     <constraint firstItem="474" firstAttribute="top" secondItem="388" secondAttribute="bottom" constant="8" symbolic="YES" id="3ye-Cp-Dfu"/>
                     <constraint firstItem="389" firstAttribute="firstBaseline" secondItem="419" secondAttribute="firstBaseline" id="5iW-F0-tUp"/>
                     <constraint firstItem="474" firstAttribute="leading" secondItem="469" secondAttribute="trailing" constant="8" symbolic="YES" id="7of-CS-KuV"/>
-                    <constraint firstItem="399" firstAttribute="leading" secondItem="465" secondAttribute="trailing" constant="50" id="88r-GN-Y4J"/>
+                    <constraint firstItem="399" firstAttribute="leading" secondItem="465" secondAttribute="trailing" constant="21" id="88r-GN-Y4J"/>
                     <constraint firstItem="394" firstAttribute="leading" secondItem="403" secondAttribute="trailing" constant="8" symbolic="YES" id="Ace-k3-zNL"/>
                     <constraint firstAttribute="trailing" secondItem="474" secondAttribute="trailing" constant="20" symbolic="YES" id="CXW-48-6ou"/>
                     <constraint firstItem="387" firstAttribute="top" secondItem="394" secondAttribute="bottom" constant="8" symbolic="YES" id="E8z-JQ-rdL"/>

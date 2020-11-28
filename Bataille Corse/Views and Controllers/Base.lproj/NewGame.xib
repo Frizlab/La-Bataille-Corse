@@ -190,7 +190,7 @@ Gw
                             <action selector="deletePlayer:" target="-2" id="93"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="129">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="129">
                         <rect key="frame" x="18" y="58" width="181" height="16"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Number of computer players:" id="143">
                             <font key="font" metaFont="system"/>

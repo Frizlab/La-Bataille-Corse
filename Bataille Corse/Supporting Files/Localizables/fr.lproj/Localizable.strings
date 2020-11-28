@@ -43,7 +43,7 @@
 "ok"       = "OK";
 
 "dommage"  = "Désolé, j'ai gagné";
-"improve"  = "Mais vous pouvez encore vous entraîner pour vous améliorer et me battre";
+"improve"  = "Mais vous pouvez encore vous entraîner pour vous améliorer et me battre.";
 
 "error"                  = "Erreur logistique";
 "errWhenDistributeCards" = "Une erreur s'est produite lorsque je distribuais les cartes, par conséquent, je ne peut pas commencer le jeu.";
