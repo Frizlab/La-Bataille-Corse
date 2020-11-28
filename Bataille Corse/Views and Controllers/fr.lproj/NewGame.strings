@@ -1,39 +1,39 @@
+/* ••••••••••••••••••••••••••••••••••••• DO NOT TOUCH THIS BLOCK ••••••••••••••••••••••••••••••••••••• */
 
-/* Class = "NSWindow"; title = "Nouvelle partie"; ObjectID = "45"; */
+"144.title" = "";
+
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* Title of the “New Game” window */
 "45.title" = "Nouvelle partie";
 
-/* Class = "NSTableColumn"; headerCell.title = "Temps de réaction"; ObjectID = "84"; */
+/* Title of the “Reaction Time” column */
 "84.headerCell.title" = "Temps de réaction";
-
-/* Class = "NSTableColumn"; headerCell.title = "Nom du joueur"; ObjectID = "86"; */
+/* Title of the “Player’s Name” column */
 "86.headerCell.title" = "Nom du joueur";
-
-/* Class = "NSTableColumn"; headerCell.title = "Touche pour taper"; ObjectID = "100"; */
+/* Title of the “Key for Banging” column */
 "100.headerCell.title" = "Touche pour taper";
-
-/* Class = "NSTableColumn"; headerCell.title = "Joue"; ObjectID = "122"; */
+/* Title of the “Is Active?” column */
 "122.headerCell.title" = "Joue";
 
-/* Class = "NSButtonCell"; title = "Ok"; ObjectID = "137"; */
-"137.title" = "Ok";
-
-/* Class = "NSButtonCell"; title = "Calibrer votre temps de réaction…"; ObjectID = "138"; */
+/* Title of the button to calibrate the reaction time */
 "138.title" = "Calibrer votre temps de réaction…";
 
-/* Class = "NSButtonCell"; title = "Préférences…"; ObjectID = "139"; */
+/* Title of the preferences button */
 "139.title" = "Préférences…";
 
-/* Class = "NSButtonCell"; title = "Annuler"; ObjectID = "140"; */
-"140.title" = "Annuler";
-
-/* Class = "NSButtonCell"; title = "Ajouter"; ObjectID = "141"; */
+/* Title of the “Add Player” button */
 "141.title" = "Ajouter";
 
-/* Class = "NSButtonCell"; title = "Supprimer"; ObjectID = "142"; */
+/* Title of the “Delete Player” button */
 "142.title" = "Supprimer";
 
-/* Class = "NSTextFieldCell"; title = "Nombre de joueur informatique :"; ObjectID = "143"; */
+/* “Number of computer players:” */
 "143.title" = "Nombre de joueur informatique :";
 
-/* Class = "NSTextFieldCell"; title = "1"; ObjectID = "144"; */
-"144.title" = "1";
+/* Cancel button title */
+"140.title" = "Annuler";
+/* OK button title */
+"137.title" = "OK";

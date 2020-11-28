@@ -1,12 +1,13 @@
+/* ••••••••••••••••••••••••••••••••••••• DO NOT TOUCH THIS BLOCK ••••••••••••••••••••••••••••••••••••• */
 
-/* Class = "NSWindow"; title = "Bataille corse"; ObjectID = "15"; */
+"161.title" = ""; "160.title" = "";
+
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* Title of the Game window (should be the app name) */
 "15.title" = "Bataille corse";
 
-/* Class = "NSTextFieldCell"; title = "playerName"; ObjectID = "160"; */
-"160.title" = "playerName";
-
-/* Class = "NSTextFieldCell"; title = "-27"; ObjectID = "161"; */
-"161.title" = "-27";
-
-/* Class = "NSTextFieldCell"; title = "carte(s)"; ObjectID = "163"; */
+/* “card(s)” */
 "163.title" = "carte(s)";

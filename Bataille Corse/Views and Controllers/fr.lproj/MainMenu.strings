@@ -1,78 +1,91 @@
+/* ••••••••••••••••••••••••••••••••••••• DO NOT TOUCH THIS BLOCK ••••••••••••••••••••••••••••••••••••• */
 
-/* Class = "NSMenuItem"; title = "Tout ramener au premier plan"; ObjectID = "5"; */
-"5.title" = "Tout ramener au premier plan";
+"29.title" = ""; "255.title" = "";
 
-/* Class = "NSMenuItem"; title = "Fenêtre"; ObjectID = "19"; */
-"19.title" = "Fenêtre";
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
 
-/* Class = "NSMenuItem"; title = "Placer dans le Dock"; ObjectID = "23"; */
-"23.title" = "Placer dans le Dock";
 
-/* Class = "NSMenu"; title = "Fenêtre"; ObjectID = "24"; */
-"24.title" = "Fenêtre";
 
-/* Class = "NSMenu"; title = "MainMenu"; ObjectID = "29"; */
-"29.title" = "MainMenu";
+/* ••••••••••••••••••••••••••••••• */
+/*            Main Menu            */
+/* ••••••••••••••••••••••••••••••• */
 
-/* Class = "NSMenuItem"; title = "Bataille corse"; ObjectID = "56"; */
+/* •••••••••• App Menu •••••••••• */
+
+/* Standard macOS App menu item title (should be the app name) */
 "56.title" = "Bataille corse";
-
-/* Class = "NSMenu"; title = "Bataille corse"; ObjectID = "57"; */
+/* Standard macOS App menu title (should be the app name) */
 "57.title" = "Bataille corse";
 
-/* Class = "NSMenuItem"; title = "À propos de Bataille corse"; ObjectID = "58"; */
-"58.title" = "À propos de Bataille corse";
+/* Standard macOS “About” menu item title in the App menu */
+"58.title" = "À propos de Bataille corse…";
 
-/* Class = "NSMenu"; title = "Fichier"; ObjectID = "81"; */
-"81.title" = "Fichier";
-
-/* Class = "NSMenuItem"; title = "Nouveau jeu"; ObjectID = "82"; */
-"82.title" = "Nouveau jeu";
-
-/* Class = "NSMenuItem"; title = "Fichier"; ObjectID = "83"; */
-"83.title" = "Fichier";
-
-/* Class = "NSMenuItem"; title = "Aide"; ObjectID = "103"; */
-"103.title" = "Aide";
-
-/* Class = "NSMenu"; title = "Aide"; ObjectID = "106"; */
-"106.title" = "Aide";
-
-/* Class = "NSMenuItem"; title = "Aide Bataille corse"; ObjectID = "111"; */
-"111.title" = "Aide Bataille corse";
-
-/* Class = "NSMenuItem"; title = "Préférences…"; ObjectID = "129"; */
+/* Standard macOS “Preferences” menu item title in the App menu */
 "129.title" = "Préférences…";
 
-/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+/* Standard macOS “Services” menu title in the App menu */
 "130.title" = "Services";
-
-/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+/* Standard macOS “Services” menu item title in the App menu */
 "131.title" = "Services";
 
-/* Class = "NSMenuItem"; title = "Masquer Bataille corse"; ObjectID = "134"; */
+/* Standard macOS “Hide App” menu item title in the App menu */
 "134.title" = "Masquer Bataille corse";
 
-/* Class = "NSMenuItem"; title = "Quitter Bataille corse"; ObjectID = "136"; */
-"136.title" = "Quitter Bataille corse";
-
-/* Class = "NSMenuItem"; title = "Masquer les autres"; ObjectID = "145"; */
+/* Standard macOS “Hide Others” menu item title in the App menu */
 "145.title" = "Masquer les autres";
 
-/* Class = "NSMenuItem"; title = "Tout afficher"; ObjectID = "150"; */
+/* Standard macOS “Show All” menu item title in the App menu */
 "150.title" = "Tout afficher";
 
-/* Class = "NSMenuItem"; title = "Agrandir/réduire"; ObjectID = "239"; */
+/* Standard macOS “Quit App” menu item title in the App menu */
+"136.title" = "Quitter Bataille corse";
+
+/* •••••••••• File Menu •••••••••• */
+
+/* Standard macOS “File” menu item title */
+"83.title" = "Fichier";
+/* Standard macOS “File” menu title */
+"81.title" = "Fichier";
+
+/* The “New Game…” menu item title in the “File” menu */
+"82.title" = "Nouveau jeu…";
+
+/* •••••••••• Window Menu •••••••••• */
+
+/* Standard macOS “Window” menu item title */
+"19.title" = "Fenêtre";
+/* Standard macOS “Window” menu title */
+"24.title" = "Fenêtre";
+
+/* Standard macOS “Minimize” menu item title in the “Window” menu */
+"23.title" = "Placer dans le Dock";
+
+/* Standard macOS “Zoom” menu item title in the “Window” menu */
 "239.title" = "Agrandir/réduire";
 
-/* Class = "NSWindow"; title = "Window"; ObjectID = "255"; */
-"255.title" = "Window";
+/* Standard macOS “Bring All to Front” menu item title in the “Window” menu */
+"5.title" = "Tout ramener au premier plan";
 
-/* Class = "NSTextFieldCell"; title = "Je charge les images, veuillez patienter…"; ObjectID = "273"; */
-"273.title" = "Je charge les images, veuillez patienter…";
+/* •••••••••• Help Menu •••••••••• */
 
-/* Class = "NSTextFieldCell"; title = "Bataille Corse"; ObjectID = "275"; */
+/* Standard macOS “Help” menu item title */
+"103.title" = "Aide";
+/* Standard macOS “Help” menu title */
+"106.title" = "Aide";
+
+/* Standard macOS “App Help” menu item title in the “Help” menu */
+"111.title" = "Aide Bataille corse";
+
+
+/* ••••••••••••••••••••••••••••••••••• */
+/*            Splash Screen            */
+/* ••••••••••••••••••••••••••••••••••• */
+
+/* App title in the splash screen window */
 "275.title" = "Bataille Corse";
 
-/* Class = "NSTextFieldCell"; title = "Par François LAMBOLEY, 14 ans"; ObjectID = "276"; */
-"276.title" = "Par François LAMBOLEY, 14 ans";
+/* App author in the splash screen window */
+"276.title" = "Par François Lamboley";
+
+/* Loading images label in the splash screen window */
+"273.title" = "Je charge les images, veuillez patienter…";

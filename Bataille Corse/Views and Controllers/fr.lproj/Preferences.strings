@@ -1,81 +1,55 @@
+ "406.title" = ""; "490.title" = "";
+"491.title" = ""; "485.title" = ""; "495.title" = ""; "498.title" = "";
 
-/* Class = "NSWindow"; title = "Préférences"; ObjectID = "385"; */
+/* ••••••••••••••••••••••••••••••••••••• END OF THE BLOCK ••••••••••••••••••••••••••••••••••••• */
+
+
+
+/* Title of the Preferences window */
 "385.title" = "Préférences";
 
-/* Class = "NSMenuItem"; title = "Très facile"; ObjectID = "395"; */
+/* “Show splash screen” */
+"486.title" = "Afficher la fenêtre de démarrage";
+/* “Beginner mode” */
+"481.title" = "Mode débutant";
+
+/* “Minimum reaction time of computers players = your reaction time -” */
+"488.title" = "Temps de réaction minimum de l'ordinateur  = votre temps de réaction -";
+/* “Maximum reaction time of computers players = your reaction time +” */
+"489.title" = "Temps de réaction maximum de l'ordinateur = votre temps de réaction +";
+
+/* “Difficulty level:” */
+"484.title" = "Difficulté du jeu :";
+/* “Very easy” */
 "395.title" = "Très facile";
-
-/* Class = "NSMenuItem"; title = "Normal"; ObjectID = "401"; */
-"401.title" = "Normal";
-
-/* Class = "NSMenuItem"; title = "Facile"; ObjectID = "405"; */
+/* “Easy” */
 "405.title" = "Facile";
-
-/* Class = "NSMenu"; title = "OtherViews"; ObjectID = "406"; */
-"406.title" = "OtherViews";
-
-/* Class = "NSMenuItem"; title = "Difficile"; ObjectID = "408"; */
+/* “Normal” */
+"401.title" = "Normal";
+/* “Difficult” */
 "408.title" = "Difficile";
-
-/* Class = "NSMenuItem"; title = "Très difficile"; ObjectID = "410"; */
+/* “Very Difficult” */
 "410.title" = "Très difficile";
-
-/* Class = "NSMenuItem"; title = "Imbattable"; ObjectID = "414"; */
+/* “Unbeatable” */
 "414.title" = "Imbattable";
 
-/* Class = "NSBox"; title = "Variantes"; ObjectID = "420"; */
+/* “Variants” group title */
 "420.title" = "Variantes";
+/* “Sandwich with up to” */
+"499.title" = "Sandwich avec au moins";
+/* “Sandwich-ten with up to” */
+"496.title" = "Sandwich dix avec au mois";
+/* “level(s)” (for the sandwiches) */
+"492.title" = "étage(s)";
+/* “level(s)” (for the sandwiches-ten) */
+"497.title" = "étage(s)";
+/* “Begin-end” */
+"494.title" = "Début-fin";
+/* “Begin-end ten” */
+"493.title" = "Début-fin dix";
 
-/* Class = "NSButtonCell"; title = "Mode débutant"; ObjectID = "488"; */
-"488.title" = "Mode débutant";
+/* “Allow “force next card”” */
+"487.title" = "Autoriser à forcer la carte suivante";
 
-/* Class = "NSTextFieldCell"; title = "Amende lors que l'on tape sans raison :"; ObjectID = "490"; */
-"490.title" = "Amende lors que l'on tape sans raison :";
-
-/* Class = "NSTextFieldCell"; title = "Difficulté du jeu :"; ObjectID = "491"; */
-"491.title" = "Difficulté du jeu :";
-
-/* Class = "NSTextFieldCell"; title = "540"; ObjectID = "492"; */
-"492.title" = "540";
-
-/* Class = "NSTextFieldCell"; title = "100 %"; ObjectID = "493"; */
-"493.title" = "100 %";
-
-/* Class = "NSButtonCell"; title = "Afficher la fenêtre de démarrage"; ObjectID = "494"; */
-"494.title" = "Afficher la fenêtre de démarrage";
-
-/* Class = "NSButtonCell"; title = "Autoriser à forcer la carte suivante"; ObjectID = "495"; */
-"495.title" = "Autoriser à forcer la carte suivante";
-
-/* Class = "NSTextFieldCell"; title = "Temps de réaction minimum de l'ordinateur  = votre temps de réaction -"; ObjectID = "496"; */
-"496.title" = "Temps de réaction minimum de l'ordinateur  = votre temps de réaction -";
-
-/* Class = "NSTextFieldCell"; title = "Temps de réaction maximum de l'ordinateur = votre temps de réaction +"; ObjectID = "497"; */
-"497.title" = "Temps de réaction maximum de l'ordinateur = votre temps de réaction +";
-
-/* Class = "NSTextFieldCell"; title = "100 %"; ObjectID = "498"; */
-"498.title" = "100 %";
-
-/* Class = "NSTextFieldCell"; title = "étage(s)"; ObjectID = "499"; */
-"499.title" = "étage(s)";
-
-/* Class = "NSButtonCell"; title = "Début-fin dix"; ObjectID = "500"; */
-"500.title" = "Début-fin dix";
-
-/* Class = "NSButtonCell"; title = "Début-fin"; ObjectID = "501"; */
-"501.title" = "Début-fin";
-
-/* Class = "NSTextFieldCell"; title = "0"; ObjectID = "502"; */
-"502.title" = "0";
-
-/* Class = "NSButtonCell"; title = "Sandwich dix avec au mois"; ObjectID = "503"; */
-"503.title" = "Sandwich dix avec au mois";
-
-/* Class = "NSTextFieldCell"; title = "étage(s)"; ObjectID = "504"; */
-"504.title" = "étage(s)";
-
-/* Class = "NSTextFieldCell"; title = "0"; ObjectID = "505"; */
-"505.title" = "0";
-
-/* Class = "NSButtonCell"; title = "Sandwich avec au moins"; ObjectID = "506"; */
-"506.title" = "Sandwich avec au moins";
+/* “Fine for wrong bang:” */
+"483.title" = "Amende lors que l'on tape sans raison :";

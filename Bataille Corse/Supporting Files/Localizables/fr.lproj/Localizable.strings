@@ -17,15 +17,14 @@
 "shift"      = "Majuscule (Shift)";
 "control"    = "Contrôle";
 "alt"        = "Option (Alt)";
-"cmd"        = "Pomme";
+"cmd"        = "Commande (Touche Apple)";
 "arrowUp"    = "Flèche vers le haut";
 "arrowDown"  = "Flèche vers le bas";
 "arrowLeft"  = "Flèche vers la gauche";
 "arrowRight" = "Flèche vers la droite";
 "verNum"     = "Verrouillage du pavé numérique";
-"capsLock"   = "Verrouillage des majuscules";
-"pagEnd"     = "Aller en fin de page";
-"pagBegin"   = "Aller en début de page";
+"pagEnd"     = "Fin de page";
+"pagBegin"   = "Début de page";
 "pageDown"   = "Descendre d'une page";
 "pageUp"     = "Monter d'une page";
 "delete"     = "Supprimer (en avant)";
@@ -41,17 +40,15 @@
 
 "bravo"    = "Bravo !!!";
 "endMatch" = "%@ a gagné, c'est la fin du match mais les joueurs peuvent éventuellement prendre leur revanche !!!";
-"ok"       = "Ok";
+"ok"       = "OK";
 
 "dommage"  = "Désolé, j'ai gagné";
 "improve"  = "Mais vous pouvez encore vous entraîner pour vous améliorer et me battre";
 
 "error"                  = "Erreur logistique";
-"errWhenDistributeCards" = "Une erreur s'est produite lorsque je distribuait les cartes, par conséquent, je ne peut pas commencer le jeu.";
-
-"beware"         = "Attention %@, tu as tapé sans raison";
-"citationPut"    = "%@, fait attention, tu as perdu %d cartes pour avoir tapé sans raison valable";
+"errWhenDistributeCards" = "Une erreur s'est produite lorsque je distribuais les cartes, par conséquent, je ne peut pas commencer le jeu.";
+"citationPut"    = "%@, fait attention, tu as perdu %d carte(s) pour avoir tapé sans raison valable";
 "getCards"       = "%@ récupères toutes les cartes posées";
-"getCardsReflex" = "Bravo %@, tu récupère toutes les cartes posées car tu as vu le \"%@\" plus vite que les autres";
-"mustPutNCards"  = "%@ doit poser %d carte(s) jusqu'à ce que qqun tape ou qu'une carte haute (> 10) soit posée.";
+"getCardsReflex" = "Bravo %@, tu récupère toutes les cartes posées car tu as vu le « %@ » plus vite que les autres";
+"mustPutNCards"  = "%@ doit poser %d carte(s) jusqu'à ce que qqun tape ou qu'une carte haute (> 10) soit posée";
 "noCards"        = "%@, tu n'as plus de cartes, tu peu continuer de jouer, mais fais attention à toi !!!";
