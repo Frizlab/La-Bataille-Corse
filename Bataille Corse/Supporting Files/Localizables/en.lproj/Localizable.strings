@@ -23,7 +23,6 @@
 "arrowLeft"  = "Arrow left";
 "arrowRight" = "Arrow right";
 "verNum"     = "Lock numbers";
-"capsLock"   = "Caps lock";
 "pagEnd"     = "Page end";
 "pagBegin"   = "Page begin";
 "pageDown"   = "Page down";
@@ -48,8 +47,6 @@
 
 "error"                  = "Error";
 "errWhenDistributeCards" = "An error has occured while distributing the cards, I can't begin the game.";
-
-"beware"         = "Beware %@, that's a wrong bang!";
 "citationPut"    = "Beware %@, you loose %d card(s) because you've banged without reason";
 "getCards"       = "%@ gets the whole pile";
 "getCardsReflex" = "Bravo %@, you get the pile because you've seen the \"%@\" faster than the others";
