@@ -133,7 +133,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	FLPlayer *player = [players objectAtIndex:rowIndex];
 	
 	id value = [player valueForKey:identifier];
-	// Permet d'afficher Return au lieu d'un \r interprété, Tabulation au lieu d'un \t interprété...
+	// Permet d'afficher Return au lieu d'un \r interpr√©t√©, Tabulation au lieu d'un \t interpr√©t√©...
 	if ([identifier isEqualToString:@"hitKey"])
 		return [value nameForKey];
 	

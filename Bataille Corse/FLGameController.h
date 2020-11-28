@@ -26,7 +26,7 @@
     FLGame *game;
 }
 
-// Méthodes d'initialisations //
+// M√©thodes d'initialisations //
 - (id)initWithPacket:(NSArray *)newPacket;
 - (id)initWithPacket:(NSArray *)newPacket andPlayers:(NSArray *)newPlayers;
 
@@ -66,27 +66,27 @@
 - (FLCycleArray *)arrayOfPlayers;
 - (FLCardView *)cardView;
 
-// Interception des événements //
-// …vénement clavier
+// Interception des √©v√©nements //
+// ‚Ä¶v√©nement clavier
 #ifndef NSPECIALKEY
 - (void)flagsChanged:(NSEvent *)e;
 #endif
 - (void)keyDown:(NSEvent *)event;
 
-// Pour demander si on veut vraiment arrêter de jouer quand on ferme la fenêtre
+// Pour demander si on veut vraiment arr√™ter de jouer quand on ferme la fen√™tre
 - (BOOL)windowShouldClose:(id)sender;
 
 // Notification //
 - (void)refreshReasonForHit:(NSNotification *)n;
 
-// Méthodes d'accès //
+// M√©thodes d'acc√®s //
 - (NSArray *)packet;
 - (void)setPacket:(NSArray *)newPacket;
 - (FLCycleArray *)players;
 - (void)setPlayers:(FLCycleArray *)newPlayers;
 
-// Méthodes d'action //
-// Comme son nom ne l'indique pas, le bouton qui appelle cette méthode est fait pour poser une carte !
+// M√©thodes d'action //
+// Comme son nom ne l'indique pas, le bouton qui appelle cette m√©thode est fait pour poser une carte !
 - (IBAction)buttonHitClicked:(id)sender;
 
 @end

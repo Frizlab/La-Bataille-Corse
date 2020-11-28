@@ -2,7 +2,7 @@
 //  FLNSMutableArray.h
 //  Bataille corse
 //
-//  Created by François on 20/01/05.
+//  Created by Fran√ßois on 20/01/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 

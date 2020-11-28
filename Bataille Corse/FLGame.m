@@ -2,7 +2,7 @@
 //  FLGame.m
 //  Bataille corse
 //
-//  Created by François on 16/01/05.
+//  Created by Fran√ßois on 16/01/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -45,23 +45,23 @@
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	cardValue valeurFirstCard = [[cards objectAtIndex:0] cardValue];
 	cardValue valeurLastCard  = [[cards lastObject]		cardValue];
-	// Cas où la dernière carte est un joker
+	// Cas o√π la derni√®re carte est un joker
 	if (valeurLastCard == 0) {
 //		[lastReasonForHit release];
 		[self setLastReasonForHit:NSLocalizedString(@"joker", nil)];
 		return YES;
 	}
-	// Cas où il y a moins de deux cartes
+	// Cas o√π il y a moins de deux cartes
 	if ([cards count] <= 1)
 		return NO;
-	// Cas du début-fin
+	// Cas du d√©but-fin
 	if ([defaults boolForKey:FLDebutFin])
 		if (valeurFirstCard == valeurLastCard) {
 //			[lastReasonForHit release];
 			[self setLastReasonForHit:NSLocalizedString(@"start-end", nil)];
 			return YES;
 		}
-	// Cas du début-fin-dix
+	// Cas du d√©but-fin-dix
 	if ([defaults boolForKey:FLDebutFinDix])
 		if (valeurFirstCard + valeurLastCard == 10) {
 //			[lastReasonForHit release];
@@ -73,7 +73,7 @@
 		for (i = 1 ; i<=(unsigned)([defaults integerForKey:FLDoublesValue]+1) && i <= lastIndex ; i++) {
 			cardValue valeurCurrentStudyCard = [[cards objectAtIndex:lastIndex-i] cardValue];
 			if (valeurCurrentStudyCard == valeurLastCard) {
-				// Ici, on sait qu'il faut taper et on détermine le message qui dit pourquoi il le faut
+				// Ici, on sait qu'il faut taper et on d√©termine le message qui dit pourquoi il le faut
 				[self setLastReasonForHit:[NSString stringWithFormat:@"%@ %@ %lu %@",
 					NSLocalizedString(@"doubles", nil),
 					NSLocalizedString(@"with", nil),
@@ -89,7 +89,7 @@
 		for (i = 1 ; i<=(unsigned)([defaults integerForKey:FLDixValue]+1) && i <= lastIndex ; i++) {
 			cardValue valeurCurrentStudyCard = [[cards objectAtIndex:lastIndex-i] cardValue];
 			if (valeurCurrentStudyCard + valeurLastCard == 10) {
-				// Ici, on sait qu'il faut taper et on détermine le message qui dit pourquoi il le faut
+				// Ici, on sait qu'il faut taper et on d√©termine le message qui dit pourquoi il le faut
 				[self setLastReasonForHit:[NSString stringWithFormat:@"%@ %@ %lu %@",
 					NSLocalizedString(@"ten", nil),
 					NSLocalizedString(@"with", nil),

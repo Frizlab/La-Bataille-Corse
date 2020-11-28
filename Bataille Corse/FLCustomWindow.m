@@ -12,19 +12,19 @@
 															styleMask:NSWindowStyleMaskBorderless
 															  backing:bufferingType
 																 defer:NO];
-	// Efface le fond par défaut d'une fenêtre
+	// Efface le fond par dÃˆfaut d'une fenÃtre
 	[result setBackgroundColor:[NSColor clearColor]];
-	// Mais, on est obligé de rendre la fenêtre non opaque pour pas qu'elle s'affiche en noir
+	// Mais, on est obligÃˆ de rendre la fenÃtre non opaque pour pas qu'elle s'affiche en noir
 	[result setOpaque:NO];
-	// Pour mettre la fenetre devant toute les autres fenetres, même celles des autres applis
+	// Pour mettre la fenetre devant toute les autres fenetres, mÃme celles des autres applis
 //	[result setLevel:NSStatusWindowLevel];
-	// Pour remettre l'ombre de la fenêtre, ce qui est automatiquement enlevé pour ce type de fenêtre
+	// Pour remettre l'ombre de la fenÃtre, ce qui est automatiquement enlevÃˆ pour ce type de fenÃtre
 	[result setHasShadow:YES];
 	
 	return result;
 }
 
-// Autorise la fenêtre à reçevoir les évenement clavier
+// Autorise la fenÃtre â€¡ reÃevoir les Ãˆvenement clavier
 - (BOOL)canBecomeKeyWindow
 {
 	return YES;

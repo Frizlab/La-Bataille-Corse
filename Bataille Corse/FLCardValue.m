@@ -2,7 +2,7 @@
 //  FLCardValue.m
 //  Bataille corse
 //
-//  Created by François on 02/01/05.
+//  Created by Fran√ßois on 02/01/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -34,7 +34,7 @@
 	return self;
 }
 
-/// Méthodes d'accès ///
+/// M√©thodes d'acc√®s ///
 - (cardForm)forme
 {
 	return forme;

@@ -2,7 +2,7 @@
 //  FLPlayer.m
 //  Bataille corse
 //
-//  Created by François on 12/01/05.
+//  Created by Fran√ßois on 12/01/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -247,10 +247,10 @@
 // FLFL
 // Il est possible que le temps pour trouver un anagramme correct
 // soit excessivement long avec cette methode
-// Il faudrait la changer pour que l'echange se fasse entre la première
+// Il faudrait la changer pour que l'echange se fasse entre la premi√®re
 // et la derniere carte, la premiere et l'avant derniere... (trouver l'algo)
-// On peut choisir plusieurs suites de cartes possible jusqu'à ce que l'on
-// trouve une suite convenable en s'arrêtant à un certain nombre d'essai
+// On peut choisir plusieurs suites de cartes possible jusqu'√† ce que l'on
+// trouve une suite convenable en s'arr√™tant √† un certain nombre d'essai
 // pour que l'attente ne soit pas trop longue
 - (NSArray *)cardsForCitation:(signed int)nbrCardsAmende
 {
@@ -460,7 +460,7 @@
 
 
 
-// Pour le tableau de FLNewGameController (overwrite de la méthode de NSObject)
+// Pour le tableau de FLNewGameController (overwrite de la m√©thode de NSObject)
 - (void)setNilValueForKey:(NSString *)key
 {
 	if ([key isEqual:@"tempsReaction"]) {

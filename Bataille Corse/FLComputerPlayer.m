@@ -2,7 +2,7 @@
 //  FLComputerPlayer.m
 //  Bataille corse
 //
-//  Created by François on 21/01/05.
+//  Created by Fran√ßois on 21/01/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -138,10 +138,10 @@
 	
 	diffMaxMin  = useMinMax.max - useMinMax.min;
 	diffPercent = fabsf(percentMinMax.max - percentMinMax.min);
-	// Ce sera la variance utilisée pour la répartition normale
+	// Ce sera la variance utilis√©e pour la r√©partition normale
 	variance = ecartTypeOfOtherReactionTime + ((diffMaxMin*diffPercent)/100.)/2.;
 	
-	// Crée un nombre au hasard avec une distribution normale jusqu'à
+	// Cr√©e un nombre au hasard avec une distribution normale jusqu'√†
 	// ce qu'il soit entre useMinMax.min et useMinMax.max
 	do {
 		randomNumber = [self normalDistributionWithMean:averageOfOtherReactionTime andVariance:variance];
@@ -164,7 +164,7 @@
 															(unsigned long)levelDifficulty];
 	}
 	factor = SSRandomFloatBetween(factorMinMax.min, factorMinMax.max);
-	// Multiplie le nombre créé au hasard par un facteur choisi au hasard
+	// Multiplie le nombre cr√©√© au hasard par un facteur choisi au hasard
 	// entre deux bornes qui respectent le niveau de jeu
 	randomNumber *= factor;
 	randomNumber = MAX(useMinMax.min, randomNumber);

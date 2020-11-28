@@ -2,7 +2,7 @@
 //  FLCalibrateTimeController.m
 //  Bataille corse
 //
-//  Created by François on 21/03/05.
+//  Created by Fran√ßois on 21/03/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -149,8 +149,8 @@
 		if (! [self isInt:randomNumber+1 inArray:sawValues sizeOfArray:NUMBER_OF_CARDS]) {
 			[player addCard:[packet objectAtIndex:randomNumber]];
 			
-			sawValues[cardPut] = randomNumber+1; // Pour que 0 ne puisse pas y être 
-															 // (tableau initialisé à 0)
+			sawValues[cardPut] = randomNumber+1; // Pour que 0 ne puisse pas y √™tre 
+															 // (tableau initialis√© √† 0)
 			cardPut++;
 		}
 	}
@@ -259,8 +259,8 @@
 	return cardView;
 }
 
-//////////////////////// Interception des événements ////////////////////////
-// Événement clavier
+//////////////////////// Interception des √©v√©nements ////////////////////////
+// √âv√©nement clavier
 #ifndef NSPECIALKEY
 - (void)flagsChanged:(NSEvent *)e
 {
@@ -299,7 +299,7 @@
 	[reasonHit setStringValue:[game lastReasonForHit]];
 }
 
-//////////////////////// Méthodes d'accès ////////////////////////
+//////////////////////// M√©thodes d'acc√®s ////////////////////////
 - (NSArray *)packet
 {
 	return packet;
@@ -328,7 +328,7 @@
 	now = [newNow retain];
 }
 
-//////////// Pour demander si on veut vraiment arrêter de jouer quand on ferme la fenêtre ////////////
+//////////// Pour demander si on veut vraiment arr√™ter de jouer quand on ferme la fen√™tre ////////////
 - (BOOL)windowShouldClose:(id)sender
 {
 	if (isCalibrateFinish)
@@ -348,7 +348,7 @@
 	return NO;
 }
 
-//////////////////////// Méthodes d'action ////////////////////////
+//////////////////////// M√©thodes d'action ////////////////////////
 - (IBAction)buttonHitClicked:(id)sender
 {
 	[sender setState:1];

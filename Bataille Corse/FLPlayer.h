@@ -2,7 +2,7 @@
 //  FLPlayer.h
 //  Bataille corse
 //
-//  Created by François on 12/01/05.
+//  Created by Fran√ßois on 12/01/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 @interface FLPlayer : NSObject <NSCoding> {
 	id delegate;
 	NSMutableArray *packet;
-	signed int nbrCards; // Devient négatif quand le joueur doit mettre une amende
+	signed int nbrCards; // Devient n√©gatif quand le joueur doit mettre une amende
 								// et qu'il n'a plus assez de cartes pour la mettre
 	
 	NSTimer *getPutCardsTimer;
@@ -57,7 +57,7 @@
 - (NSInteger)passage:(NSUInteger)length withLevels:(NSMutableArray *)levels;
 // Il est possible que le temps pour trouver un anagramme correct
 // soit excessivement long avec cette methode
-// Il faudrait la changer pour que l'echange se fasse entre la première
+// Il faudrait la changer pour que l'echange se fasse entre la premi√®re
 // et la derniere carte, la premiere et l'avant derniere... (trouver l'algo)
 - (NSArray *)cardsForCitation:(signed int)nbrCardsAmende;
 // Fin anagrammes //

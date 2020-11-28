@@ -2,7 +2,7 @@
 //  FLCalibrateTimeController.h
 //  Bataille corse
 //
-//  Created by François on 21/03/05.
+//  Created by Fran√ßois on 21/03/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -39,8 +39,8 @@
 - (BOOL)isInt:(unsigned int)numb inArray:(unsigned int *)array sizeOfArray:(unsigned int)size;
 - (void)distributeCards;
 
-/// Interception des événements ///
-// Événement clavier 
+/// Interception des √©v√©nements ///
+// √âv√©nement clavier 
 #ifndef NSPECIALKEY
 - (void)flagsChanged:(NSEvent *)e;
 #endif
@@ -49,14 +49,14 @@
 /// Notification ///
 - (void)refreshReasonForHit:(NSNotification *)n;
 
-/// Méthodes d'accès ///
+/// M√©thodes d'acc√®s ///
 - (NSArray *)packet;
 - (void)setPacket:(NSArray *)newPacket;
 - (FLPlayer *)player;
 - (void)setPlayer:(FLPlayer *)newPlayer;
 - (void)setNow:(NSDate *)newNow;
 
-/// Pour demander si on veut vraiment arrêter de jouer quand on ferme la fenêtre ///
+/// Pour demander si on veut vraiment arr√™ter de jouer quand on ferme la fen√™tre ///
 - (BOOL)windowShouldClose:(id)sender;
 
 /// Delegate de FLPlayer ///

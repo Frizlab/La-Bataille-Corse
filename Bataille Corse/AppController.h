@@ -21,13 +21,13 @@
 	NSArray *cards;
 }
 
-/// Appelé quand l'application a fini de se charger ///
+/// Appel√© quand l'application a fini de se charger ///
 - (void)applicationWillFinishLaunching:(NSNotification *)n;
 
-/// Appelé pour savoir si l'application doit quitter ///
+/// Appel√© pour savoir si l'application doit quitter ///
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender;
 
-/// Appelé quand l'application va quitter ///
+/// Appel√© quand l'application va quitter ///
 - (void)applicationWillTerminate:(NSNotification *)aNotification;
 
 /// Action methods ///

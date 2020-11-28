@@ -2,7 +2,7 @@
 //  FLCardValue.h
 //  Bataille corse
 //
-//  Created by François on 02/01/05.
+//  Created by Fran√ßois on 02/01/05.
 //  Copyright 2005 __MyCompanyName__. All rights reserved.
 //
 
@@ -33,7 +33,7 @@ typedef unsigned int cardValue;
 // Initialisations //
 - (id)initWithValue:(cardValue)initValue andForme:(cardForm)initForme;
 
-// Méthodes d'accès //
+// M√©thodes d'acc√®s //
 - (cardForm)forme;
 - (void)setForme:(cardForm)newForme;
 - (cardValue)valeur;
