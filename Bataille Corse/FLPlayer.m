@@ -323,11 +323,12 @@
 		cardView = [_delegate cardView];
 	
 	putCards = cardView.cards;
+	NSUInteger nCardsPut = putCards.count;
 	[_packet addArray:putCards invertingAtIndex:0];
 	[cardView removeAllCards];
 	[self putTheLateCitation];
 	
-	_numberOfCards += [putCards count];
+	_numberOfCards += nCardsPut;
 	
 	if ([_delegate respondsToSelector:@selector(playerDidGetAllPutCards:)])
 		[_delegate playerDidGetAllPutCards:self];
